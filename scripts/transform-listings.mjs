@@ -100,7 +100,23 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
 
       const rawCommunity = String(pick(raw, "communityArea", "community", "area", "location") ?? "").trim();
       // "Marina Gate, Dubai Marina" → community is the broader trailing part.
-      const parts = rawCommunity.split(",").map((s) => s.trim()).filter(Boolean);
+      // But portals often append the emirate ("City of Lights, Al Reem Island,
+      // Abu Dhabi"); keeping that would file every Abu Dhabi listing under a
+      // community literally named "Abu Dhabi" and break the area grouping.
+      const EMIRATE_NAMES = [
+        "dubai",
+        "abu dhabi",
+        "sharjah",
+        "ajman",
+        "ras al khaimah",
+        "umm al quwain",
+        "fujairah",
+        "uae",
+      ];
+      let parts = rawCommunity.split(",").map((s) => s.trim()).filter(Boolean);
+      while (parts.length > 1 && EMIRATE_NAMES.includes(parts[parts.length - 1].toLowerCase())) {
+        parts = parts.slice(0, -1);
+      }
       const community = parts[parts.length - 1] || "Unknown";
       const building = String(pick(raw, "buildingTowerName", "building", "tower") ?? parts[0] ?? community).trim();
       const url = pick(raw, "listingURL", "url", "link");
