@@ -2,7 +2,7 @@
   "name": "distress-radar",
   "version": "0.1.0",
   "private": true,
-  "description": "Distress Radar — UAE distressed property deals dashboard",
+  "description": "Distress Radar \u2014 UAE distressed property deals dashboard",
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler pages dev dist --port 8788",
@@ -14,7 +14,8 @@
     "cf:secrets": "node scripts/cloudflare.mjs secrets",
     "cf:status": "node scripts/cloudflare.mjs status",
     "cf:schema": "node scripts/cloudflare.mjs schema",
-    "cf:schema:local": "node scripts/cloudflare.mjs schema:local"
+    "cf:schema:local": "node scripts/cloudflare.mjs schema:local",
+    "seed": "node scripts/ingest.mjs seed/first-sweep.json"
   },
   "devDependencies": {
     "@types/node": "^26.4.0",

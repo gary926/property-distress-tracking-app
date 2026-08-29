@@ -53,6 +53,15 @@ Check a deployment picked up its secrets with
 that running deployment can see. (Present, not valid: a wrong password still
 reports as configured.)
 
+### Seeding real listings
+
+`seed/first-sweep.json` holds 54 real listings captured from Bayut and Property
+Finder on 2026-08-29 (Dubai, Abu Dhabi, Sharjah). Load them into a deployment:
+
+```sh
+APP_URL=https://distress-radar.pages.dev INGEST_TOKEN=<your-token> npm run seed
+```
+
 ## Data flow
 
 - `GET /api/listings` serves from D1; until the first ingest it falls back to
