@@ -9,6 +9,13 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cmd = process.argv[2];
 const DB_NAME = "distress-radar-db";
 const PROJECT = "distress-radar";
+// Pages serves the production branch at <project>.pages.dev; any other branch
+// becomes a *preview* deployment on a hashed subdomain. Pages secrets set via
+// `pages secret put` are production-scoped, so a preview deployment starts with
+// no APP_PASSWORD and the app reports "app password not set". This is a
+// single-user app with no use for preview deploys, so always deploy to the
+// production branch regardless of the git branch checked out.
+const PRODUCTION_BRANCH = "main";
 
 function run(args, opts = {}) {
   const res = spawnSync("npx", ["wrangler", ...args], {
@@ -54,8 +61,19 @@ switch (cmd) {
   case "deploy": {
     const build = spawnSync("node", ["scripts/build.mjs"], { cwd: root, stdio: "inherit" });
     if (build.status !== 0) process.exit(build.status ?? 1);
-    run(["pages", "deploy", "dist", "--project-name", PROJECT]);
-    console.log("Read the live URL from the output above — Cloudflare appends its own suffix.");
+    run([
+      "pages",
+      "deploy",
+      "dist",
+      "--project-name",
+      PROJECT,
+      "--branch",
+      PRODUCTION_BRANCH,
+    ]);
+    console.log(
+      `\nDeployed to the ${PRODUCTION_BRANCH} (production) branch → https://${PROJECT}.pages.dev` +
+        "\nVerify secrets reached it:  curl -s https://" + PROJECT + ".pages.dev/api/health",
+    );
     break;
   }
   case "secrets": {
@@ -65,7 +83,10 @@ switch (cmd) {
       console.log(`\nSetting ${name} (input hidden):`);
       run(["pages", "secret", "put", name, "--project-name", PROJECT]);
     }
-    console.log("\nSecrets stored. Now run: npm run cf:deploy  (secrets bind at deploy time)");
+    console.log(
+      "\nSecrets stored (production scope). Now run: npm run cf:deploy" +
+        "\nPages binds secrets at deploy time, so a redeploy is mandatory.",
+    );
     break;
   }
   case "status": {

@@ -84,13 +84,22 @@ been observed dropping.
 - **D1 provisioned**: `distress-radar-db`, uuid `f86f5a2f-c231-4ff3-8e41-c5edaaaf2f21`,
   primary region WEUR (closest D1 offers to the UAE), schema applied, all six
   tables verified. `wrangler.toml` points at it.
-- **Not yet done** (needs an interactive Cloudflare login): Pages project
-  creation, secrets, first deploy. See README "First deploy".
+- **Pages project created and first deploy done** — but it landed as a *preview*
+  deployment (feature branch checked out), so it had no production secrets and
+  login failed. Fixed by pinning `cf:deploy` to `--branch main`; a redeploy is
+  needed to land it on production.
 - **Firecrawl verified working** against Bayut and Property Finder on
   2026-08-29; the scrape → transform → ingest → score chain was run end to end
   on 16 real Dubai Marina listings against local D1.
 
 ## Gotchas already hit
+
+- **Pages preview vs production is the one that bit us.** `wrangler pages deploy`
+  infers the branch from git. Deploying while on a feature branch creates a
+  *preview* deployment on a hashed subdomain (`<hash>.<project>.pages.dev`),
+  leaves `<project>.pages.dev` serving nothing, and — because `pages secret put`
+  is production-scoped — gives that preview no APP_PASSWORD, so login fails with
+  "not set". `cf:deploy` now always passes `--branch main` so this cannot recur.
 
 - Pages binds secrets at deploy time — always redeploy after `cf:secrets`.
 - Same-day price changes upsert into `price_points` (PK listing_id+date).

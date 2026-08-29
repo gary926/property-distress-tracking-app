@@ -50,7 +50,14 @@ export async function sessionIsValid(request: Request, env: Env): Promise<boolea
 
 export async function handleLogin(request: Request, env: Env): Promise<Response> {
   if (!env.APP_PASSWORD || !env.SESSION_SECRET) {
-    return fail(500, "not_configured", "APP_PASSWORD / SESSION_SECRET secrets are not set on this deployment.");
+    // Pages secrets are production-scoped and bind at deploy time, so this
+    // fires on a preview (non-production-branch) deployment, or when secrets
+    // were set without redeploying afterwards.
+    return fail(
+      500,
+      "not_configured",
+      "APP_PASSWORD / SESSION_SECRET are not bound to this deployment. If the URL has a hash prefix it is a preview deployment, which does not receive production secrets — redeploy to the production branch (npm run cf:deploy). Check /api/health to see which secrets this deployment can see.",
+    );
   }
   const ip = request.headers.get("cf-connecting-ip") ?? "local";
   const windowStart = Date.now() - RATE_WINDOW_MS;

@@ -44,9 +44,14 @@ npm run cf:secrets     # prompts for APP_PASSWORD, SESSION_SECRET, INGEST_TOKEN
 npm run cf:deploy      # builds and deploys
 ```
 
-Read the live URL from the deploy output — Cloudflare appends its own suffix,
-so it won't necessarily be `distress-radar.pages.dev`. Secrets bind at deploy
-time, so `cf:secrets` must always be followed by `cf:deploy`.
+`cf:deploy` always deploys to the **production** branch, so the app is served at
+`https://distress-radar.pages.dev`. Secrets bind at deploy time and are
+production-scoped, so `cf:secrets` must always be followed by `cf:deploy`.
+
+Check a deployment picked up its secrets with
+`curl -s https://distress-radar.pages.dev/api/health` — it reports which secrets
+that running deployment can see. (Present, not valid: a wrong password still
+reports as configured.)
 
 ## Data flow
 
