@@ -24,11 +24,13 @@ resulting design will drive the build. Keep the build faithful to this direction
 
 ## Screens
 
-1. **Main dashboard** — greeting header with ambient gradient wash; 4 KPI cards
-   (Active Flagged Deals, New Today, Avg. Discount vs Market, Deals in Pipeline);
-   pill-chip filter bar with prominent emirate segmented control + community, type,
-   beds, price, score-threshold gradient slider; deal feed with card/table toggle and
-   map-view toggle. Deal cards: photo, circular gradient score ring (0–100), price with
+1. **Main dashboard** — greeting header with ambient gradient wash; a prominent
+   rounded location search bar with autocomplete (type an area or building name —
+   "Marina Gate", "JVC" — and get grouped suggestions: Areas / Buildings, with icons);
+   4 KPI cards (Active Flagged Deals, New Today, Avg. Discount vs Market, Deals in
+   Pipeline); pill-chip filter bar with prominent emirate segmented control +
+   community, type, beds, price, score-threshold gradient slider; deal feed with
+   card/table toggle and map-view toggle. Deal cards: photo, circular gradient score ring (0–100), price with
    drop ("AED 1.15M ↓14%"), price/sqft vs building avg, beds/size/community icons,
    fired-signal icons, portal favicons, days on market.
 2. **Deal detail** — gallery, icon key facts, gradient-filled price-history chart,
@@ -37,7 +39,12 @@ resulting design will drive the build. Keep the build faithful to this direction
    (New → Reviewing → Contacted → Negotiating → Closed/Dismissed), notes, watchlist,
    snooze, never-flag.
 3. **Saved searches & alerts** — saved-search cards with iOS-style toggles for
-   push / email / daily digest and per-search thresholds; global alert preferences.
+   push / email / daily digest and per-search thresholds; an alert-customization
+   section with independent Push and Email columns (which events fire each channel:
+   new Hot deal, any new flag, watchlist price cut, saved-search match; min
+   score/discount sliders; frequency: instant / hourly batch / digest only; quiet
+   hours for push); a Daily Digest card with an iOS-style time picker for send time
+   and a small email preview thumbnail (past-24h deals list).
 4. **Settings** — Apple-Settings grouped cards: scoring weight sliders, price-drop
    threshold (default 10%), editable keyword chips, staleness cutoff, data-source
    health panel (status dots, last sync, listing counts per portal).

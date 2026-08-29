@@ -46,6 +46,9 @@ Severity tiers: **Hot / Warm / Watch**.
 - KPI header: active flagged deals, new since yesterday, avg discount vs market,
   deals in pipeline.
 - Deal feed: card grid (photos) + dense table view; sort by score, discount %, freshness.
+- Location search: autocomplete search bar for area/community or building/tower name
+  (like standard property portals — type "Marina Gate" or "JVC" and get suggestions),
+  usable alongside the emirate filter.
 - Filters: emirate, community, building, property type, beds, price range, size (sqft),
   portal, score threshold, signal type.
 - Deal detail: price-history chart, benchmark comparison (e.g. "AED 950/sqft vs building
@@ -63,8 +66,16 @@ Severity tiers: **Hot / Warm / Watch**.
 ## 5. Alerts
 
 - Instant push notification + email for high-score deals matching a saved search.
-- Daily email digest of all new flags.
-- Per-saved-search score/discount thresholds.
+- **Daily digest email**: scheduled email (configurable send time) summarizing all new
+  distress deals captured in the past 24 hours — deal photo, price, drop %, score,
+  location, and a link into the dashboard for each.
+- Full alert customization, per channel (push vs email independently):
+  - which events trigger each channel (new Hot deal, any new flag, price cut on a
+    watchlisted deal, saved-search match);
+  - minimum score / discount thresholds per channel;
+  - frequency: instant, hourly batch, or daily digest only;
+  - quiet hours for push notifications.
+- Per-saved-search overrides on top of the global alert rules.
 
 ## 6. Settings
 
