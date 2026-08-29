@@ -89,6 +89,19 @@ describe("scoreListing", () => {
     expect(extreme.tier).toBe("hot");
   });
 
+  it("survives a freshly ingested listing that has no price history yet", () => {
+    // Real ingested rows arrive before the worker builds history; partial
+    // upserts can also omit array fields entirely.
+    const raw = { ...base } as Partial<Listing> as Listing;
+    delete (raw as Partial<Listing>).priceHistory;
+    delete (raw as Partial<Listing>).keywords;
+    const scored = scoreListing(raw);
+    expect(scored.score).toBe(0);
+    expect(scored.dropPct).toBe(0);
+    expect(scored.priceHistory).toHaveLength(1);
+    expect(scored.priceHistory[0].price).toBe(base.askingPrice);
+  });
+
   it("respects custom weights", () => {
     const noKeywordWeight = scoreListing(
       { ...base, keywords: ["urgent sale"] },

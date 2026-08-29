@@ -50,17 +50,34 @@ stored in D1; the worker's digest uses the same stored settings.
 Create a scheduled Claude routine (fresh session, daily ~04:00 UTC = 08:00
 UAE) with Firecrawl + Gmail connectors and this job:
 
-1. Scrape Bayut/Property Finder/Dubizzle search pages for price-reduced /
-   urgent-sale listings (Firecrawl structured extraction → the `Listing` shape
-   in `src/shared/types.ts`; benchmarkPsf = community average of the batch
-   when no DLD figure is available).
-2. `POST <APP_URL>/api/ingest` with `Authorization: Bearer <INGEST_TOKEN>`.
-3. `GET <APP_URL>/api/digest` — if `deals` is non-empty, email the digest to
-   the configured recipient via Gmail and send a phone push with the count and
-   top deal.
+1. **Scrape** each portal area page with `firecrawl_scrape`, `formats: ["json"]`,
+   extracting title, building, community, emirate, price AED, beds, baths,
+   sqft, listing URL, and urgency phrases. Verified working (2026-08-29):
+   - `https://www.bayut.com/for-sale/apartments/dubai/<area>/`
+   - `https://www.propertyfinder.ae/en/search?c=1&l=<locId>&t=1&ob=nd`
+     (`ob=nd` = newest first; reduction phrases show up in titles)
+   Costs ~5 credits per page. **Bayut's `?q=` param does not filter** — it
+   silently returns the generic listing page, so don't try keyword search;
+   scrape area pages and let the scoring engine find the signals.
+2. **Transform**: `node scripts/transform-listings.mjs raw.json > listings.json`
+   — maps loose extraction fields to the `Listing` shape, detects distress
+   keywords, and computes benchmark psf from the batch (building+bed-band →
+   community+bed-band → building; median, min 3 comparables). Bed banding is
+   load-bearing: an unbanded community average flags every large unit as
+   "below market".
+3. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
+4. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
+   to the configured recipient via Gmail and send a phone push with the count
+   and top deal.
 
 The routine needs three values: the live APP_URL (read from the deploy
 output), the INGEST_TOKEN, and the digest recipient (set in app Settings).
+
+**Expect low scores on day one.** A first sweep has no price history and no
+days-on-market, so only the below-market and keyword signals can fire (max 50
+of 100). Price-drop (35) and staleness (15) accrue as the sweep repeats — the
+radar gets sharper every day it runs, and Hot deals appear once listings have
+been observed dropping.
 
 ## Gotchas already hit
 

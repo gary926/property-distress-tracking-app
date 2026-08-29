@@ -40,9 +40,17 @@ export function scoreListing(
   const signals: Signal[] = [];
   const { weights } = settings;
 
-  const original = listing.priceHistory[0]?.price ?? listing.askingPrice;
+  // Ingested listings may arrive before the worker has built any history, and
+  // partial upserts can omit array fields — never let that throw.
+  const priceHistory =
+    Array.isArray(listing.priceHistory) && listing.priceHistory.length > 0
+      ? listing.priceHistory
+      : [{ date: listing.listedDate ?? listing.firstSeen, price: listing.askingPrice }];
+  const keywords = Array.isArray(listing.keywords) ? listing.keywords : [];
+
+  const original = priceHistory[0]?.price ?? listing.askingPrice;
   const dropPct = original > 0 ? ((original - listing.askingPrice) / original) * 100 : 0;
-  const cuts = countPriceCuts(listing);
+  const cuts = countPriceCuts({ ...listing, priceHistory });
   if (dropPct >= settings.dropThresholdPct) {
     // Saturates at 2× the configured threshold.
     const points = Math.round(
@@ -69,7 +77,7 @@ export function scoreListing(
     });
   }
 
-  const matched = listing.keywords.filter((k) =>
+  const matched = keywords.filter((k) =>
     settings.keywords.some((s) => k.toLowerCase().includes(s) || s.includes(k.toLowerCase())),
   );
   if (matched.length > 0) {
@@ -109,6 +117,7 @@ export function scoreListing(
 
   return {
     ...listing,
+    priceHistory,
     score,
     tier: tierFor(score),
     signals: signals.sort((a, b) => b.points - a.points),
