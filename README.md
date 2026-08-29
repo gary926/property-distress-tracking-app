@@ -32,8 +32,21 @@ cookies stored in D1, rate-limited.
 | `npm run cf:status` | Deployments + D1 info |
 | `npm run cf:schema` | Re-apply `db/schema.sql` remotely |
 
-First deploy: `npx wrangler login`, then `cf:setup` → `cf:secrets` → `cf:deploy`.
-Read the live URL from the deploy output — Cloudflare appends its own suffix.
+### First deploy
+
+The D1 database is **already provisioned** (`distress-radar-db`, WEUR, id wired
+into `wrangler.toml`, schema applied). What's left needs your Cloudflare login:
+
+```sh
+npx wrangler login     # opens a browser, one time
+npm run cf:setup       # idempotent: finds the existing D1, creates the Pages project
+npm run cf:secrets     # prompts for APP_PASSWORD, SESSION_SECRET, INGEST_TOKEN
+npm run cf:deploy      # builds and deploys
+```
+
+Read the live URL from the deploy output — Cloudflare appends its own suffix,
+so it won't necessarily be `distress-radar.pages.dev`. Secrets bind at deploy
+time, so `cf:secrets` must always be followed by `cf:deploy`.
 
 ## Data flow
 
