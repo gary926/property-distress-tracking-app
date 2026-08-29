@@ -1,0 +1,9 @@
+name = "distress-radar"
+compatibility_date = "2026-08-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "distress-radar-db"
+# Filled in by `npm run cf:setup` after the database is created.
+database_id = "REPLACE_WITH_DATABASE_ID"

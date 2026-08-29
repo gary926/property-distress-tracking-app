@@ -1,0 +1,34 @@
+{
+  "name": "distress-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Distress Radar — UAE distressed property deals dashboard",
+  "scripts": {
+    "dev": "vite",
+    "dev:worker": "wrangler pages dev dist --port 8788",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview-fixtures.mjs",
+    "test": "vitest run",
+    "cf:setup": "node scripts/cloudflare.mjs setup",
+    "cf:deploy": "node scripts/cloudflare.mjs deploy",
+    "cf:secrets": "node scripts/cloudflare.mjs secrets",
+    "cf:status": "node scripts/cloudflare.mjs status",
+    "cf:schema": "node scripts/cloudflare.mjs schema",
+    "cf:schema:local": "node scripts/cloudflare.mjs schema:local"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.127.1"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

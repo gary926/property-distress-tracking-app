@@ -91,8 +91,19 @@ Severity tiers: **Hot / Warm / Watch**.
 - CSV export of deal lists.
 - AI-generated deal summaries.
 
+## v1 delivery architecture (built 2026-08-29)
+
+- Stack per the `/build-webapp` skill: Cloudflare Pages + D1 + React/Vite;
+  single-password auth; JSON-envelope API. See `HANDOFF.md`.
+- Live data: Firecrawl scrapes → `POST /api/ingest`; price history accrues in
+  D1 so drop/relist detection sharpens over daily runs. Demo snapshot serves
+  until the first ingest.
+- Alerts (no paid tools): daily scheduled Claude routine — scrape, ingest,
+  read `/api/digest`, send Gmail digest + Claude-app push.
+
 ## Workflow plan
 
 1. ~~Feature planning~~ (this document)
-2. Design prompt for Claude Design → user brings back the design
-3. Build the app from the design (build-webapp skill)
+2. ~~Design prompt for Claude Design~~ → Stitch design delivered (`DESIGN_BRIEF.md`)
+3. ~~Build the app from the design~~ (build-webapp skill)
+4. Deploy (`cf:setup` → `cf:secrets` → `cf:deploy`), then activate the daily sweep routine
