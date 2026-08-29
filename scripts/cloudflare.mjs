@@ -15,7 +15,9 @@ const PROJECT = "distress-radar";
 // no APP_PASSWORD and the app reports "app password not set". This is a
 // single-user app with no use for preview deploys, so always deploy to the
 // production branch regardless of the git branch checked out.
-const PRODUCTION_BRANCH = "main";
+// Override with PRODUCTION_BRANCH=<name> if the Pages project was created with
+// a different production branch (check: npm run cf:status).
+const PRODUCTION_BRANCH = process.env.PRODUCTION_BRANCH || "main";
 
 function run(args, opts = {}) {
   const res = spawnSync("npx", ["wrangler", ...args], {
@@ -90,6 +92,8 @@ switch (cmd) {
     break;
   }
   case "status": {
+    // The Branch column shows which deployments are production vs preview.
+    run(["pages", "project", "list"], { allowFail: true });
     run(["pages", "deployment", "list", "--project-name", PROJECT]);
     run(["d1", "info", DB_NAME], { allowFail: true });
     break;
