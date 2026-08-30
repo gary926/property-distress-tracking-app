@@ -59,7 +59,7 @@ export function Saved() {
       <header className="page-head">
         <div className="glow-header" />
         <h1 className="t-headline-lg">Saved searches & alerts</h1>
-        <p>Manage your distress criteria and how the radar reaches you.</p>
+        <p>Manage your great-deal criteria and how the radar reaches you.</p>
       </header>
 
       {/* Saved searches */}

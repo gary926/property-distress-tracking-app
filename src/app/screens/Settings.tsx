@@ -124,7 +124,7 @@ export function Settings() {
       <p className="t-caps section-gap">Semantic triggers</p>
       <section className="card panel enter" style={{ marginTop: 10 }}>
         <p className="t-muted" style={{ margin: "0 0 14px", fontSize: 14 }}>
-          Keywords that mark a listing as distressed when they appear in its text.
+          Keywords that mark a listing as a great deal when they appear in its text.
         </p>
         <div className="kw-chips">
           {scoring.keywords.map((kw) => (

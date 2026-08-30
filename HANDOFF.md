@@ -1,4 +1,4 @@
-# HANDOFF — Distress Radar
+# HANDOFF — Great Radar
 
 Read this first when picking the project up. It records the decisions made with
 Garvit and how the moving parts fit.
@@ -47,7 +47,7 @@ stored in D1; the worker's digest uses the same stored settings.
 
 ## The daily sweep
 
-**Live as of 2026-08-30**: scheduled Claude routine "Distress Radar — daily UAE
+**Live as of 2026-08-30**: scheduled Claude routine "Great Radar — daily UAE
 sweep (08:00 Gulf)", `trig_012q6gKm7um8H2sYQuuDxv2y`, cron `0 4 * * *` (04:00
 UTC = 08:00 Gulf), fresh session per firing, completion push on.
 

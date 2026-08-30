@@ -89,7 +89,7 @@ export interface Listing {
   benchmarkPsf?: number;
   listedDate: string;
   relistCount: number;
-  keywords: string[]; // distress keywords found in listing text
+  keywords: string[]; // great-deal keywords found in listing text
   description: string;
   portals: Portal[];
   /** Deep link per portal, so the detail page can open the real listing. */

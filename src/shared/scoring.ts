@@ -30,7 +30,7 @@ export function tierFor(score: number): Tier {
 }
 
 /**
- * Composite Distress Score. Each weighted component saturates independently so
+ * Composite Great Score. Each weighted component saturates independently so
  * one extreme signal cannot dominate the whole score.
  */
 export function scoreListing(

@@ -103,7 +103,7 @@ export function Dashboard() {
         <div className="glow-header" />
         <h1 className="t-headline-lg">{greeting}, Garvit</h1>
         <p>
-          {flagged.length} distressed deals on the radar
+          {flagged.length} great deals on the radar
           {dataSource === "demo" ? " · demo snapshot until the first live sync" : ""}
         </p>
       </header>
@@ -142,7 +142,7 @@ export function Dashboard() {
       <div className="feed-head">
         <div className="chip-select set" style={{ flexShrink: 0 }}>
           <select value={sort} aria-label="Sort deals" onChange={(e) => setSort(e.target.value as Sort)}>
-            <option value="score">Sort: Distress score</option>
+            <option value="score">Sort: Great score</option>
             <option value="discount">Sort: Biggest discount</option>
             <option value="fresh">Sort: Newest first</option>
             <option value="price">Sort: Lowest price</option>

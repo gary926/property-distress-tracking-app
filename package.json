@@ -2,7 +2,7 @@
   "name": "distress-radar",
   "version": "0.1.0",
   "private": true,
-  "description": "Distress Radar — UAE distressed property deals dashboard",
+  "description": "Great Radar — UAE great property deals dashboard",
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler pages dev dist --port 8788",

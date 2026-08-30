@@ -1,4 +1,4 @@
-# Distress Radar — Design Brief
+# Great Radar — Design Brief
 
 Visual direction agreed 2026-08-29. This is the prompt given to Claude Design; the
 resulting design will drive the build. Keep the build faithful to this direction.
@@ -9,7 +9,7 @@ resulting design will drive the build. Keep the build faithful to this direction
   a subtle cool grey-blue tint, pure white cards, large corner radii (16–20px), soft
   diffused shadows, generous whitespace, hairline borders at most.
 - **Gemini color language**: signature blue → indigo → violet gradient used sparingly —
-  primary buttons, Distress Score ring, active filter chips, one ambient header glow.
+  primary buttons, Great Score ring, active filter chips, one ambient header glow.
   Soft glow/bloom behind key elements.
 - **Typography**: SF Pro / Inter feel; large light-weight numerals for KPIs, tight
   letter-spacing, strong hierarchy.

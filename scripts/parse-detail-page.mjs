@@ -516,7 +516,7 @@ export function enrich(listings, pages) {
       // A settled-price figure for this listing's own building. Kept apart
       // from buildingPsf, which is an asking-price average — folding the two
       // together would compare an asking price against what people actually
-      // paid and read the gap as distress.
+      // paid and read the gap as a great deal.
       const txn = transactionPsf(own.transactions, listing.sqft);
       if (txn.buildingTxnPsf) {
         next.buildingTxnPsf = txn.buildingTxnPsf;

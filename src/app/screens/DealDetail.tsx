@@ -159,7 +159,7 @@ export function DealDetail({ id }: { id: string }) {
             <h2 className="t-headline-md">Why this was flagged</h2>
             {deal.signals.length === 0 && (
               <p className="t-muted" style={{ margin: 0 }}>
-                No distress signals fired at the current thresholds.
+                No great-deal signals fired at the current thresholds.
               </p>
             )}
             {deal.signals.map((s) => {

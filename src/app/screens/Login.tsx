@@ -28,10 +28,10 @@ export function Login() {
           <IconRadar size={28} strokeWidth={1.75} />
         </span>
         <h1 className="t-headline-md" style={{ marginTop: 18 }}>
-          <span className="grad-text">Distress Radar</span>
+          <span className="grad-text">Great Radar</span>
         </h1>
         <p className="t-muted" style={{ margin: "6px 0 0", fontSize: 14 }}>
-          UAE distressed property deals, tracked daily.
+          Great UAE property deals, tracked daily.
         </p>
         <input
           type="password"

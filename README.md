@@ -1,6 +1,6 @@
-# Distress Radar
+# Great Radar
 
-A personal dashboard that tracks **distressed property deals across the UAE** —
+A personal dashboard that tracks **great property deals across the UAE** —
 price drops, below-market pricing, urgency language, and stale/relisted
 patterns — scored 0–100 and delivered through in-app review, push
 notifications, and a daily digest email.

@@ -231,7 +231,7 @@ export async function buildDigest(env: Env) {
     generatedAt: new Date().toISOString(),
     source,
     recipient: alerts?.email.address ?? null,
-    subject: `Distress Radar — ${fresh.length} new deal${fresh.length === 1 ? "" : "s"} in the last 24h`,
+    subject: `Great Radar — ${fresh.length} new deal${fresh.length === 1 ? "" : "s"} in the last 24h`,
     deals: fresh.map((d) => ({
       id: d.id,
       title: `${d.building} · ${d.title}`,

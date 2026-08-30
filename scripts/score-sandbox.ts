@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Stress-test harness for the distress score.
+// Stress-test harness for the great score.
 //
 // Three modes:
 //   npm run score -- --case price=1000000,sqft=1000,buildingPsf=1400

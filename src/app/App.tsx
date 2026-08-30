@@ -26,7 +26,7 @@ function navActive(path: string, to: string): boolean {
 
 function Logo() {
   return (
-    <Link to="/" className="logo" aria-label="Distress Radar home">
+    <Link to="/" className="logo" aria-label="Great Radar home">
       <span className="logo-mark">
         <IconRadar size={20} strokeWidth={1.75} />
       </span>
@@ -109,7 +109,7 @@ function Routes() {
   if (phase === "loading") {
     return (
       <div className="login-wrap">
-        <p className="t-muted">Loading Distress Radar…</p>
+        <p className="t-muted">Loading Great Radar…</p>
       </div>
     );
   }

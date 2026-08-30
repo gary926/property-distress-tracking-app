@@ -1,6 +1,6 @@
 # UAE Distress Deals Dashboard — Feature Plan
 
-A personal tool for spotting distressed property listings across the UAE, scoring them,
+A personal tool for spotting great property listings across the UAE, scoring them,
 and alerting the owner the moment a good deal appears.
 
 **Owner / sole user:** Garvit (single-user app, no accounts/roles needed in v1)
@@ -28,7 +28,7 @@ and alerting the owner the moment a good deal appears.
 
 ## 2. Distress engine
 
-Composite **Distress Score (0–100)** from weighted signals, all thresholds configurable:
+Composite **Great Score (0–100)** from weighted signals, all thresholds configurable:
 
 1. **Price drop** > 10% (default) vs original listing price, from price history.
 2. **Below benchmark**: price/sqft under the building average (apartments) or community

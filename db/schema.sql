@@ -1,4 +1,4 @@
--- Distress Radar — D1 schema. Apply with `npm run cf:schema` (remote)
+-- Great Radar — D1 schema. Apply with `npm run cf:schema` (remote)
 -- or `npm run cf:schema:local` (wrangler pages dev local D1).
 
 CREATE TABLE IF NOT EXISTS sessions (

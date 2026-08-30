@@ -17,7 +17,7 @@ export function DealCard({ deal, index = 0 }: { deal: ScoredListing; index?: num
       <Link
         to={`/deals/${deal.id}`}
         className="stretch-link"
-        aria-label={`${deal.building}, ${formatAED(deal.askingPrice)}, distress score ${deal.score}`}
+        aria-label={`${deal.building}, ${formatAED(deal.askingPrice)}, great score ${deal.score}`}
       />
       <div className="deal-media">
         <PropertyArt listing={deal} className="art" />

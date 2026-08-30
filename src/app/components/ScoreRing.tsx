@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-/** Circular Distress Score ring — gradient stroke, fills on mount. */
+/** Circular Great Score ring — gradient stroke, fills on mount. */
 export function ScoreRing({ score, size = 56, stroke = 5 }: { score: number; size?: number; stroke?: number }) {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
@@ -15,7 +15,7 @@ export function ScoreRing({ score, size = 56, stroke = 5 }: { score: number; siz
   return (
     <div
       role="img"
-      aria-label={`Distress score ${score} out of 100`}
+      aria-label={`Great score ${score} out of 100`}
       style={{
         position: "relative",
         display: "inline-flex",
