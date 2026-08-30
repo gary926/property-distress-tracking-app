@@ -64,15 +64,55 @@ export function scoreListing(
     });
   }
 
+  // Below-market is judged against two separate references, because they mean
+  // different things. Cheap relative to its OWN BUILDING is the strong signal:
+  // same tower, same finish, same service charge, so a gap is the seller, not
+  // the asset. Cheap relative to the AREA is weaker on its own — an older or
+  // lower-spec tower sits below its neighbourhood permanently without any
+  // seller being motivated. So the building figure leads when we have it, and
+  // an area-only comparison scores at a discount.
   const psf = listing.askingPrice / listing.sqft;
-  const belowMarketPct =
-    listing.benchmarkPsf > 0 ? ((listing.benchmarkPsf - psf) / listing.benchmarkPsf) * 100 : 0;
+  const pctBelow = (ref?: number) =>
+    ref && ref > 0 ? ((ref - psf) / ref) * 100 : null;
+
+  const belowBuildingPct = pctBelow(listing.buildingPsf);
+  // Rows ingested before the split carry only benchmarkPsf; treat it as area.
+  const belowAreaPct = pctBelow(listing.areaPsf ?? listing.benchmarkPsf);
+
+  const usesBuilding = belowBuildingPct !== null;
+  const belowMarketPct = usesBuilding ? belowBuildingPct : (belowAreaPct ?? 0);
+  const belowMarketBasis: "building" | "area" | "none" = usesBuilding
+    ? "building"
+    : belowAreaPct !== null
+      ? "area"
+      : "none";
+
   if (belowMarketPct >= 5) {
-    const points = Math.round(Math.min(belowMarketPct / 30, 1) * weights.belowMarket);
+    // An area-only comparison caps at 70% of the weight: it is real evidence,
+    // just not conclusive about this particular seller.
+    const confidence = usesBuilding ? 1 : 0.7;
+    const points = Math.round(
+      Math.min(belowMarketPct / 30, 1) * weights.belowMarket * confidence,
+    );
+    const parts: string[] = [];
+    if (belowBuildingPct !== null) {
+      parts.push(
+        `${belowBuildingPct.toFixed(0)}% below the ${listing.building} average of AED ${Math.round(listing.buildingPsf!).toLocaleString()}/sqft`,
+      );
+    }
+    if (belowAreaPct !== null) {
+      const areaRef = listing.areaPsf ?? listing.benchmarkPsf!;
+      parts.push(
+        `${belowAreaPct.toFixed(0)}% below the ${listing.community} average of AED ${Math.round(areaRef).toLocaleString()}/sqft`,
+      );
+    }
     signals.push({
       kind: "below_market",
-      label: "Below market value",
-      detail: `AED ${Math.round(psf).toLocaleString()}/sqft vs ${listing.building || listing.community} average of AED ${Math.round(listing.benchmarkPsf).toLocaleString()}/sqft (${listing.benchmarkSource}) — ${belowMarketPct.toFixed(0)}% below.`,
+      label: usesBuilding ? "Below its building's average" : "Below area average",
+      detail:
+        `Asking AED ${Math.round(psf).toLocaleString()}/sqft — ${parts.join("; ")}` +
+        ` (${listing.benchmarkSource}).` +
+        (usesBuilding ? "" : " No building average available, so this scores at reduced confidence."),
       points,
     });
   }
@@ -123,7 +163,10 @@ export function scoreListing(
     signals: signals.sort((a, b) => b.points - a.points),
     dropPct,
     psf,
+    belowBuildingPct,
+    belowAreaPct,
     belowMarketPct,
+    belowMarketBasis,
     daysOnMarket,
   };
 }

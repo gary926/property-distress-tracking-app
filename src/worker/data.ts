@@ -67,10 +67,18 @@ export async function handleIngest(request: Request, env: Env): Promise<Response
   let created = 0;
   let priceCuts = 0;
   let updated = 0;
+  let rejectedRentals = 0;
   const date = today();
 
   for (const incoming of body.listings) {
     if (!incoming.id || typeof incoming.askingPrice !== "number") continue;
+    // v1 is sale-only. The transform already filters rentals, but a rental that
+    // slipped through would sit ~2 orders of magnitude below the sale prices in
+    // its group and poison every psf benchmark there — so reject at the door.
+    if (incoming.listingType && incoming.listingType !== "sale") {
+      rejectedRentals++;
+      continue;
+    }
     const existing = await env.DB.prepare("SELECT * FROM listings WHERE id = ?")
       .bind(incoming.id)
       .first<ListingRow>();
@@ -111,7 +119,7 @@ export async function handleIngest(request: Request, env: Env): Promise<Response
     updated++;
   }
 
-  return ok({ created, updated, priceCuts });
+  return ok({ created, updated, priceCuts, rejectedRentals });
 }
 
 // ---- Settings documents (single-user JSON docs in the settings table) ----

@@ -40,8 +40,13 @@ export interface Comp {
   beds: number;
 }
 
+/** v1 tracks sale listings only; rentals are a v2 feature. */
+export type ListingType = "sale";
+
 export interface Listing {
   id: string;
+  /** Always "sale" in v1 — the ingest rejects rentals outright. */
+  listingType: ListingType;
   title: string;
   building: string;
   community: string;
@@ -52,13 +57,27 @@ export interface Listing {
   sqft: number;
   askingPrice: number;
   priceHistory: PricePoint[]; // oldest → newest, first = original listing price
-  benchmarkPsf: number; // building/community avg AED per sqft
-  benchmarkSource: "DLD transactions" | "Listing averages";
+  /** Average AED/sqft for the *same building*, when known. The strongest
+   *  comparison: same tower, same build quality, same service charges. */
+  buildingPsf?: number;
+  /** Average AED/sqft for the surrounding area/community, when known.
+   *  Weaker evidence on its own — a whole tower can sit below its area. */
+  areaPsf?: number;
+  /** Where the two figures above came from. Portals publish both on the
+   *  listing page; otherwise they are computed from the scraped batch. */
+  benchmarkSource: "DLD transactions" | "Portal published" | "Listing averages";
+  /** Legacy single benchmark, kept so rows ingested before the split still
+   *  score. Treated as the area figure when areaPsf is absent. */
+  benchmarkPsf?: number;
   listedDate: string;
   relistCount: number;
   keywords: string[]; // distress keywords found in listing text
   description: string;
   portals: Portal[];
+  /** Deep link per portal, so the detail page can open the real listing. */
+  sourceUrls?: Partial<Record<Portal, string>>;
+  /** Single-URL form written by earlier sweeps; still read as a fallback. */
+  sourceUrl?: string;
   agent: { name: string; phone: string };
   imageHue: number; // deterministic placeholder art
   comps: Comp[];
@@ -78,7 +97,14 @@ export interface ScoredListing extends Listing {
   signals: Signal[];
   dropPct: number; // % below original listing price
   psf: number;
-  belowMarketPct: number; // % below benchmark psf
+  /** % below the building average (null when no building figure is known). */
+  belowBuildingPct: number | null;
+  /** % below the area average (null when no area figure is known). */
+  belowAreaPct: number | null;
+  /** The headline figure: building discount when available, else area. */
+  belowMarketPct: number;
+  /** Which comparison belowMarketPct came from. */
+  belowMarketBasis: "building" | "area" | "none";
   daysOnMarket: number;
 }
 

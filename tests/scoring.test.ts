@@ -5,6 +5,7 @@ import type { Listing } from "../src/shared/types";
 
 const base: Listing = {
   id: "t1",
+  listingType: "sale",
   title: "Test unit",
   building: "Test Tower",
   community: "Testville",
@@ -15,7 +16,8 @@ const base: Listing = {
   sqft: 1000,
   askingPrice: 1_000_000,
   priceHistory: [{ date: "2026-01-01", price: 1_000_000 }],
-  benchmarkPsf: 1000,
+  buildingPsf: 1000,
+  areaPsf: 1000,
   benchmarkSource: "DLD transactions",
   listedDate: "2026-08-01",
   relistCount: 0,
@@ -61,11 +63,57 @@ describe("scoreListing", () => {
     expect(over.dropPct).toBeCloseTo(15);
   });
 
-  it("fires below-market from the benchmark psf", () => {
-    const scored = scoreListing({ ...base, askingPrice: 800_000 }); // 800 psf vs 1000 avg
-    const signal = scored.signals.find((s) => s.kind === "below_market");
-    expect(signal).toBeDefined();
+  it("compares against the building and the area separately", () => {
+    // 800 psf vs a 1000 building average and a 900 area average.
+    const scored = scoreListing({ ...base, askingPrice: 800_000, areaPsf: 900 });
+    expect(scored.belowBuildingPct).toBeCloseTo(20);
+    expect(scored.belowAreaPct).toBeCloseTo(11.11, 1);
+    // The building figure leads: same tower, same spec.
+    expect(scored.belowMarketBasis).toBe("building");
     expect(scored.belowMarketPct).toBeCloseTo(20);
+    expect(scored.signals.find((s) => s.kind === "below_market")).toBeDefined();
+  });
+
+  it("falls back to the area comparison at reduced confidence", () => {
+    const withBuilding = scoreListing({ ...base, askingPrice: 800_000, areaPsf: 1000 });
+    const areaOnly = scoreListing({
+      ...base,
+      askingPrice: 800_000,
+      buildingPsf: undefined,
+      areaPsf: 1000,
+    });
+    expect(areaOnly.belowMarketBasis).toBe("area");
+    expect(areaOnly.belowBuildingPct).toBeNull();
+    expect(areaOnly.belowAreaPct).toBeCloseTo(20);
+    // Same discount, but an area-only match is weaker evidence, so scores lower.
+    const pts = (r: typeof areaOnly) =>
+      r.signals.find((s) => s.kind === "below_market")!.points;
+    expect(pts(areaOnly)).toBeLessThan(pts(withBuilding));
+  });
+
+  it("still scores rows that carry only the legacy benchmarkPsf", () => {
+    const legacy = scoreListing({
+      ...base,
+      askingPrice: 800_000,
+      buildingPsf: undefined,
+      areaPsf: undefined,
+      benchmarkPsf: 1000,
+    });
+    expect(legacy.belowMarketBasis).toBe("area");
+    expect(legacy.belowAreaPct).toBeCloseTo(20);
+  });
+
+  it("makes no below-market claim without any reference", () => {
+    const noRef = scoreListing({
+      ...base,
+      askingPrice: 800_000,
+      buildingPsf: undefined,
+      areaPsf: undefined,
+      benchmarkPsf: undefined,
+    });
+    expect(noRef.belowMarketBasis).toBe("none");
+    expect(noRef.belowMarketPct).toBe(0);
+    expect(noRef.signals.find((s) => s.kind === "below_market")).toBeUndefined();
   });
 
   it("matches configured keywords case-insensitively", () => {

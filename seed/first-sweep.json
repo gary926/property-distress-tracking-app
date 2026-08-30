@@ -10,9 +10,10 @@
     "baths": 3,
     "sqft": 1540,
     "askingPrice": 4000000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Vacant | Marina View | High Floor",
@@ -28,7 +29,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -36,7 +37,7 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
@@ -44,14 +45,17 @@
       {
         "source": "Listing avg",
         "label": "Cayan Tower · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2800000,
         "sqft": 1525,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16083937.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16083937.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16083937.html"
+    }
   },
   {
     "id": "pf-14066052",
@@ -64,9 +68,10 @@
     "baths": 4,
     "sqft": 2450,
     "askingPrice": 3000000,
-    "benchmarkPsf": 1224,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Fully Upgraded | Generous Layout | Vacant",
@@ -79,8 +84,11 @@
     },
     "imageHue": 226,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-14066052.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-14066052.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-14066052.html"
+    }
   },
   {
     "id": "pf-16144392",
@@ -93,9 +101,10 @@
     "baths": 2,
     "sqft": 693,
     "askingPrice": 1600000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Marina View | Unfurnished | Vacant",
@@ -111,7 +120,7 @@
       {
         "source": "Listing avg",
         "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1449000,
         "sqft": 598,
         "beds": 1
@@ -119,7 +128,7 @@
       {
         "source": "Listing avg",
         "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1450000,
         "sqft": 1224,
         "beds": 1
@@ -127,14 +136,17 @@
       {
         "source": "Listing avg",
         "label": "Sanibel Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1900000,
         "sqft": 938,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16144392.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16144392.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16144392.html"
+    }
   },
   {
     "id": "pf-15462731",
@@ -147,9 +159,10 @@
     "baths": 2,
     "sqft": 598,
     "askingPrice": 1449000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Vacant | Fully Furnished | Close to Mall",
@@ -165,7 +178,7 @@
       {
         "source": "Listing avg",
         "label": "Bay Central West · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 693,
         "beds": 1
@@ -173,7 +186,7 @@
       {
         "source": "Listing avg",
         "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1450000,
         "sqft": 1224,
         "beds": 1
@@ -181,14 +194,17 @@
       {
         "source": "Listing avg",
         "label": "Sanibel Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1900000,
         "sqft": 938,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15462731.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15462731.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15462731.html"
+    }
   },
   {
     "id": "pf-16015020",
@@ -201,9 +217,10 @@
     "baths": 3,
     "sqft": 1231,
     "askingPrice": 3399000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Exclusive | Penthouse Level | Sunset View",
@@ -219,7 +236,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -227,7 +244,7 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
@@ -235,14 +252,17 @@
       {
         "source": "Listing avg",
         "label": "Cayan Tower · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2800000,
         "sqft": 1525,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16015020.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16015020.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16015020.html"
+    }
   },
   {
     "id": "pf-16065000",
@@ -255,9 +275,10 @@
     "baths": 2,
     "sqft": 1350,
     "askingPrice": 2048000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Vacant Now | Marina Access | City Views",
@@ -273,7 +294,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -281,7 +302,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -289,14 +310,17 @@
       {
         "source": "Listing avg",
         "label": "Cayan Tower · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2800000,
         "sqft": 1525,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16065000.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16065000.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16065000.html"
+    }
   },
   {
     "id": "pf-15966507",
@@ -309,9 +333,10 @@
     "baths": 3,
     "sqft": 1525,
     "askingPrice": 2800000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "High Floor | Vacant | Expansive Layout",
@@ -327,7 +352,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -335,7 +360,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -343,14 +368,17 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15966507.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15966507.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15966507.html"
+    }
   },
   {
     "id": "pf-15842273",
@@ -363,9 +391,10 @@
     "baths": 4,
     "sqft": 2550,
     "askingPrice": 7850000,
-    "benchmarkPsf": 3078,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Upgraded Penthouse | Exclusive | Sea View",
@@ -378,8 +407,11 @@
     },
     "imageHue": 333,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15842273.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15842273.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15842273.html"
+    }
   },
   {
     "id": "pf-137449378",
@@ -392,9 +424,10 @@
     "baths": 2,
     "sqft": 1224,
     "askingPrice": 1450000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Furnished 1BR | Marina Living | High ROI| Hot Deal",
@@ -410,7 +443,7 @@
       {
         "source": "Listing avg",
         "label": "Bay Central West · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 693,
         "beds": 1
@@ -418,7 +451,7 @@
       {
         "source": "Listing avg",
         "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1449000,
         "sqft": 598,
         "beds": 1
@@ -426,14 +459,17 @@
       {
         "source": "Listing avg",
         "label": "Sanibel Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1900000,
         "sqft": 938,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html"
+    }
   },
   {
     "id": "pf-137447722",
@@ -446,9 +482,10 @@
     "baths": 3,
     "sqft": 1511,
     "askingPrice": 2895000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Canal And Partial Sea View | Corner | Vacant",
@@ -464,7 +501,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -472,7 +509,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -480,14 +517,17 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html"
+    }
   },
   {
     "id": "pf-137447197",
@@ -500,9 +540,10 @@
     "baths": 2,
     "sqft": 1417,
     "askingPrice": 3900000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Best Priced | 2BR-Vacant-Unfurnished | High Floor",
@@ -518,7 +559,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -526,7 +567,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -534,14 +575,17 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
+    }
   },
   {
     "id": "pf-137447162",
@@ -554,9 +598,10 @@
     "baths": 1,
     "sqft": 395,
     "askingPrice": 1275000,
-    "benchmarkPsf": 3228,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Best Priced | Fully Furnished | Pool View",
@@ -569,8 +614,11 @@
     },
     "imageHue": 186,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html"
+    }
   },
   {
     "id": "pf-137446798",
@@ -583,9 +631,10 @@
     "baths": 2,
     "sqft": 938,
     "askingPrice": 1900000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Full Marina View | Vacant Soon | Large Layout",
@@ -601,7 +650,7 @@
       {
         "source": "Listing avg",
         "label": "Bay Central West · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 693,
         "beds": 1
@@ -609,7 +658,7 @@
       {
         "source": "Listing avg",
         "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1449000,
         "sqft": 598,
         "beds": 1
@@ -617,14 +666,17 @@
       {
         "source": "Listing avg",
         "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1450000,
         "sqft": 1224,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-sanibel-tower-137446798.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-sanibel-tower-137446798.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-sanibel-tower-137446798.html"
+    }
   },
   {
     "id": "pf-137444864",
@@ -637,9 +689,10 @@
     "baths": 2,
     "sqft": 718,
     "askingPrice": 1650000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
       "reduced price"
@@ -657,7 +710,7 @@
       {
         "source": "Listing avg",
         "label": "Bay Central West · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 693,
         "beds": 1
@@ -665,7 +718,7 @@
       {
         "source": "Listing avg",
         "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1449000,
         "sqft": 598,
         "beds": 1
@@ -673,14 +726,17 @@
       {
         "source": "Listing avg",
         "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1450000,
         "sqft": 1224,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137444864.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137444864.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137444864.html"
+    }
   },
   {
     "id": "pf-137437380",
@@ -693,9 +749,10 @@
     "baths": 2,
     "sqft": 909,
     "askingPrice": 1875000,
-    "benchmarkPsf": 2180,
+    "listingType": "sale",
+    "areaPsf": 2180,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Marine View | Fully Furnished 1BR | Good Location",
@@ -711,7 +768,7 @@
       {
         "source": "Listing avg",
         "label": "Bay Central West · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 693,
         "beds": 1
@@ -719,7 +776,7 @@
       {
         "source": "Listing avg",
         "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1449000,
         "sqft": 598,
         "beds": 1
@@ -727,14 +784,17 @@
       {
         "source": "Listing avg",
         "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1450000,
         "sqft": 1224,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-fairfield-tower-137437380.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-fairfield-tower-137437380.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-fairfield-tower-137437380.html"
+    }
   },
   {
     "id": "pf-137433484",
@@ -747,9 +807,10 @@
     "baths": 3,
     "sqft": 2243,
     "askingPrice": 3699000,
-    "benchmarkPsf": 1916,
+    "listingType": "sale",
+    "areaPsf": 1916,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Marina View | Furnished | Vacant",
@@ -765,7 +826,7 @@
       {
         "source": "Listing avg",
         "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 4000000,
         "sqft": 1540,
         "beds": 2
@@ -773,7 +834,7 @@
       {
         "source": "Listing avg",
         "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3399000,
         "sqft": 1231,
         "beds": 2
@@ -781,14 +842,17 @@
       {
         "source": "Listing avg",
         "label": "Orra Marina · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2048000,
         "sqft": 1350,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html"
+    }
   },
   {
     "id": "pf-16177545",
@@ -801,9 +865,10 @@
     "baths": 3,
     "sqft": 1837,
     "askingPrice": 2279093,
-    "benchmarkPsf": 1241,
+    "listingType": "sale",
+    "areaPsf": 1350,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Prime Investment | Spacious 2 BR | High ROI",
@@ -816,8 +881,11 @@
     },
     "imageHue": 354,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16177545.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16177545.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16177545.html"
+    }
   },
   {
     "id": "pf-16315729",
@@ -830,9 +898,10 @@
     "baths": 2,
     "sqft": 1049,
     "askingPrice": 999999,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Spacious Apartment | Laundry | Big Balcony",
@@ -848,7 +917,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -856,7 +925,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
@@ -864,14 +933,17 @@
       {
         "source": "Listing avg",
         "label": "Rise Residences · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 900000,
         "sqft": 749,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16315729.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16315729.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16315729.html"
+    }
   },
   {
     "id": "pf-15444304",
@@ -884,9 +956,10 @@
     "baths": 2,
     "sqft": 795,
     "askingPrice": 1110000,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Brand new I Private pool I Spacious layout",
@@ -902,7 +975,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -910,7 +983,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
@@ -918,14 +991,17 @@
       {
         "source": "Listing avg",
         "label": "Rise Residences · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 900000,
         "sqft": 749,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15444304.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15444304.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15444304.html"
+    }
   },
   {
     "id": "pf-16250286",
@@ -938,9 +1014,10 @@
     "baths": 1,
     "sqft": 442,
     "askingPrice": 590000,
-    "benchmarkPsf": 1335,
+    "listingType": "sale",
+    "areaPsf": 1350,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "1% MONTHLY PAYMENT PLAN | BOUTIQUE | JVC | STUDIO | CASH DEAL",
@@ -956,14 +1033,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Apex · Studio",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 670000,
         "sqft": 427,
         "beds": 0
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16250286.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16250286.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16250286.html"
+    }
   },
   {
     "id": "pf-16271936",
@@ -976,9 +1056,10 @@
     "baths": 2,
     "sqft": 646,
     "askingPrice": 949999,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Smart Home | Next to Al Khail Exit | High Floor",
@@ -994,7 +1075,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -1002,7 +1083,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -1010,14 +1091,17 @@
       {
         "source": "Listing avg",
         "label": "Rise Residences · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 900000,
         "sqft": 749,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16271936.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16271936.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16271936.html"
+    }
   },
   {
     "id": "pf-16046188",
@@ -1030,9 +1114,10 @@
     "baths": 1,
     "sqft": 749,
     "askingPrice": 900000,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "OPEN VIEW | LARGE LAYOUT | HIGH QUALITY FINISHING",
@@ -1048,7 +1133,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -1056,7 +1141,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -1064,14 +1149,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16046188.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16046188.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16046188.html"
+    }
   },
   {
     "id": "pf-16308585",
@@ -1084,9 +1172,10 @@
     "baths": 1,
     "sqft": 427,
     "askingPrice": 670000,
-    "benchmarkPsf": 1569,
+    "listingType": "sale",
+    "areaPsf": 1350,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "BRAND NEW | PREMIUM QUALITY | HIGHER FLOOR",
@@ -1102,14 +1191,17 @@
       {
         "source": "Listing avg",
         "label": "Beverly Crown · Studio",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 590000,
         "sqft": 442,
         "beds": 0
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16308585.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16308585.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16308585.html"
+    }
   },
   {
     "id": "pf-15837924",
@@ -1122,9 +1214,10 @@
     "baths": 2,
     "sqft": 879,
     "askingPrice": 1199999,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "BRAND NEW | 1BHK | LOWEST PRICE | READY TO MOVE",
@@ -1140,7 +1233,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -1148,7 +1241,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -1156,14 +1249,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15837924.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15837924.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15837924.html"
+    }
   },
   {
     "id": "pf-15944843",
@@ -1176,9 +1272,10 @@
     "baths": 2,
     "sqft": 759,
     "askingPrice": 1139503,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Investor Deal | Attractive PP | Near To Circle Mall",
@@ -1194,7 +1291,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -1202,7 +1299,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -1210,14 +1307,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15944843.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15944843.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15944843.html"
+    }
   },
   {
     "id": "pf-15172708",
@@ -1230,9 +1330,10 @@
     "baths": 2,
     "sqft": 782,
     "askingPrice": 1000000,
-    "benchmarkPsf": 1365,
+    "listingType": "sale",
+    "areaPsf": 1365,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Beautifully Furnished | Fully Modernized | Pool View | VOT",
@@ -1248,7 +1349,7 @@
       {
         "source": "Listing avg",
         "label": "Crystal Residence · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 999999,
         "sqft": 1049,
         "beds": 1
@@ -1256,7 +1357,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1110000,
         "sqft": 795,
         "beds": 1
@@ -1264,14 +1365,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 949999,
         "sqft": 646,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15172708.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15172708.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15172708.html"
+    }
   },
   {
     "id": "pf-14649430",
@@ -1284,9 +1388,10 @@
     "baths": 1,
     "sqft": 626,
     "askingPrice": 1500000,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Stylish 1BHK | Spacious Layout | High Floor",
@@ -1302,7 +1407,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1310,7 +1415,7 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
@@ -1318,14 +1423,17 @@
       {
         "source": "Listing avg",
         "label": "Amara · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 995,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-14649430.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-14649430.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-14649430.html"
+    }
   },
   {
     "id": "pf-16221573",
@@ -1338,9 +1446,10 @@
     "baths": 1,
     "sqft": 1051,
     "askingPrice": 1869000,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Spacious 1BR | Prime Location | Exceptional Value",
@@ -1356,7 +1465,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1364,7 +1473,7 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
@@ -1372,14 +1481,17 @@
       {
         "source": "Listing avg",
         "label": "Amara · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 995,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16221573.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16221573.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16221573.html"
+    }
   },
   {
     "id": "pf-16090144",
@@ -1392,9 +1504,10 @@
     "baths": 1,
     "sqft": 520,
     "askingPrice": 849999,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Premium 1BHK | Stunning View | Luxury Living",
@@ -1410,7 +1523,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1418,7 +1531,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1426,14 +1539,17 @@
       {
         "source": "Listing avg",
         "label": "Amara · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1600000,
         "sqft": 995,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16090144.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16090144.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16090144.html"
+    }
   },
   {
     "id": "pf-16315609",
@@ -1446,9 +1562,10 @@
     "baths": 1,
     "sqft": 995,
     "askingPrice": 1600000,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Amara Tower | High Floor | Gated Community | Resale",
@@ -1464,7 +1581,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1472,7 +1589,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1480,14 +1597,17 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16315609.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16315609.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16315609.html"
+    }
   },
   {
     "id": "pf-15466765",
@@ -1500,9 +1620,10 @@
     "baths": 1,
     "sqft": 1167,
     "askingPrice": 1650000,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Hot Deal!!!! | Corner Apartment | Big Size | Stunning Views",
@@ -1518,7 +1639,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1526,7 +1647,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1534,14 +1655,17 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15466765.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15466765.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15466765.html"
+    }
   },
   {
     "id": "pf-16000456",
@@ -1554,9 +1678,10 @@
     "baths": 1,
     "sqft": 861,
     "askingPrice": 1625000,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "1BR+Balcony | Waterfront Living | Best Investment!",
@@ -1572,7 +1697,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1580,7 +1705,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1588,14 +1713,17 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16000456.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16000456.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16000456.html"
+    }
   },
   {
     "id": "pf-15471011",
@@ -1608,9 +1736,10 @@
     "baths": 1,
     "sqft": 996,
     "askingPrice": 1599990,
-    "benchmarkPsf": 1635,
+    "listingType": "sale",
+    "areaPsf": 1635,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Contemporary 1BR Apartment | Vibrant Community",
@@ -1626,7 +1755,7 @@
       {
         "source": "Listing avg",
         "label": "Renad Tower · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1500000,
         "sqft": 626,
         "beds": 1
@@ -1634,7 +1763,7 @@
       {
         "source": "Listing avg",
         "label": "Radisson Residences Tower 1 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1869000,
         "sqft": 1051,
         "beds": 1
@@ -1642,14 +1771,17 @@
       {
         "source": "Listing avg",
         "label": "Vista 3 · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 849999,
         "sqft": 520,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15471011.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15471011.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15471011.html"
+    }
   },
   {
     "id": "pf-16048920",
@@ -1662,9 +1794,10 @@
     "baths": 3,
     "sqft": 1475,
     "askingPrice": 2500000,
-    "benchmarkPsf": 1695,
+    "listingType": "sale",
+    "areaPsf": 1695,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
       "motivated seller"
@@ -1682,7 +1815,7 @@
       {
         "source": "Listing avg",
         "label": "Elie Saab Waterfront by Ohana · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3750000,
         "sqft": 2105,
         "beds": 2
@@ -1690,14 +1823,17 @@
       {
         "source": "Listing avg",
         "label": "Reem Hills · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2450000,
         "sqft": 1835,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16048920.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16048920.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16048920.html"
+    }
   },
   {
     "id": "pf-16137656",
@@ -1710,9 +1846,10 @@
     "baths": 2,
     "sqft": 2105,
     "askingPrice": 3750000,
-    "benchmarkPsf": 1695,
+    "listingType": "sale",
+    "areaPsf": 1695,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
       "motivated seller",
@@ -1731,7 +1868,7 @@
       {
         "source": "Listing avg",
         "label": "Manzel · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2500000,
         "sqft": 1475,
         "beds": 2
@@ -1739,14 +1876,17 @@
       {
         "source": "Listing avg",
         "label": "Reem Hills · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2450000,
         "sqft": 1835,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16137656.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16137656.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16137656.html"
+    }
   },
   {
     "id": "pf-16250259",
@@ -1759,9 +1899,10 @@
     "baths": 2,
     "sqft": 1835,
     "askingPrice": 2450000,
-    "benchmarkPsf": 1695,
+    "listingType": "sale",
+    "areaPsf": 1695,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Spacious 2BR With Balcony | Hot Deal | High ROI!",
@@ -1777,7 +1918,7 @@
       {
         "source": "Listing avg",
         "label": "Manzel · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2500000,
         "sqft": 1475,
         "beds": 2
@@ -1785,14 +1926,17 @@
       {
         "source": "Listing avg",
         "label": "Elie Saab Waterfront by Ohana · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 3750000,
         "sqft": 2105,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16250259.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16250259.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16250259.html"
+    }
   },
   {
     "id": "pf-16242165",
@@ -1805,9 +1949,10 @@
     "baths": 3,
     "sqft": 2672,
     "askingPrice": 14599999,
-    "benchmarkPsf": 2562,
+    "listingType": "sale",
+    "areaPsf": 2562,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Special Offer | Branded Residences | Ultra Luxury",
@@ -1823,7 +1968,7 @@
       {
         "source": "Listing avg",
         "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 8400000,
         "sqft": 3279,
         "beds": 2
@@ -1831,14 +1976,17 @@
       {
         "source": "Listing avg",
         "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 8250000,
         "sqft": 3279,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16242165.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16242165.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16242165.html"
+    }
   },
   {
     "id": "pf-16102278",
@@ -1851,9 +1999,10 @@
     "baths": 1,
     "sqft": 790,
     "askingPrice": 2709888,
-    "benchmarkPsf": 2778,
+    "listingType": "sale",
+    "areaPsf": 2778,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Boutique Luxury | Palace Branded | Burj Khalifa Views | Direct Metro",
@@ -1869,7 +2018,7 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Aquarise · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1880000,
         "sqft": 790,
         "beds": 1
@@ -1877,14 +2026,17 @@
       {
         "source": "Listing avg",
         "label": "Peninsula Two · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1750000,
         "sqft": 630,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16102278.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16102278.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16102278.html"
+    }
   },
   {
     "id": "pf-16139080",
@@ -1897,9 +2049,10 @@
     "baths": 2,
     "sqft": 790,
     "askingPrice": 1880000,
-    "benchmarkPsf": 2778,
+    "listingType": "sale",
+    "areaPsf": 2778,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Prime Investment | Cash Buyer Exclusive | High ROI",
@@ -1915,7 +2068,7 @@
       {
         "source": "Listing avg",
         "label": "Avarra by Palace · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2709888,
         "sqft": 790,
         "beds": 1
@@ -1923,14 +2076,17 @@
       {
         "source": "Listing avg",
         "label": "Peninsula Two · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1750000,
         "sqft": 630,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16139080.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16139080.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16139080.html"
+    }
   },
   {
     "id": "pf-16232833",
@@ -1943,9 +2099,10 @@
     "baths": 3,
     "sqft": 3279,
     "askingPrice": 8400000,
-    "benchmarkPsf": 2562,
+    "listingType": "sale",
+    "areaPsf": 2562,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "WORLD CLASS AMENITIES | ICONIC SKYSCRAPER | Q2 2027",
@@ -1961,7 +2118,7 @@
       {
         "source": "Listing avg",
         "label": "Bugatti Residences by Binghatti · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 14599999,
         "sqft": 2672,
         "beds": 2
@@ -1969,14 +2126,17 @@
       {
         "source": "Listing avg",
         "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 8250000,
         "sqft": 3279,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16232833.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16232833.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16232833.html"
+    }
   },
   {
     "id": "pf-16328711",
@@ -1989,9 +2149,10 @@
     "baths": 3,
     "sqft": 3279,
     "askingPrice": 8250000,
-    "benchmarkPsf": 2562,
+    "listingType": "sale",
+    "areaPsf": 2562,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Best Branded Deal | Top Class Amenities | High Floor | Amazing Views",
@@ -2007,7 +2168,7 @@
       {
         "source": "Listing avg",
         "label": "Bugatti Residences by Binghatti · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 14599999,
         "sqft": 2672,
         "beds": 2
@@ -2015,14 +2176,17 @@
       {
         "source": "Listing avg",
         "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 8400000,
         "sqft": 3279,
         "beds": 2
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16328711.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16328711.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16328711.html"
+    }
   },
   {
     "id": "pf-16110541",
@@ -2035,9 +2199,10 @@
     "baths": 1,
     "sqft": 630,
     "askingPrice": 1750000,
-    "benchmarkPsf": 2778,
+    "listingType": "sale",
+    "areaPsf": 2778,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
       "motivated seller"
@@ -2055,7 +2220,7 @@
       {
         "source": "Listing avg",
         "label": "Avarra by Palace · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2709888,
         "sqft": 790,
         "beds": 1
@@ -2063,14 +2228,17 @@
       {
         "source": "Listing avg",
         "label": "Binghatti Aquarise · 1BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 1880000,
         "sqft": 790,
         "beds": 1
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16110541.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16110541.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16110541.html"
+    }
   },
   {
     "id": "pf-16142136",
@@ -2083,9 +2251,10 @@
     "baths": 1,
     "sqft": 512,
     "askingPrice": 1390962,
-    "benchmarkPsf": 2717,
+    "listingType": "sale",
+    "areaPsf": 2747,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "PRIME RESIDENCES | LIMITED AVAILABILITY | 3-YEAR POST-HANDOVER PLAN",
@@ -2098,8 +2267,11 @@
     },
     "imageHue": 181,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16142136.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16142136.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16142136.html"
+    }
   },
   {
     "id": "pf-15812781",
@@ -2112,9 +2284,10 @@
     "baths": 4,
     "sqft": 6245,
     "askingPrice": 22500888,
-    "benchmarkPsf": 3603,
+    "listingType": "sale",
+    "areaPsf": 2747,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Wealthy Luxurious 3BR | Bugatti Branded | Best Price | Ready Soon",
@@ -2127,8 +2300,11 @@
     },
     "imageHue": 106,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-15812781.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15812781.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15812781.html"
+    }
   },
   {
     "id": "pf-16323718",
@@ -2141,9 +2317,10 @@
     "baths": 4,
     "sqft": 2504,
     "askingPrice": 1730000,
-    "benchmarkPsf": 691,
+    "listingType": "sale",
+    "areaPsf": 691,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Contemporary House | Lush Landscapes and Peaceful Setting | Resale",
@@ -2156,8 +2333,11 @@
     },
     "imageHue": 30,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16323718.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16323718.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16323718.html"
+    }
   },
   {
     "id": "pf-16319141",
@@ -2170,9 +2350,9 @@
     "baths": 4,
     "sqft": 2315,
     "askingPrice": 1600000,
-    "benchmarkPsf": 691,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Prestige Eco Residence | Advanced Smart Living | Resale",
@@ -2185,8 +2365,11 @@
     },
     "imageHue": 165,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16319141.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319141.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319141.html"
+    }
   },
   {
     "id": "pf-16319723",
@@ -2199,9 +2382,10 @@
     "baths": 5,
     "sqft": 2800,
     "askingPrice": 2699000,
-    "benchmarkPsf": 964,
+    "listingType": "sale",
+    "areaPsf": 691,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "4BHK | Freehold | Direct Access to kids play area",
@@ -2217,14 +2401,17 @@
       {
         "source": "Listing avg",
         "label": "Robinia · 4BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2000000,
         "sqft": 3705,
         "beds": 4
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16319723.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319723.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319723.html"
+    }
   },
   {
     "id": "pf-16323685",
@@ -2237,9 +2424,10 @@
     "baths": 5,
     "sqft": 3705,
     "askingPrice": 2000000,
-    "benchmarkPsf": 540,
+    "listingType": "sale",
+    "areaPsf": 691,
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Beautiful Masaar Retreat | Comfortable Indoor-Outdoor Living | Resale",
@@ -2255,14 +2443,17 @@
       {
         "source": "Listing avg",
         "label": "Robinia · 4BR",
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "price": 2699000,
         "sqft": 2800,
         "beds": 4
       }
     ],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16323685.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16323685.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16323685.html"
+    }
   },
   {
     "id": "pf-16319168",
@@ -2275,9 +2466,9 @@
     "baths": 5,
     "sqft": 3702,
     "askingPrice": 2030000,
-    "benchmarkPsf": 548,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Contemporary Green Villa | Sophisticated Family Lifestyle | Resale",
@@ -2290,8 +2481,11 @@
     },
     "imageHue": 165,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16319168.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319168.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319168.html"
+    }
   },
   {
     "id": "pf-16307451",
@@ -2304,9 +2498,9 @@
     "baths": 4,
     "sqft": 2150,
     "askingPrice": 1500000,
-    "benchmarkPsf": 698,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Premium 3BR Townhouse | With Maidroom + Lawn | Only 1.5 Million",
@@ -2319,8 +2513,11 @@
     },
     "imageHue": 2,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16307451.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16307451.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16307451.html"
+    }
   },
   {
     "id": "pf-16313187",
@@ -2333,9 +2530,9 @@
     "baths": 1,
     "sqft": 337,
     "askingPrice": 440000,
-    "benchmarkPsf": 1306,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "High ROI Investment | Modern Studio + Balcony | Maryam Island",
@@ -2348,8 +2545,11 @@
     },
     "imageHue": 122,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16313187.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16313187.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16313187.html"
+    }
   },
   {
     "id": "pf-16320088",
@@ -2362,9 +2562,9 @@
     "baths": 4,
     "sqft": 1900,
     "askingPrice": 1870000,
-    "benchmarkPsf": 984,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "NEW LAUNCH | FROM AED 1.87M | 5% DP | INVEST NOW",
@@ -2377,8 +2577,11 @@
     },
     "imageHue": 320,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16320088.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16320088.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16320088.html"
+    }
   },
   {
     "id": "pf-16304659",
@@ -2391,9 +2594,9 @@
     "baths": 5,
     "sqft": 4004,
     "askingPrice": 3050000,
-    "benchmarkPsf": 762,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Own a Villa with Just 10% | An Opportunity Worth Buying",
@@ -2406,8 +2609,11 @@
     },
     "imageHue": 279,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16304659.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16304659.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16304659.html"
+    }
   },
   {
     "id": "pf-16321016",
@@ -2420,9 +2626,9 @@
     "baths": 4,
     "sqft": 2100,
     "askingPrice": 1597000,
-    "benchmarkPsf": 760,
+    "listingType": "sale",
     "benchmarkSource": "Listing averages",
-    "listedDate": "2026-08-29",
+    "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
     "description": "Great Opportunity to Own a Luxury 3BR Apartment in Al Ghaf Tower",
@@ -2435,7 +2641,10 @@
     },
     "imageHue": 60,
     "comps": [],
-    "firstSeen": "2026-08-29",
-    "sourceUrl": "https://www.bayut.com/property/details-16321016.html"
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16321016.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16321016.html"
+    }
   }
 ]

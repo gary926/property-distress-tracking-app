@@ -59,12 +59,31 @@ UAE) with Firecrawl + Gmail connectors and this job:
    Costs ~5 credits per page. **Bayut's `?q=` param does not filter** — it
    silently returns the generic listing page, so don't try keyword search;
    scrape area pages and let the scoring engine find the signals.
+1b. **Enrich (optional but this is where the good benchmarks come from).**
+   Search pages carry no averages. The *listing detail page* does — verified
+   2026-08-29 on `bayut.com/property/details-16083937.html`, which publishes
+   "Average AED/sqft for DAMAC Heights: 1,500" and "for Dubai Marina area:
+   1,200". Scrape detail pages for the listings you care about, asking for
+   `buildingAveragePricePerSqft` and `areaAveragePricePerSqft` (the transform
+   reads exactly those names and prefers them over anything it computes).
+   **Costs ~5 credits per listing**, so enrich selectively — the top-scoring
+   listings, or ones whose price just moved — not the whole batch.
 2. **Transform**: `node scripts/transform-listings.mjs raw.json > listings.json`
    — maps loose extraction fields to the `Listing` shape, detects distress
-   keywords, and computes benchmark psf from the batch (building+bed-band →
-   community+bed-band → building; median, min 3 comparables). Bed banding is
-   load-bearing: an unbanded community average flags every large unit as
-   "below market".
+   keywords, drops any rental, and derives **two** benchmarks per listing:
+   `buildingPsf` (same tower) and `areaPsf` (surrounding community). Published
+   portal figures win; otherwise each is a bed-banded median over the batch
+   needing 3+ comparables. Bed banding is load-bearing — an unbanded average
+   flags every large unit as "below market" purely because big units carry
+   lower psf.
+
+   **Sale-only.** v1 tracks sales; rentals are v2. The transform rejects them
+   (rental URL paths, an explicit price-period field, "for rent"/"to let" in
+   the title) and `/api/ingest` rejects any row not marked `listingType:
+   "sale"`. One rental in a group would sit ~2 orders of magnitude below the
+   sale prices and poison every psf benchmark there. Note the filter must NOT
+   match period words in titles: UAE sale listings advertise instalment plans
+   ("1% MONTHLY PAYMENT PLAN"), and matching "monthly" there drops real deals.
 3. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
 4. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
    to the configured recipient via Gmail and send a phone push with the count

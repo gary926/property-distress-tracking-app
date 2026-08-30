@@ -51,7 +51,9 @@ export function DealDetail({ id }: { id: string }) {
   }
 
   const watchlisted = state?.watchlisted ?? false;
-  const fairValue = Math.round(deal.benchmarkPsf * deal.sqft);
+  // The chart's reference line uses the strongest benchmark we have.
+  const refPsf = deal.buildingPsf ?? deal.areaPsf ?? deal.benchmarkPsf ?? null;
+  const fairValue = refPsf ? Math.round(refPsf * deal.sqft) : deal.askingPrice;
   const cuts = countPriceCuts(deal);
 
   return (
@@ -186,16 +188,45 @@ export function DealDetail({ id }: { id: string }) {
             <h2 className="t-headline-md">Market alignment</h2>
             <div className="bench-hero">
               <span className="big tnum">AED {Math.round(deal.psf).toLocaleString()}/sqft</span>
-              <span className="t-muted">
-                vs {deal.building} average AED {Math.round(deal.benchmarkPsf).toLocaleString()}/sqft
-              </span>
-              {deal.belowMarketPct >= 1 && (
-                <span className="below-pill">{deal.belowMarketPct.toFixed(0)}% below</span>
-              )}
+              <span className="t-muted">this unit&rsquo;s asking rate</span>
             </div>
-            <p className="t-muted" style={{ fontSize: 13, margin: "8px 0 14px" }}>
-              Benchmark source: {deal.benchmarkSource}. Estimated fair value{" "}
-              <b className="tnum" style={{ color: "var(--ink)" }}>{formatAED(fairValue)}</b>.
+            <div className="fact-grid" style={{ marginTop: 14 }}>
+              <BenchmarkCard
+                label={`${deal.building} average`}
+                scope="Same building"
+                psf={deal.buildingPsf}
+                pct={deal.belowBuildingPct}
+                primary={deal.belowMarketBasis === "building"}
+              />
+              <BenchmarkCard
+                label={`${deal.community} average`}
+                scope="Wider area"
+                psf={deal.areaPsf ?? deal.benchmarkPsf}
+                pct={deal.belowAreaPct}
+                primary={deal.belowMarketBasis === "area"}
+              />
+            </div>
+            <p className="t-muted" style={{ fontSize: 13, margin: "12px 0 14px" }}>
+              Source: {deal.benchmarkSource}.{" "}
+              {deal.belowMarketBasis === "building" ? (
+                <>
+                  Scored on the building comparison — same tower and spec, so a gap points at
+                  the seller rather than the asset.
+                </>
+              ) : deal.belowMarketBasis === "area" ? (
+                <>
+                  No building average available, so this is scored on the area comparison at
+                  reduced confidence.
+                </>
+              ) : (
+                <>Not enough comparable stock to judge this one against the market yet.</>
+              )}
+              {refPsf ? (
+                <>
+                  {" "}Fair value at that rate:{" "}
+                  <b className="tnum" style={{ color: "var(--ink)" }}>{formatAED(fairValue)}</b>.
+                </>
+              ) : null}
             </p>
             <div className="table-wrap">
               <table className="comps-table">
@@ -278,21 +309,38 @@ export function DealDetail({ id }: { id: string }) {
 
           <section className="card panel enter">
             <h2 className="t-headline-md">Sources & agent</h2>
-            {deal.portals.map((p) => (
-              <a
-                key={p}
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="setting-row"
-                style={{ color: "var(--primary)", fontWeight: 500 }}
-              >
-                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <IconExternal size={16} />
-                  View on {p}
-                </span>
-                <span className="t-muted" style={{ fontSize: 12.5 }}>link with live feed</span>
-              </a>
-            ))}
+            {deal.portals.map((p) => {
+              // Prefer the per-portal deep link; fall back to the single-URL
+              // form written by earlier sweeps.
+              const href = deal.sourceUrls?.[p] ?? deal.sourceUrl;
+              if (!href) {
+                return (
+                  <span key={p} className="setting-row" style={{ color: "var(--muted)" }}>
+                    <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <IconExternal size={16} />
+                      {p}
+                    </span>
+                    <span style={{ fontSize: 12.5 }}>no link captured</span>
+                  </span>
+                );
+              }
+              return (
+                <a
+                  key={p}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="setting-row"
+                  style={{ color: "var(--primary)", fontWeight: 500 }}
+                >
+                  <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <IconExternal size={16} />
+                    View on {p}
+                  </span>
+                  <span className="t-muted" style={{ fontSize: 12.5 }}>opens in a new tab</span>
+                </a>
+              );
+            })}
             <div className="setting-row">
               <span>
                 <b style={{ fontSize: 14.5 }}>{deal.agent.name}</b>
@@ -306,6 +354,42 @@ export function DealDetail({ id }: { id: string }) {
         </div>
       </div>
     </>
+  );
+}
+
+function BenchmarkCard({
+  label,
+  scope,
+  psf,
+  pct,
+  primary,
+}: {
+  label: string;
+  scope: string;
+  psf?: number;
+  pct: number | null;
+  primary: boolean;
+}) {
+  return (
+    <div className="card fact" style={primary ? { borderColor: "var(--primary)" } : undefined}>
+      <p style={{ margin: 0 }}>{scope}</p>
+      <b className="tnum" style={{ fontSize: 17 }}>
+        {psf ? `AED ${Math.round(psf).toLocaleString()}/sqft` : "Not available"}
+      </b>
+      <p style={{ marginTop: 4 }}>{label}</p>
+      {pct !== null && (
+        <span
+          className="below-pill"
+          style={
+            pct >= 1
+              ? { marginTop: 6 }
+              : { marginTop: 6, background: "var(--surface-low)", color: "var(--muted)" }
+          }
+        >
+          {pct >= 1 ? `${pct.toFixed(0)}% below` : `${Math.abs(pct).toFixed(0)}% above`}
+        </span>
+      )}
+    </div>
   );
 }
 

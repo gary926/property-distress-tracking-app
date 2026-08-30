@@ -27,6 +27,43 @@ const DISTRESS_KEYWORDS = [
   "must sell",
 ];
 
+// v1 tracks SALE listings only — rentals are a v2 feature. Portals mix both in
+// some result sets and the price scale differs by ~2 orders of magnitude, so a
+// single rental slipping through would wreck every psf benchmark in its group.
+const RENT_URL_MARKERS = ["/rent/", "/to-rent", "for-rent", "/rent?", "rent/"];
+// Only an explicit price-period FIELD may use these. They must never be matched
+// against a title: UAE sale listings routinely advertise instalment plans
+// ("1% MONTHLY PAYMENT PLAN"), and treating that as a rental drops real deals.
+const RENT_PERIOD_MARKERS = [
+  "per year",
+  "per month",
+  "per annum",
+  "yearly",
+  "monthly",
+  "/yr",
+  "/year",
+  "/month",
+  "annually",
+];
+// Unambiguous in free text — no sale listing says "for rent".
+const RENT_TEXT_MARKERS = ["for rent", "to rent", "for lease", "to let"];
+
+function isRental(raw, title, url) {
+  const purpose = String(
+    pick(raw, "listingType", "purpose", "offeringType", "transactionType") ?? "",
+  ).toLowerCase();
+  if (purpose.includes("rent")) return true;
+  if (purpose.includes("sale") || purpose.includes("buy")) return false;
+
+  const u = String(url ?? "").toLowerCase();
+  if (RENT_URL_MARKERS.some((m) => u.includes(m))) return true;
+
+  const period = String(pick(raw, "pricePeriod", "rentFrequency", "frequency") ?? "").toLowerCase();
+  if (period && RENT_PERIOD_MARKERS.some((m) => period.includes(m))) return true;
+
+  return RENT_TEXT_MARKERS.some((m) => String(title ?? "").toLowerCase().includes(m));
+}
+
 const pick = (obj, ...names) => {
   const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
   const entries = Object.entries(obj).map(([k, v]) => [norm(k), v]);
@@ -97,6 +134,8 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
       const price = num(pick(raw, "priceAED", "price"));
       const sqft = num(pick(raw, "sizeSqft", "size", "area", "builtUpArea"));
       if (!price || !sqft) return null;
+      const urlEarly = pick(raw, "listingURL", "url", "link");
+      if (isRental(raw, title, urlEarly)) return null;
 
       const rawCommunity = String(pick(raw, "communityArea", "community", "area", "location") ?? "").trim();
       // "Marina Gate, Dubai Marina" → community is the broader trailing part.
@@ -121,6 +160,9 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
       const building = String(pick(raw, "buildingTowerName", "building", "tower") ?? parts[0] ?? community).trim();
       const url = pick(raw, "listingURL", "url", "link");
       const description = String(pick(raw, "description", "summary") ?? "").trim();
+      const portalName = String(
+        pick(raw, "portal") ?? (String(url).includes("bayut") ? "Bayut" : "Property Finder"),
+      );
       const bedsRaw = pick(raw, "bedrooms", "beds");
       const beds = typeof bedsRaw === "number" ? bedsRaw : (num(bedsRaw) ?? 0);
 
@@ -135,13 +177,23 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
         baths: num(pick(raw, "bathrooms", "baths")) ?? 1,
         sqft,
         askingPrice: price,
-        benchmarkPsf: 0, // filled in below
+        listingType: "sale",
+        // Portals publish both averages on the listing page. When the scrape
+        // captured them, they beat anything computed from our own batch.
+        publishedBuildingPsf: num(
+          pick(raw, "buildingAveragePricePerSqft", "buildingPsf", "towerAveragePsf"),
+        ),
+        publishedAreaPsf: num(
+          pick(raw, "areaAveragePricePerSqft", "areaPsf", "communityAveragePsf"),
+        ),
+        buildingPsf: undefined, // filled in below
+        areaPsf: undefined, // filled in below
         benchmarkSource: "Listing averages",
         listedDate: today,
         relistCount: 0,
         keywords: findKeywords(title, description, JSON.stringify(pick(raw, "urgencyPhrases") ?? "")),
         description: description || title,
-        portals: [String(pick(raw, "portal") ?? (String(url).includes("bayut") ? "Bayut" : "Property Finder"))],
+        portals: [portalName],
         agent: {
           name: String(pick(raw, "agentName", "agent") ?? "Listing agent"),
           phone: String(pick(raw, "agentPhone", "phone") ?? ""),
@@ -150,15 +202,20 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
         comps: [],
         firstSeen: today,
         sourceUrl: typeof url === "string" ? url : undefined,
+        sourceUrls: typeof url === "string" ? { [portalName]: url } : undefined,
         _source: source,
       };
     })
     .filter(Boolean);
 
-  // Benchmarks from the batch, most specific grouping that has enough depth:
-  // building+bed-band → community+bed-band → building → none. Bed banding
-  // matters: a 4-bed's psf is structurally lower than a studio's, so an
-  // unbanded community average flags every large unit as "below market".
+  // Two independent benchmarks, because they answer different questions:
+  //   buildingPsf — the same tower. Strong evidence about THIS seller.
+  //   areaPsf     — the surrounding community. Weaker: a whole tower can sit
+  //                 below its area permanently without anyone being motivated.
+  // Portal-published figures win when the scrape captured them; otherwise both
+  // are computed from the batch, bed-banded (a 4-bed's psf is structurally
+  // lower than a studio's, so an unbanded average flags every large unit).
+  const band = (beds) => (beds <= 0 ? "studio" : beds >= 4 ? "4plus" : String(beds));
   const groupPsf = (keyFn) => {
     const map = new Map();
     for (const l of interim) {
@@ -169,34 +226,38 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
     }
     return map;
   };
-  const band = (beds) => (beds <= 0 ? "studio" : beds >= 4 ? "4plus" : String(beds));
   const byBuildingBand = groupPsf((l) => `${l.community}|${l.building}|${band(l.beds)}`);
-  const byCommunityBand = groupPsf((l) => `${l.community}|${band(l.beds)}`);
   const byBuilding = groupPsf((l) => `${l.community}|${l.building}`);
+  const byAreaBand = groupPsf((l) => `${l.community}|${band(l.beds)}`);
+  const byArea = groupPsf((l) => l.community);
   // Median resists a single mispriced outlier better than the mean.
   const median = (a) => {
     const s = [...a].sort((x, y) => x - y);
     const m = Math.floor(s.length / 2);
     return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
   };
+  // A group must exclude the listing itself to be a fair comparison, so
+  // require 3+ members (the unit plus at least two genuine comparables).
+  const MIN_COMPARABLES = 3;
+  const fromGroup = (groups, key) => {
+    const arr = groups.get(key);
+    return arr && arr.length >= MIN_COMPARABLES ? Math.round(median(arr)) : undefined;
+  };
 
+  let anyPublished = false;
   for (const l of interim) {
-    const bb = byBuildingBand.get(`${l.community}|${l.building}|${band(l.beds)}`) ?? [];
-    const cb = byCommunityBand.get(`${l.community}|${band(l.beds)}`) ?? [];
-    const bldg = byBuilding.get(`${l.community}|${l.building}`) ?? [];
-    if (bb.length >= 3) {
-      l.benchmarkPsf = Math.round(median(bb));
-      l.benchmarkSource = "Listing averages";
-    } else if (cb.length >= 3) {
-      l.benchmarkPsf = Math.round(median(cb));
-      l.benchmarkSource = "Listing averages";
-    } else if (bldg.length >= 3) {
-      l.benchmarkPsf = Math.round(median(bldg));
-      l.benchmarkSource = "Listing averages";
-    } else {
-      // Not enough comparable stock in this batch — no below-market claim.
-      l.benchmarkPsf = Math.round(l.askingPrice / l.sqft);
-    }
+    l.buildingPsf =
+      l.publishedBuildingPsf ??
+      fromGroup(byBuildingBand, `${l.community}|${l.building}|${band(l.beds)}`) ??
+      fromGroup(byBuilding, `${l.community}|${l.building}`);
+    l.areaPsf =
+      l.publishedAreaPsf ??
+      fromGroup(byAreaBand, `${l.community}|${band(l.beds)}`) ??
+      fromGroup(byArea, l.community);
+    if (l.publishedBuildingPsf || l.publishedAreaPsf) anyPublished = true;
+    l.benchmarkSource =
+      l.publishedBuildingPsf || l.publishedAreaPsf ? "Portal published" : "Listing averages";
+    // Comps stay bed-banded and within the same community.
     l.comps = interim
       .filter((o) => o.id !== l.id && o.community === l.community && band(o.beds) === band(l.beds))
       .slice(0, 3)
@@ -208,7 +269,14 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
         sqft: o.sqft,
         beds: o.beds,
       }));
+    delete l.publishedBuildingPsf;
+    delete l.publishedAreaPsf;
     delete l._source;
+  }
+  if (!anyPublished) {
+    console.error(
+      "Note: no portal-published averages found in this batch — benchmarks computed from the scrape itself.",
+    );
   }
 
   // Dedupe by id, keeping the first occurrence.
