@@ -1,4 +1,4 @@
-# UAE Distress Deals Dashboard — Feature Plan
+# UAE Great Deals Dashboard — Feature Plan
 
 A personal tool for spotting great property listings across the UAE, scoring them,
 and alerting the owner the moment a good deal appears.
@@ -14,7 +14,7 @@ and alerting the owner the moment a good deal appears.
 - **Scope:** All UAE, with emirate as the primary filter. Benchmark quality tiers:
   Dubai (best, DLD transactions), Abu Dhabi (good), other emirates (listing-average only).
 - **Users & alerts:** single user; in-app review queue + push notifications + email alerts.
-- **Distress signals:** price-drop rule, listing-text keywords, days-on-market + relist
+- **Great-deal signals:** price-drop rule, listing-text keywords, days-on-market + relist
   patterns, below building/community average price-per-sqft.
 
 ## 1. Data ingestion
@@ -26,7 +26,7 @@ and alerting the owner the moment a good deal appears.
 - Price-history snapshots per listing (needed for drop and relist detection).
 - Data-source health tracking: last sync, listing counts, error states per source.
 
-## 2. Distress engine
+## 2. Great-deal engine
 
 Composite **Great Score (0–100)** from weighted signals, all thresholds configurable:
 
@@ -67,7 +67,7 @@ Severity tiers: **Hot / Warm / Watch**.
 
 - Instant push notification + email for high-score deals matching a saved search.
 - **Daily digest email**: scheduled email (configurable send time) summarizing all new
-  distress deals captured in the past 24 hours — deal photo, price, drop %, score,
+  great deals captured in the past 24 hours — deal photo, price, drop %, score,
   location, and a link into the dashboard for each.
 - Full alert customization, per channel (push vs email independently):
   - which events trigger each channel (new Hot deal, any new flag, price cut on a

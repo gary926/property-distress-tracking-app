@@ -76,7 +76,7 @@ The job it runs:
    silently returns the generic listing page, so don't try keyword search;
    scrape area pages and let the scoring engine find the signals.
 2. **Transform**: `node scripts/transform-listings.mjs raw.json > listings.json`
-   — maps loose extraction fields to the `Listing` shape, detects distress
+   — maps loose extraction fields to the `Listing` shape, detects great-deal
    keywords, drops any rental, and derives **two** benchmarks per listing:
    `buildingPsf` (same tower) and `areaPsf` (surrounding community). Published
    portal figures win; otherwise each is a bed-banded median over the batch
@@ -293,7 +293,7 @@ building.
 **`buildingTxnPsf` is deliberately not scored.** These are settled prices and
 `askingPrice` is an asking price; folding them into `buildingPsf` would compare
 what a seller wants against what buyers paid and read the ordinary gap between
-them as distress. It is displayed as its own card ("What buyers paid") and the
+them as a great deal. It is displayed as its own card ("What buyers paid") and the
 detail screen says plainly that the scored averages are asking prices. Adding
 a signal for "priced below even the settled comps" is a real idea, but it is a
 scoring change and has not been made — scores are byte-identical before and
