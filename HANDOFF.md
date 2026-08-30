@@ -45,10 +45,26 @@ hits, staleness/relists), capped at 99. Tiers: hot ≥70, warm ≥45. Weights,
 threshold, keywords, and staleness cutoff are user-tunable in Settings and
 stored in D1; the worker's digest uses the same stored settings.
 
-## The daily sweep (to activate after first deploy)
+## The daily sweep
 
-Create a scheduled Claude routine (fresh session, daily ~04:00 UTC = 08:00
-UAE) with Firecrawl + Gmail connectors and this job:
+**Live as of 2026-08-30**: scheduled Claude routine "Distress Radar — daily UAE
+sweep (08:00 Gulf)", `trig_012q6gKm7um8H2sYQuuDxv2y`, cron `0 4 * * *` (04:00
+UTC = 08:00 Gulf), fresh session per firing, completion push on.
+
+Two things it depends on that do not live in this repo:
+
+- **Connectors.** The routine needs Firecrawl and Gmail attached. Triggers
+  created through the MCP tool cannot carry connectors on this account, so they
+  were attached by hand in claude.ai → Routines. If a run reports "no
+  Firecrawl/Gmail connectors attached", that is what came adrift.
+- **The INGEST_TOKEN**, which lives in the routine's prompt and in Cloudflare
+  (`npm run cf:secrets`). Rotating it means changing it in both. It is
+  deliberately not written down in this repo.
+
+The routine checks out `claude/uae-distress-deals-dashboard-j3184x`, because
+`main` is still the initial commit. Merge that branch and this step can go.
+
+The job it runs:
 
 1. **Scrape** each portal area page with `firecrawl_scrape`, `formats: ["json"]`,
    extracting title, building, community, emirate, price AED, beds, baths,
