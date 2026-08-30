@@ -64,11 +64,20 @@ function normalise(name) {
     .trim();
 }
 
+/** Names must line up on whole words, and the shorter one has to be specific
+ *  enough to mean something. Both rules are load-bearing: the table's rank
+ *  prefix is already stripped at parse time, so a tower genuinely named "23
+ *  Marina" stays "23 Marina" — strip a number again and it becomes "marina",
+ *  which substring-matches most of the community ("ARY Marina View" did). */
 function matchesBuilding(rowLabel, building) {
-  const a = normalise(rowLabel).replace(/^\d+\s+/, ""); // strip the rank prefix
+  const a = normalise(rowLabel);
   const b = normalise(building);
   if (!a || !b) return false;
-  return a === b || a.includes(b) || b.includes(a);
+  if (a === b) return true;
+  const [shorter, longer] = a.length <= b.length ? [a, b] : [b, a];
+  const specific = shorter.includes(" ") || shorter.length >= 8;
+  if (!specific) return false;
+  return ` ${longer} `.includes(` ${shorter} `);
 }
 
 /** "for other 4 Beds apartments in Dubai Marina" → the area average, printed
@@ -182,12 +191,30 @@ export function parseDetailPage(markdown, listing = {}) {
   const listingPsf =
     listing.askingPrice && listing.sqft ? listing.askingPrice / listing.sqft : undefined;
   const buildingAverages = parseBuildingAverages(md);
-  const mine = listing.building
-    ? buildingAverages.find((r) => matchesBuilding(r.name, listing.building))
+  const forListing = listing.locationPath ?? listing.building;
+  const mine = forListing
+    ? buildingAverages.find((r) => matchesBuilding(r.name, forListing))
     : undefined;
+  const area = parseAreaAverage(md, listingPsf);
+
+  // The chart's label always names the community, but the figure is scoped to
+  // whatever location Bayut filed the listing under — which for a unit in a
+  // sub-development is that sub-development, not the community. Two Dubai
+  // Marina 2-bed pages read on the same day proved it: Cayan Tower and DAMAC
+  // Heights both said 2,079, while Marina Gate 2 said 3,105 — exactly its own
+  // row in the per-location table below. Treating that as the Dubai Marina
+  // average would have marked every other 2-bed in the community ~33% below
+  // market. When the figure coincides with a named location, assume it is that
+  // location's, and let it benchmark only listings that sit there.
+  const scopedTo = area.areaPsf
+    ? buildingAverages.find((r) => r.psf === area.areaPsf)?.name
+    : undefined;
+
   return {
     purpose: parsePurpose(md),
-    ...parseAreaAverage(md, listingPsf),
+    ...area,
+    areaPsfScope: area.areaPsf ? (scopedTo ? "location" : "community") : undefined,
+    areaPsfLocation: scopedTo,
     buildingAverages,
     buildingPsf: mine?.psf,
     transactions: parseTransactions(md, listing.beds),
@@ -227,7 +254,10 @@ export function enrich(listings, pages) {
     const key = `${owner.community}|${band(owner.beds)}`;
     const existing = benchmarks.get(key) ?? { buildingAverages: [] };
     benchmarks.set(key, {
-      areaPsf: existing.areaPsf ?? parsed.areaPsf,
+      // Only a community-scoped figure describes the band as a whole. A
+      // location-scoped one still reaches the listings it covers, through the
+      // per-location table it was matched against.
+      areaPsf: existing.areaPsf ?? (parsed.areaPsfScope === "community" ? parsed.areaPsf : undefined),
       // Merge tables across pages in the same band — different pages surface
       // slightly different "popular" buildings.
       buildingAverages: [
@@ -257,9 +287,12 @@ export function enrich(listings, pages) {
       next.benchmarkSource = "Portal published";
       stats.area++;
     }
-    const match = published?.buildingAverages.find((r) => matchesBuilding(r.name, listing.building));
+    const match = published?.buildingAverages.find((r) =>
+      matchesBuilding(r.name, listing.locationPath ?? listing.building),
+    );
     if (match) {
       next.buildingPsf = match.psf;
+      next.buildingPsfLabel = match.name;
       next.benchmarkSource = "Portal published";
       stats.building++;
     }

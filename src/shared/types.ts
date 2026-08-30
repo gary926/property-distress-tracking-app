@@ -49,6 +49,11 @@ export interface Listing {
   listingType: ListingType;
   title: string;
   building: string;
+  /** The portal's full location path ("Noora Tower, Al Habtoor City, Business
+   *  Bay") when it carries more than `building` does. Never displayed — it is
+   *  what the benchmark matcher uses, because a unit's published comparison is
+   *  often against its sub-development rather than its tower. */
+  locationPath?: string;
   community: string;
   emirate: Emirate;
   type: PropertyType;
@@ -60,6 +65,11 @@ export interface Listing {
   /** Average AED/sqft for the *same building*, when known. The strongest
    *  comparison: same tower, same build quality, same service charges. */
   buildingPsf?: number;
+  /** What `buildingPsf` actually describes. The portal's per-location table
+   *  lists towers in some communities and sub-districts in others, so the
+   *  figure is often the development's rather than the tower's — and saying
+   *  "Beverly Crown average" when it is JVC District 11's would misstate it. */
+  buildingPsfLabel?: string;
   /** Average AED/sqft for the surrounding area/community, when known.
    *  Weaker evidence on its own — a whole tower can sit below its area. */
   areaPsf?: number;

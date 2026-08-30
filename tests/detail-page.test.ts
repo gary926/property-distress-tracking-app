@@ -26,6 +26,24 @@ describe("parseDetailPage", () => {
     expect(parseDetailPage(page, { ...unit, building: "Nowhere Tower" }).buildingPsf).toBeUndefined();
   });
 
+  it("does not match a tower whose name merely shares a common word", () => {
+    // "23 Marina" is a real tower name. Stripping its leading number leaves
+    // "marina", which would match most of the community — "ARY Marina View"
+    // was wrongly given 23 Marina's average before this was fixed.
+    const withNumberedTower = page.replace("| 2 Cayan Tower | 2,866 | 1.8% |", "| 2 23 Marina | 2,866 | 1.8% |");
+    expect(parseDetailPage(withNumberedTower, { ...unit, building: "ARY Marina View" }).buildingPsf).toBeUndefined();
+    expect(parseDetailPage(withNumberedTower, { ...unit, building: "23 Marina" }).buildingPsf).toBe(2866);
+  });
+
+  it("matches a sub-development named inside the listing's location path", () => {
+    const parsed = parseDetailPage(page, {
+      ...unit,
+      building: "Noora Tower",
+      locationPath: "Noora Tower, Horizon Tower, Dubai Marina",
+    });
+    expect(parsed.buildingPsf).toBe(1357);
+  });
+
   it("reads same-building transactions as ISO-dated comps", () => {
     const { transactions } = parseDetailPage(page, unit);
     expect(transactions).toHaveLength(6);
@@ -128,6 +146,73 @@ describe("enrich", () => {
   });
 });
 
+describe("chart scope", () => {
+  // Real pages read on 2026-08-30. Cayan Tower and DAMAC Heights (filed
+  // straight under Dubai Marina) both reported 2,079 for 2-bed; Marina Gate 2
+  // reported 3,105, which is exactly its own row in the per-location table,
+  // because Bayut files it under the "Marina Gate" sub-development.
+  const marinaGatePage = `
+## Property Information
+
+- PurposeFor Sale
+
+## Trends & Indices
+
+### Average price/sqft\*
+
+for other 2 Beds apartments in Dubai Marina
+
+3,1052,761Avg. price/sqftAsking Price5001,0001,5002,0002,5003,0003,500
+
+### Popular locations\*\*
+
+|  | Avg. price/sqft | VS Q2 2026 |
+| --- | --- | --- |
+| 1 Stella Maris | 2,664 | 0.1% |
+| 5 Marina Gate | 3,105 | 0.6% |
+`;
+  const marinaGate = {
+    id: "pf-16015020",
+    building: "Marina Gate 2",
+    community: "Dubai Marina",
+    beds: 2,
+    askingPrice: 3_399_000,
+    sqft: 1231,
+    comps: [],
+  };
+
+  it("recognises a figure that is really a sub-development's", () => {
+    const parsed = parseDetailPage(marinaGatePage, marinaGate);
+    expect(parsed.areaPsf).toBe(3105);
+    expect(parsed.areaPsfScope).toBe("location");
+    expect(parsed.areaPsfLocation).toBe("Marina Gate");
+  });
+
+  it("still treats an unmatched figure as the community's", () => {
+    // Cayan Tower is filed directly under Dubai Marina, so 2,079 matches no row.
+    const cayanPage = marinaGatePage
+      .replace("3,1052,761", "2,0791,836")
+      .replace("| 5 Marina Gate | 3,105 | 0.6% |", "| 5 Marina Gate | 3,105 | 0.6% |");
+    const cayan = { ...marinaGate, id: "pf-15966507", building: "Cayan Tower", askingPrice: 2_800_000, sqft: 1525 };
+    const parsed = parseDetailPage(cayanPage, cayan);
+    expect(parsed.areaPsf).toBe(2079);
+    expect(parsed.areaPsfScope).toBe("community");
+  });
+
+  it("never lets a sub-development's figure benchmark the whole band", () => {
+    // The bug this guards: propagating 3,105 would have marked every other
+    // Dubai Marina 2-bed roughly a third below market.
+    const neighbour = { ...marinaGate, id: "pf-15966507", building: "Cayan Tower", areaPsf: undefined };
+    const { listings } = enrich(
+      [marinaGate, neighbour],
+      [{ id: marinaGate.id, markdown: marinaGatePage }],
+    );
+    expect(listings[1].areaPsf).toBeUndefined();
+    // It does still benchmark the listing that actually sits there.
+    expect(listings[0].buildingPsf).toBe(3105);
+  });
+});
+
 describe("pagesToScrape", () => {
   it("picks one listing per area and bedroom band, busiest band first", () => {
     const l = (id: string, community: string, beds: number) => ({ id, community, beds, sourceUrl: `u/${id}` });
@@ -139,6 +224,6 @@ describe("pagesToScrape", () => {
     ]);
     expect(plan).toHaveLength(3);
     expect(plan[0]).toMatchObject({ id: "a", community: "Dubai Marina", band: "2", covers: 2 });
-    expect(plan.map((p) => p.band)).toEqual(["2", "4plus", "studio"]);
+    expect(plan.map((p: { band: string }) => p.band)).toEqual(["2", "4plus", "studio"]);
   });
 });

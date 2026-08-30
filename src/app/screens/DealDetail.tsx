@@ -192,8 +192,12 @@ export function DealDetail({ id }: { id: string }) {
             </div>
             <div className="fact-grid" style={{ marginTop: 14 }}>
               <BenchmarkCard
-                label={`${deal.building} average`}
-                scope="Same building"
+                label={`${deal.buildingPsfLabel ?? deal.building} average`}
+                scope={
+                  deal.buildingPsfLabel && deal.buildingPsfLabel !== deal.building
+                    ? "Same development"
+                    : "Same building"
+                }
                 psf={deal.buildingPsf}
                 pct={deal.belowBuildingPct}
                 primary={deal.belowMarketBasis === "building"}

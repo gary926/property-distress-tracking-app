@@ -130,7 +130,8 @@
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-14066052.html"
     },
-    "buildingPsf": 1357
+    "buildingPsf": 1357,
+    "buildingPsfLabel": "Horizon Tower"
   },
   {
     "id": "pf-16144392",
@@ -313,7 +314,8 @@
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16015020.html"
     },
-    "buildingPsf": 3105
+    "buildingPsf": 3105,
+    "buildingPsfLabel": "Marina Gate"
   },
   {
     "id": "pf-16065000",
@@ -670,7 +672,8 @@
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
     },
-    "buildingPsf": 3105
+    "buildingPsf": 3105,
+    "buildingPsfLabel": "Marina Gate"
   },
   {
     "id": "pf-137447162",
@@ -951,8 +954,8 @@
     "sqft": 1837,
     "askingPrice": 2279093,
     "listingType": "sale",
-    "areaPsf": 1630,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1017,8 +1020,8 @@
     "sqft": 1049,
     "askingPrice": 999999,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1083,8 +1086,8 @@
     "sqft": 795,
     "askingPrice": 1110000,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1141,8 +1144,8 @@
     "sqft": 442,
     "askingPrice": 590000,
     "listingType": "sale",
-    "areaPsf": 1702,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1207,8 +1210,8 @@
     "sqft": 646,
     "askingPrice": 949999,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1265,8 +1268,8 @@
     "sqft": 749,
     "askingPrice": 900000,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1323,8 +1326,8 @@
     "sqft": 427,
     "askingPrice": 670000,
     "listingType": "sale",
-    "areaPsf": 1702,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1365,8 +1368,8 @@
     "sqft": 879,
     "askingPrice": 1199999,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1423,8 +1426,8 @@
     "sqft": 759,
     "askingPrice": 1139503,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1481,8 +1484,8 @@
     "sqft": 782,
     "askingPrice": 1000000,
     "listingType": "sale",
-    "areaPsf": 1415,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1945,8 +1948,8 @@
     "sqft": 1475,
     "askingPrice": 2500000,
     "listingType": "sale",
-    "areaPsf": 1530,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1695,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
@@ -1997,13 +2000,12 @@
     "sqft": 2105,
     "askingPrice": 3750000,
     "listingType": "sale",
-    "areaPsf": 1530,
-    "benchmarkSource": "Portal published",
+    "areaPsf": 1695,
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
-      "motivated seller",
-      "below original price"
+      "motivated seller"
     ],
     "description": "Sea View | Below OP | Corner 2BR+M | Motivated Seller",
     "portals": [
@@ -2050,7 +2052,7 @@
     "sqft": 1835,
     "askingPrice": 2450000,
     "listingType": "sale",
-    "areaPsf": 1530,
+    "areaPsf": 1695,
     "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
@@ -2087,7 +2089,8 @@
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16250259.html"
     },
-    "buildingPsf": 1530
+    "buildingPsf": 1530,
+    "buildingPsfLabel": "Reem Hills"
   },
   {
     "id": "pf-16242165",
@@ -2422,7 +2425,8 @@
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16110541.html"
     },
-    "buildingPsf": 2627
+    "buildingPsf": 2627,
+    "buildingPsfLabel": "Peninsula"
   },
   {
     "id": "pf-16142136",
@@ -2562,7 +2566,7 @@
     "building": "Kaya",
     "community": "Tilal City",
     "emirate": "Sharjah",
-    "type": "Townhouse",
+    "type": "Apartment",
     "beds": 3,
     "baths": 4,
     "sqft": 2504,
@@ -2595,7 +2599,7 @@
     "building": "Sharjah Sustainable City",
     "community": "Al Rahmaniya",
     "emirate": "Sharjah",
-    "type": "Townhouse",
+    "type": "Apartment",
     "beds": 3,
     "baths": 4,
     "sqft": 2315,
@@ -2628,7 +2632,7 @@
     "building": "Robinia",
     "community": "Tilal City",
     "emirate": "Sharjah",
-    "type": "Townhouse",
+    "type": "Apartment",
     "beds": 4,
     "baths": 5,
     "sqft": 2800,
@@ -2670,7 +2674,7 @@
     "building": "Robinia",
     "community": "Tilal City",
     "emirate": "Sharjah",
-    "type": "Townhouse",
+    "type": "Apartment",
     "beds": 4,
     "baths": 5,
     "sqft": 3705,
@@ -2718,7 +2722,7 @@
     "sqft": 3702,
     "askingPrice": 2030000,
     "listingType": "sale",
-    "benchmarkSource": "Portal published",
+    "benchmarkSource": "Listing averages",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2736,8 +2740,7 @@
     "sourceUrl": "https://www.bayut.com/property/details-16319168.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16319168.html"
-    },
-    "areaPsf": 850
+    }
   },
   {
     "id": "pf-16307451",
@@ -2771,7 +2774,8 @@
       "Bayut": "https://www.bayut.com/property/details-16307451.html"
     },
     "areaPsf": 812,
-    "buildingPsf": 801
+    "buildingPsf": 801,
+    "buildingPsfLabel": "Nasma Residence"
   },
   {
     "id": "pf-16313187",
@@ -2812,7 +2816,7 @@
     "building": "Masaar 3",
     "community": "Al Menhaz",
     "emirate": "Sharjah",
-    "type": "Townhouse",
+    "type": "Apartment",
     "beds": 2,
     "baths": 4,
     "sqft": 1900,
@@ -2837,8 +2841,8 @@
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16320088.html"
     },
-    "areaPsf": 980,
-    "buildingPsf": 980
+    "buildingPsf": 980,
+    "buildingPsfLabel": "Masaar 3"
   },
   {
     "id": "pf-16304659",
@@ -2872,7 +2876,8 @@
       "Bayut": "https://www.bayut.com/property/details-16304659.html"
     },
     "areaPsf": 822,
-    "buildingPsf": 815
+    "buildingPsf": 815,
+    "buildingPsfLabel": "Shoumous Residential Complex"
   },
   {
     "id": "pf-16321016",
@@ -2906,6 +2911,7 @@
       "Bayut": "https://www.bayut.com/property/details-16321016.html"
     },
     "areaPsf": 881,
-    "buildingPsf": 736
+    "buildingPsf": 736,
+    "buildingPsfLabel": "Al Ghaf Tower by Tiger Properties"
   }
 ]

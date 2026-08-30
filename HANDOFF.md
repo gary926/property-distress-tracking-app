@@ -165,7 +165,42 @@ been observed dropping.
   2026-08-29; the scrape → transform → ingest → score chain was run end to end
   on 16 real Dubai Marina listings against local D1.
 
+## Benchmark scoping — two traps the first live run walked into
+
+Both were found on 2026-08-30 by running the pipeline against live pages, and
+both would have manufactured false "below market" flags rather than failing
+loudly. Tests cover them; read this before touching `parse-detail-page.mjs`.
+
+- **The chart's label lies about its scope.** It always says "for other N Beds
+  apartments in <community>", but the figure is scoped to whatever location
+  Bayut filed the listing under. On the same day, for Dubai Marina 2-beds,
+  Cayan Tower and DAMAC Heights both reported 2,079 while Marina Gate 2
+  reported 3,105 — exactly its own row in the per-location table, because it
+  sits in the "Marina Gate" sub-development. Propagating that across the band
+  would have marked every other 2-bed roughly a third below market. The
+  parser now treats a figure that coincides with a named location row as that
+  location's, and only a community-scoped figure benchmarks a whole band.
+- **Loose name matching.** The per-location table is ranked, so rows arrive as
+  "1 Horizon Tower" and the rank is stripped at parse time. Stripping a number
+  *again* in the matcher turned the real tower "23 Marina" into "marina",
+  which substring-matched most of the community — "ARY Marina View" was handed
+  23 Marina's average. Matching is now whole-word, and the shorter name has to
+  be at least two words or eight characters.
+
+A corollary worth keeping: what the per-location table names is often the
+*development* (Al Habtoor City, JVC District 11), not the tower. `buildingPsf`
+therefore travels with `buildingPsfLabel` naming what was actually matched, and
+the detail screen says "Same development" rather than pretending it is the
+tower's own figure.
+
 ## Gotchas already hit
+
+- **The app's own domain is blocked from the Claude session's egress proxy.**
+  `distress-radar.pages.dev` returns 403 on CONNECT, so a session cannot call
+  `/api/ingest` or `/api/digest` — the two HTTP hops in the sweep. Writing to
+  D1 through the Cloudflare connector works and is how the first two loads were
+  done. Fixing this properly means allowing the host in the environment's
+  network policy; until then the routine cannot complete steps 4 and 5.
 
 - **Pages preview vs production is the one that bit us.** `wrangler pages deploy`
   infers the branch from git. Deploying while on a feature branch creates a

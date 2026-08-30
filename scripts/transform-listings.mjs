@@ -157,7 +157,14 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
         parts = parts.slice(0, -1);
       }
       const community = parts[parts.length - 1] || "Unknown";
-      const building = String(pick(raw, "buildingTowerName", "building", "tower") ?? parts[0] ?? community).trim();
+      // Portals return a path, not a name: "Peninsula Two, Peninsula, Business
+      // Bay". The head of it is the tower and is what we show; the whole path
+      // is kept for benchmark matching, since the published figure for a unit
+      // in a sub-development is that sub-development's.
+      const locationPath = String(
+        pick(raw, "buildingTowerName", "building", "tower") ?? parts[0] ?? community,
+      ).trim();
+      const building = locationPath.split(",")[0].trim() || community;
       const url = pick(raw, "listingURL", "url", "link");
       const description = String(pick(raw, "description", "summary") ?? "").trim();
       const portalName = String(
@@ -170,6 +177,7 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
         id: slugId(url, title, building),
         title: title || `${beds || "Studio"} in ${building}`,
         building,
+        locationPath: locationPath === building ? undefined : locationPath,
         community,
         emirate: inferEmirate(raw, rawCommunity),
         type: inferType(raw, title, beds),
