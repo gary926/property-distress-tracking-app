@@ -63,7 +63,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16083937.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16083937.html"
-    }
+    },
+    "buildingTxnPsf": 1984,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-14066052",
@@ -131,7 +133,9 @@
       "Bayut": "https://www.bayut.com/property/details-14066052.html"
     },
     "buildingPsf": 1357,
-    "buildingPsfLabel": "Horizon Tower"
+    "buildingPsfLabel": "Horizon Tower",
+    "buildingTxnPsf": 1052,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-16144392",
@@ -197,7 +201,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16144392.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16144392.html"
-    }
+    },
+    "buildingTxnPsf": 2230,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-15462731",
@@ -285,27 +291,35 @@
     "imageHue": 19,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-30",
-        "price": 4000000,
-        "sqft": 1540,
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-07-07",
+        "price": 3100000,
+        "sqft": 1229,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Orra Marina · 2BR",
-        "date": "2026-08-30",
-        "price": 2048000,
-        "sqft": 1350,
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-06-26",
+        "price": 3100000,
+        "sqft": 1204,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Cayan Tower · 2BR",
-        "date": "2026-08-30",
-        "price": 2800000,
-        "sqft": 1525,
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-06-03",
+        "price": 3550000,
+        "sqft": 1231,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-04-16",
+        "price": 3650000,
+        "sqft": 1207,
         "beds": 2
       }
     ],
@@ -315,7 +329,9 @@
       "Bayut": "https://www.bayut.com/property/details-16015020.html"
     },
     "buildingPsf": 3105,
-    "buildingPsfLabel": "Marina Gate"
+    "buildingPsfLabel": "Marina Gate",
+    "buildingTxnPsf": 2740,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-16065000",
@@ -497,7 +513,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-15842273.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-15842273.html"
-    }
+    },
+    "buildingTxnPsf": 1942,
+    "buildingTxnCount": 5
   },
   {
     "id": "pf-137449378",
@@ -555,7 +573,9 @@
     "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html",
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html"
-    }
+    },
+    "buildingTxnPsf": 1225,
+    "buildingTxnCount": 3
   },
   {
     "id": "pf-137447722",
@@ -613,7 +633,9 @@
     "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html",
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html"
-    }
+    },
+    "buildingTxnPsf": 1744,
+    "buildingTxnCount": 3
   },
   {
     "id": "pf-137447197",
@@ -643,27 +665,35 @@
     "imageHue": 359,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-30",
-        "price": 4000000,
-        "sqft": 1540,
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2026-07-21",
+        "price": 4450000,
+        "sqft": 1421,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-30",
-        "price": 3399000,
-        "sqft": 1231,
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2025-11-18",
+        "price": 4650000,
+        "sqft": 1421,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Orra Marina · 2BR",
-        "date": "2026-08-30",
-        "price": 2048000,
-        "sqft": 1350,
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2024-12-09",
+        "price": 3000000,
+        "sqft": 1417,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2024-04-30",
+        "price": 4100000,
+        "sqft": 1422,
         "beds": 2
       }
     ],
@@ -673,7 +703,9 @@
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
     },
     "buildingPsf": 3105,
-    "buildingPsfLabel": "Marina Gate"
+    "buildingPsfLabel": "Marina Gate",
+    "buildingTxnPsf": 2883,
+    "buildingTxnCount": 5
   },
   {
     "id": "pf-137447162",
@@ -739,7 +771,9 @@
     "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html",
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html"
-    }
+    },
+    "buildingTxnPsf": 3468,
+    "buildingTxnCount": 5
   },
   {
     "id": "pf-137446798",
@@ -945,27 +979,35 @@
     "imageHue": 43,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "DAMAC Heights · 2BR",
-        "date": "2026-08-30",
-        "price": 4000000,
-        "sqft": 1540,
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2026-07-08",
+        "price": 2326710,
+        "sqft": 2244,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-30",
-        "price": 3399000,
-        "sqft": 1231,
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2026-06-28",
+        "price": 2400000,
+        "sqft": 1937,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Orra Marina · 2BR",
-        "date": "2026-08-30",
-        "price": 2048000,
-        "sqft": 1350,
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2025-04-22",
+        "price": 2450000,
+        "sqft": 1937,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2024-10-03",
+        "price": 2250000,
+        "sqft": 2151,
         "beds": 2
       }
     ],
@@ -973,7 +1015,9 @@
     "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html",
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html"
-    }
+    },
+    "buildingTxnPsf": 1046,
+    "buildingTxnCount": 5
   },
   {
     "id": "pf-16177545",
@@ -1039,7 +1083,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16177545.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16177545.html"
-    }
+    },
+    "buildingTxnPsf": 1447,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-16315729",
@@ -1105,7 +1151,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16315729.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16315729.html"
-    }
+    },
+    "buildingTxnPsf": 930,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-15444304",
@@ -1229,7 +1277,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16250286.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16250286.html"
-    }
+    },
+    "buildingTxnPsf": 1752,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-16271936",
@@ -2189,7 +2239,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16242165.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16242165.html"
-    }
+    },
+    "buildingTxnPsf": 12217,
+    "buildingTxnCount": 3
   },
   {
     "id": "pf-16102278",
@@ -2255,7 +2307,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16102278.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16102278.html"
-    }
+    },
+    "buildingTxnPsf": 3533,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-16139080",
@@ -2525,7 +2579,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16142136.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16142136.html"
-    }
+    },
+    "buildingTxnPsf": 2694,
+    "buildingTxnCount": 6
   },
   {
     "id": "pf-15812781",
@@ -2591,7 +2647,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-15812781.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-15812781.html"
-    }
+    },
+    "buildingTxnPsf": 7148,
+    "buildingTxnCount": 2
   },
   {
     "id": "pf-16323718",

@@ -108,10 +108,13 @@ The job it runs:
    Save each page as `seed/detail-pages/<listing id>.md`, then
    `node scripts/parse-detail-page.mjs seed/detail-pages listings.json`.
 
-   **You do not need a page per listing.** The published figures are per area
-   *and bedroom band*, so one page benchmarks every listing in its band.
-   `node scripts/parse-detail-page.mjs --plan listings.json` prints the
-   cheapest set: 23 pages covered all 54 listings in the first sweep.
+   **Two plans, and the choice is a budget decision.**
+   `--plan` gives one page per (community, bedroom band) — 23 pages for the
+   first sweep's 54 listings, because the published averages are per band.
+   `--plan --per-listing` gives one page per listing (~1 credit each) and buys
+   two things a band plan cannot: every listing's own building sale figures,
+   and the band average decided by a vote across pages instead of one reading.
+   See "Per-listing enrichment" below.
 
    What it yields, and what it does not: the per-building table lists the five
    most-searched *locations* in that band, which are towers in Dubai Marina and
@@ -270,6 +273,57 @@ per band we actually fetch (10 pages covered 39 listings; only 2 of 75 rows in
 D1 carry their own building's sales). Getting it for every listing means one
 page per listing: ~75 credits a day instead of ~10. Not done; decide before
 building.
+
+## Per-listing enrichment (2026-08-30)
+
+`--plan --per-listing` scrapes every listing's own detail page. What it buys:
+
+- **`buildingTxnPsf`** — the median AED/sqft of *recorded sales* in that
+  listing's own building, size-banded, with `buildingTxnCount` alongside.
+  This is the exact-tower comparison the band plan can never reach: with one
+  page per band, only the ~1 listing per band whose page was actually fetched
+  has its own building's data. 17 of 54 on the mixed run here; near-complete
+  under a full per-listing sweep.
+- **A vote on the area average.** With one page per band there is nothing to
+  compare, so a figure scoped to a sub-development is caught only when it
+  coincides with a row in the per-location table. With many pages per band the
+  median settles it, and `enrich` reports any band whose pages disagree by more
+  than 15%. Property Finder still wins outright where present.
+
+**`buildingTxnPsf` is deliberately not scored.** These are settled prices and
+`askingPrice` is an asking price; folding them into `buildingPsf` would compare
+what a seller wants against what buyers paid and read the ordinary gap between
+them as distress. It is displayed as its own card ("What buyers paid") and the
+detail screen says plainly that the scored averages are asking prices. Adding
+a signal for "priced below even the settled comps" is a real idea, but it is a
+scoring change and has not been made — scores are byte-identical before and
+after this work.
+
+Worth knowing when reading the numbers: asking sits above settled far more
+often than not (Barcelo Residences asks 1,916 against 1,744 settled; The Jewel
+Tower B asks 1,649 against 1,046 over five sales). That is normal, not a red
+flag, which is exactly why the two bases must not share a field.
+
+## The scrape recipe strips the headings the parser used to need
+
+Found 2026-08-30 while validating per-listing enrichment, and it would have
+broken the live sweep silently.
+
+`includeTags: ["table","svg"]` — the documented Bayut recipe — removes **every
+heading** from the page. The parser anchored on `### Popular locations`,
+`### Average price/sqft` and `## Similar Property Transactions`, so against a
+real scrape it returned no area average, no building table and no transactions
+at all. It passed its tests only because the fixtures in `seed/detail-pages/`
+are hand-trimmed transcripts that kept their headings.
+
+Tables are now located by their own header row (`| Date | Area (sqft) | Price |`,
+`| | Avg. price/sqft | VS ... |`) and the area figure is read from the chart's
+SVG text anywhere on the page; the heading path is still preferred when
+headings exist. `tests/fixtures/bayut-detail-raw.md` is a verbatim scrape with
+no headings, so this cannot regress.
+
+The lesson generalises: **fixtures must be what the scraper actually returns.**
+A hand-tidied transcript tests the parser against a page that never exists.
 
 ## Gotchas already hit
 

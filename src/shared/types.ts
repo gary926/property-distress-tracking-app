@@ -70,6 +70,14 @@ export interface Listing {
    *  figure is often the development's rather than the tower's — and saying
    *  "Beverly Crown average" when it is JVC District 11's would misstate it. */
   buildingPsfLabel?: string;
+  /** Median AED/sqft of *recorded sales* in this listing's own building, from
+   *  the portal's transactions table. Same tower, same size band — the closest
+   *  comparison there is — but these are settled prices where `askingPrice` is
+   *  an asking price, so it is deliberately kept out of `buildingPsf` and out
+   *  of the score. Shown as evidence, not used as the benchmark. */
+  buildingTxnPsf?: number;
+  /** How many sales that median is over. Two is thin; six is worth trusting. */
+  buildingTxnCount?: number;
   /** Average AED/sqft for the surrounding area/community, when known.
    *  Weaker evidence on its own — a whole tower can sit below its area. */
   areaPsf?: number;

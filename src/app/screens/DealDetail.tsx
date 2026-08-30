@@ -209,7 +209,24 @@ export function DealDetail({ id }: { id: string }) {
                 pct={deal.belowAreaPct}
                 primary={deal.belowMarketBasis === "area"}
               />
+              {deal.buildingTxnPsf ? (
+                <BenchmarkCard
+                  label={`${deal.buildingTxnCount} recorded sale${deal.buildingTxnCount === 1 ? "" : "s"} in ${deal.building}`}
+                  scope="What buyers paid"
+                  psf={deal.buildingTxnPsf}
+                  pct={((deal.buildingTxnPsf - deal.psf) / deal.buildingTxnPsf) * 100}
+                  primary={false}
+                />
+              ) : null}
             </div>
+            {deal.buildingTxnPsf ? (
+              <p className="t-muted" style={{ fontSize: 13, margin: "12px 0 0" }}>
+                The two averages above are <b>asking</b> prices, like this listing, so they are
+                what the score compares against. &ldquo;What buyers paid&rdquo; is
+                <b> settled</b> prices for this exact building — the closest comparison there
+                is, but a different basis, so it is shown as evidence and never scored.
+              </p>
+            ) : null}
             <p className="t-muted" style={{ fontSize: 13, margin: "12px 0 14px" }}>
               Source: {deal.benchmarkSource}.{" "}
               {deal.belowMarketBasis === "building" ? (

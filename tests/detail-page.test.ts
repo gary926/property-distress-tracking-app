@@ -1,7 +1,13 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-// @ts-expect-error - plain .mjs helper shared with the sweep pipeline
-import { enrich, pagesToScrape, parseDetailPage } from "../scripts/parse-detail-page.mjs";
+import {
+  consensusArea,
+  enrich,
+  pagesToScrape,
+  parseDetailPage,
+  transactionPsf,
+  // @ts-expect-error - plain .mjs helper shared with the sweep pipeline
+} from "../scripts/parse-detail-page.mjs";
 
 const page = readFileSync(new URL("./fixtures/bayut-detail.md", import.meta.url), "utf8");
 const unit = { askingPrice: 3_000_000, sqft: 2450, building: "Horizon Tower", beds: 4 };
@@ -267,8 +273,8 @@ describe("Property Finder pages", () => {
     // Both tables are Date/amount/area; only the header separates them, and
     // Firecrawl hoists them away from their captions.
     const { transactions } = parseDetailPage(pfPage, pfUnit);
-    expect(transactions.map((t) => t.price)).toEqual([1_960_000, 1_910_000, 1_400_000]);
-    expect(transactions.every((t) => t.location === "Barcelo Residences (Al Dar Tower)")).toBe(true);
+    expect(transactions.map((t: { price: number }) => t.price)).toEqual([1_960_000, 1_910_000, 1_400_000]);
+    expect(transactions.every((t: { location?: string }) => t.location === "Barcelo Residences (Al Dar Tower)")).toBe(true);
   });
 
   it("re-bands the building's sales by size, because the caption does not", () => {
@@ -280,7 +286,7 @@ describe("Property Finder pages", () => {
       "| 25 Feb 2026 | 1,960,000 | 1,101 |\n| 22 Jul 2026 | 1,150,000 | 719 |",
     );
     const { transactions } = parseDetailPage(withSmallSale, oneBed);
-    expect(transactions.map((t) => t.sqft)).toEqual([719]);
+    expect(transactions.map((t: { sqft: number }) => t.sqft)).toEqual([719]);
   });
 
   it("reads sale/rent from the wording, and stays silent otherwise", () => {
@@ -347,5 +353,169 @@ describe("pagesToScrape portal preference", () => {
       { id: "b1", community: "JVC", beds: 1, sourceUrl: "https://www.bayut.com/x" },
     ]);
     expect(plan[0]).toMatchObject({ id: "b1", isPf: false });
+  });
+});
+
+describe("per-listing enrichment", () => {
+  const pfPage = readFileSync(new URL("./fixtures/propertyfinder-detail.md", import.meta.url), "utf8");
+  const base = {
+    community: "Dubai Marina",
+    beds: 2,
+    listingType: "sale",
+    benchmarkSource: "Listing averages",
+    comps: [],
+  };
+
+  describe("consensusArea", () => {
+    it("outvotes a figure scoped to a sub-development", () => {
+      // The Marina Gate trap, but caught by weight of evidence rather than by
+      // the figure happening to match a row in the per-location table.
+      const vote = consensusArea([
+        { psf: 2130, scope: "community", portal: "bayut" },
+        { psf: 2079, scope: "community", portal: "bayut" },
+        { psf: 2100, scope: "community", portal: "bayut" },
+        { psf: 3105, scope: "community", portal: "bayut" },
+      ]);
+      expect(vote.areaPsf).toBe(2115);
+      expect(vote.votes).toBe(4);
+      expect(vote.spreadPct).toBeGreaterThan(15);
+    });
+
+    it("polls only Property Finder's readings when it has any", () => {
+      const vote = consensusArea([
+        { psf: 2592, scope: "community", portal: "bayut" },
+        { psf: 2600, scope: "community", portal: "bayut" },
+        { psf: 2191, scope: "community", portal: "propertyfinder" },
+      ]);
+      expect(vote.areaPsf).toBe(2191);
+      expect(vote.votes).toBe(1);
+    });
+
+    it("ignores location-scoped readings entirely", () => {
+      expect(
+        consensusArea([{ psf: 3105, scope: "location", portal: "bayut" }]).areaPsf,
+      ).toBeUndefined();
+    });
+  });
+
+  describe("transactionPsf", () => {
+    it("medians the building's sales within the listing's size band", () => {
+      const txns = [
+        { price: 1_960_000, sqft: 1101 }, // 1780
+        { price: 1_910_000, sqft: 1095 }, // 1744
+        { price: 1_400_000, sqft: 1095 }, // 1279
+        { price: 1_150_000, sqft: 719 }, // out of band for a 1,511 sqft unit
+      ];
+      const out = transactionPsf(txns, 1511);
+      expect(out.buildingTxnCount).toBe(3);
+      expect(out.buildingTxnPsf).toBe(1744);
+    });
+
+    it("returns nothing rather than a figure off one irrelevant sale", () => {
+      expect(transactionPsf([{ price: 1_150_000, sqft: 719 }], 1511)).toEqual({});
+    });
+  });
+
+  it("gives every listing its own building's settled figure", () => {
+    const a = { ...base, id: "pf-a", building: "Barcelo Residences (Al Dar Tower)", askingPrice: 2_895_000, sqft: 1511 };
+    const b = { ...base, id: "pf-b", building: "Sanibel Tower", askingPrice: 2_400_000, sqft: 1400 };
+    // Per-listing mode: both pages scraped, so both get their own figure.
+    const { listings, stats } = enrich(
+      [a, b],
+      [
+        { id: "pf-a", markdown: pfPage },
+        { id: "pf-b", markdown: pfPage },
+      ],
+    );
+    expect(listings[0].buildingTxnPsf).toBe(1744);
+    expect(listings[1].buildingTxnPsf).toBe(1744);
+    expect(stats.txnPsf).toBe(2);
+    // And it stays out of the asking-price benchmark.
+    expect(listings[0].buildingPsf).toBeUndefined();
+  });
+
+  it("leaves the settled figure off listings whose page was not scraped", () => {
+    const a = { ...base, id: "pf-a", building: "Barcelo Residences (Al Dar Tower)", askingPrice: 2_895_000, sqft: 1511 };
+    const b = { ...base, id: "pf-b", building: "Sanibel Tower", askingPrice: 2_400_000, sqft: 1400 };
+    const { listings } = enrich([a, b], [{ id: "pf-a", markdown: pfPage }]);
+    expect(listings[0].buildingTxnPsf).toBe(1744);
+    expect(listings[1].buildingTxnPsf).toBeUndefined();
+    // The band average still reaches it — that part is per-band, not per-page.
+    expect(listings[1].areaPsf).toBe(2130);
+  });
+
+  it("reports a band whose pages disagree", () => {
+    const marinaGatePage = readFileSync(
+      new URL("./fixtures/bayut-detail.md", import.meta.url),
+      "utf8",
+    );
+    const a = { ...base, id: "a", beds: 4, building: "Horizon Tower", askingPrice: 3_000_000, sqft: 2450 };
+    const b = { ...base, id: "b", beds: 4, building: "Cayan Tower", askingPrice: 3_000_000, sqft: 1000 };
+    const { stats } = enrich(
+      [a, b],
+      [
+        { id: "a", markdown: marinaGatePage },
+        { id: "b", markdown: marinaGatePage },
+      ],
+    );
+    // Both pages are the same fixture but the units differ, so the psf split
+    // lands differently — exactly the disagreement the check is for.
+    expect(Array.isArray(stats.disputed)).toBe(true);
+  });
+
+  it("plans one page per listing on request, and skips ones with no URL", () => {
+    const l = (id: string, url?: string) => ({ id, community: "Dubai Marina", beds: 2, sourceUrl: url });
+    const all = [l("a", "u/a"), l("b", "u/b"), l("c")];
+    expect(pagesToScrape(all, { perListing: true }).map((p: { id: string }) => p.id)).toEqual(["a", "b"]);
+    // The band plan is unchanged and still much cheaper.
+    expect(pagesToScrape(all)).toHaveLength(1);
+  });
+});
+
+describe("a real scrape, with the headings the recipe strips", () => {
+  // Verbatim shape of `firecrawl_scrape` on a Bayut detail page with the
+  // documented `includeTags: ["table","svg"]`, which keeps no headings at all.
+  // The parser used to anchor on "### Popular locations" and friends, so it
+  // read nothing from this while passing against hand-trimmed transcripts that
+  // happened to keep their headings — a silent zero-benchmark sweep.
+  const raw = readFileSync(new URL("./fixtures/bayut-detail-raw.md", import.meta.url), "utf8");
+  const marinaGate2 = {
+    id: "pf-16015020",
+    building: "Marina Gate 2",
+    community: "Dubai Marina",
+    beds: 2,
+    askingPrice: 3_399_000,
+    sqft: 1231,
+    listingType: "sale",
+    benchmarkSource: "Listing averages",
+    comps: [],
+  };
+
+  it("finds the tables by their header row, not by a heading", () => {
+    const p = parseDetailPage(raw, marinaGate2);
+    expect(p.portal).toBe("bayut");
+    expect(p.buildingAverages).toHaveLength(5);
+    expect(p.transactions).toHaveLength(6);
+  });
+
+  it("still reads the area figure out of the chart's SVG text", () => {
+    // "3,1052,761" — 3,105 is the published figure, 2,761 this unit's own psf.
+    expect(parseDetailPage(raw, marinaGate2).areaPsf).toBe(3105);
+  });
+
+  it("still catches that the figure is the sub-development's", () => {
+    const p = parseDetailPage(raw, marinaGate2);
+    expect(p.areaPsfScope).toBe("location");
+    expect(p.areaPsfLocation).toBe("Marina Gate");
+  });
+
+  it("does not let it benchmark the rest of the band", () => {
+    const neighbour = { ...marinaGate2, id: "other", building: "Cayan Tower", sqft: 1525 };
+    const { listings } = enrich(
+      [marinaGate2, neighbour],
+      [{ id: marinaGate2.id, markdown: raw }],
+    );
+    expect(listings[1].areaPsf).toBeUndefined();
+    expect(listings[0].buildingPsf).toBe(3105);
   });
 });

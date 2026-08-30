@@ -56,6 +56,31 @@ function section(markdown, heading) {
   return next === -1 ? rest : rest.slice(0, next);
 }
 
+/** Blocks of the markdown that are tables, found by their header row rather
+ *  than by the heading above them.
+ *
+ *  Load-bearing, not a nicety: the documented Bayut scrape uses
+ *  `includeTags: ["table","svg"]`, which strips every heading from the page.
+ *  A parser anchored on "### Popular locations" therefore reads *nothing* from
+ *  a real scrape while passing happily against a hand-trimmed transcript that
+ *  kept its headings. Content anchors survive both. */
+function findTable(markdown, headerMatches) {
+  return (
+    markdown
+      .split(/\n\s*\n/)
+      .find((block) => {
+        const header = block.split("\n")[0] ?? "";
+        return header.trim().startsWith("|") && headerMatches(header);
+      }) ?? ""
+  );
+}
+
+/** Prefer the named section when the page still has headings, and fall back to
+ *  locating the table by its own header when it does not. */
+function blockFor(markdown, heading, headerMatches) {
+  return section(markdown, heading) || findTable(markdown, headerMatches);
+}
+
 /** Compare portal names loosely: "Silverene Tower B" vs "Silverene Tower". */
 function normalise(name) {
   return String(name)
@@ -84,8 +109,10 @@ function matchesBuilding(rowLabel, building) {
  *  next to this listing's own asking psf. Which is which is settled by
  *  comparing against the psf we already know, not by position. */
 function parseAreaAverage(markdown, listingPsf) {
-  const block = section(markdown, "### Average price/sqft");
-  if (!block) return {};
+  // The chart is SVG text, so it survives a scrape that strips headings; the
+  // section is used only to narrow the search when headings are present.
+  const block = section(markdown, "### Average price/sqft") || markdown;
+  if (!/Avg\. price\/sqft/.test(block)) return {};
   const chart = block.split("Avg. price/sqft")[0] ?? "";
   const areaName = block.match(/(?:apartments|villas|townhouses|properties) in ([^\n*]+)/)?.[1]?.trim();
 
@@ -129,7 +156,9 @@ function parseAreaAverage(markdown, listingPsf) {
  *  bedroom band, so they apply to any listing in that band, whichever page
  *  they were read from. */
 function parseBuildingAverages(markdown) {
-  const block = section(markdown, "### Popular locations");
+  const block = blockFor(markdown, "### Popular locations", (h) =>
+    /Avg\.\s*price\/sqft/i.test(h),
+  );
   if (!block) return [];
   const rows = [];
   for (const line of block.split("\n")) {
@@ -149,7 +178,14 @@ function parseBuildingAverages(markdown) {
  *  prices, not asking prices, so they are shown as comps rather than folded
  *  into the benchmark — mixing the two bases would quietly bias every score. */
 function parseTransactions(markdown, beds) {
-  return parseTransactionRows(section(markdown, "## Similar Property Transactions"), beds);
+  return parseTransactionRows(
+    blockFor(
+      markdown,
+      "## Similar Property Transactions",
+      (h) => /\bDate\b/i.test(h) && /Price|AED(?!\/year)/i.test(h) && !/AED\/year/i.test(h),
+    ),
+    beds,
+  );
 }
 
 /** Rows out of an already-isolated transactions table. Split from the lookup
@@ -316,6 +352,63 @@ export function parseDetailPage(markdown, listing = {}) {
   };
 }
 
+function median(values) {
+  if (values.length === 0) return undefined;
+  const v = [...values].sort((a, b) => a - b);
+  const mid = v.length >> 1;
+  return v.length % 2 ? v[mid] : Math.round((v[mid - 1] + v[mid]) / 2);
+}
+
+/**
+ * The band's area average, decided by vote rather than by whichever page was
+ * read first.
+ *
+ * With one page per band there is nothing to compare, so a figure scoped to a
+ * sub-development is caught only when it happens to coincide with a row in the
+ * per-location table. Scraping every listing turns that into a majority: seven
+ * Dubai Marina 2-bed pages saying 2,130 outvote the one saying 3,105.
+ *
+ * Property Finder still wins outright where it is present — it states the
+ * community it averaged, so it needs no corroboration — and only its figures
+ * are polled when any exist.
+ */
+export function consensusArea(candidates) {
+  const community = candidates.filter((c) => c.scope === "community" && c.psf > 0);
+  if (community.length === 0) return {};
+  const pf = community.filter((c) => c.portal === "propertyfinder");
+  const polled = pf.length > 0 ? pf : community;
+  const values = polled.map((c) => c.psf);
+  const psf = median(values);
+  const lo = Math.min(...values);
+  const hi = Math.max(...values);
+  return {
+    areaPsf: psf,
+    areaPsfPortal: polled[0].portal,
+    votes: polled.length,
+    // Pages in one band should agree. When they do not, something is scoped
+    // differently from what it claims and the median is load-bearing.
+    spreadPct: lo > 0 ? Math.round(((hi - lo) / lo) * 100) : 0,
+  };
+}
+
+/**
+ * A per-building AED/sqft from the building's own recorded sales.
+ *
+ * Deliberately NOT written to `buildingPsf`: these are settled prices and the
+ * listing is an asking price, so the two cannot share a field without biasing
+ * every score. It travels separately, labelled, as the evidence it is.
+ */
+export function transactionPsf(transactions, sqft) {
+  const rows = sqft
+    ? transactions.filter((t) => t.sqft > 0 && Math.abs(t.sqft - sqft) / sqft <= 0.35)
+    : transactions.filter((t) => t.sqft > 0);
+  if (rows.length === 0) return {};
+  return {
+    buildingTxnPsf: Math.round(median(rows.map((t) => t.price / t.sqft))),
+    buildingTxnCount: rows.length,
+  };
+}
+
 /** Same banding as the transform: psf is structurally lower in larger units,
  *  so a benchmark is only meaningful within a bedroom band. */
 export function band(beds) {
@@ -336,10 +429,22 @@ export function band(beds) {
 export function enrich(listings, pages) {
   const byId = new Map(pages.map((p) => [p.id, p.markdown]));
   const byListingId = new Map(listings.map((l) => [l.id, l]));
-  const stats = { pages: pages.length, building: 0, area: 0, comps: 0, rentals: 0, bands: 0 };
+  const stats = {
+    pages: pages.length,
+    building: 0,
+    area: 0,
+    comps: 0,
+    rentals: 0,
+    bands: 0,
+    txnPsf: 0,
+    /** Bands whose pages disagreed by more than 15% — worth a look before
+     *  ingesting, because it means something is scoped differently from what
+     *  it says. Only ever populated when several pages cover one band. */
+    disputed: [],
+  };
 
   // Pass 1 — read each page once, filed under the band it describes.
-  const benchmarks = new Map(); // "community|band" -> { areaPsf, buildingAverages }
+  const benchmarks = new Map(); // "community|band" -> { candidates, buildingAverages }
   const perListing = new Map(); // listing id -> { purpose, transactions }
   for (const page of pages) {
     const owner = byListingId.get(page.id);
@@ -347,21 +452,17 @@ export function enrich(listings, pages) {
     const parsed = parseDetailPage(page.markdown, owner);
     perListing.set(page.id, parsed);
     const key = `${owner.community}|${band(owner.beds)}`;
-    const existing = benchmarks.get(key) ?? { buildingAverages: [] };
-    // Only a community-scoped figure describes the band as a whole. A
-    // location-scoped one still reaches the listings it covers, through the
-    // per-location table it was matched against.
-    const offered = parsed.areaPsfScope === "community" ? parsed.areaPsf : undefined;
-    // Where both portals cover a band, take Property Finder's: it names the
-    // community it averaged in words, so it cannot be a sub-development's
-    // figure wearing the community's label.
-    const takeOffered =
-      offered &&
-      (!existing.areaPsf ||
-        (existing.areaPsfPortal !== "propertyfinder" && parsed.portal === "propertyfinder"));
+    const existing = benchmarks.get(key) ?? { candidates: [], buildingAverages: [] };
     benchmarks.set(key, {
-      areaPsf: takeOffered ? offered : existing.areaPsf,
-      areaPsfPortal: takeOffered ? parsed.portal : existing.areaPsfPortal,
+      // Every page's reading is a vote, resolved once all pages are in. A
+      // figure scoped to a sub-development is still recorded, but as its own
+      // scope, so it can only reach the listings that actually sit there.
+      candidates: [
+        ...existing.candidates,
+        ...(parsed.areaPsf
+          ? [{ psf: parsed.areaPsf, scope: parsed.areaPsfScope, portal: parsed.portal }]
+          : []),
+      ],
       // Merge tables across pages in the same band — different pages surface
       // slightly different "popular" buildings.
       buildingAverages: [
@@ -372,7 +473,18 @@ export function enrich(listings, pages) {
       ],
     });
   }
-  stats.bands = benchmarks.size;
+
+  // Resolve each band's vote before applying anything.
+  const resolved = new Map();
+  for (const [key, entry] of benchmarks) {
+    const vote = consensusArea(entry.candidates);
+    resolved.set(key, { ...vote, buildingAverages: entry.buildingAverages });
+    if (vote.spreadPct > 15) {
+      stats.disputed.push({ band: key, spreadPct: vote.spreadPct, votes: vote.votes });
+    }
+  }
+
+  stats.bands = resolved.size;
 
   // Pass 2 — apply them to every listing in the band.
   const out = [];
@@ -385,13 +497,13 @@ export function enrich(listings, pages) {
       continue;
     }
     const next = { ...listing };
-    const published = benchmarks.get(`${listing.community}|${band(listing.beds)}`);
+    const published = resolved.get(`${listing.community}|${band(listing.beds)}`);
     if (published?.areaPsf) {
       next.areaPsf = published.areaPsf;
       next.benchmarkSource = "Portal published";
       stats.area++;
     }
-    const match = published?.buildingAverages.find((r) =>
+    const match = published?.buildingAverages?.find((r) =>
       matchesBuilding(r.name, listing.locationPath ?? listing.building),
     );
     if (match) {
@@ -401,6 +513,16 @@ export function enrich(listings, pages) {
       stats.building++;
     }
     if (own?.transactions.length) {
+      // A settled-price figure for this listing's own building. Kept apart
+      // from buildingPsf, which is an asking-price average — folding the two
+      // together would compare an asking price against what people actually
+      // paid and read the gap as distress.
+      const txn = transactionPsf(own.transactions, listing.sqft);
+      if (txn.buildingTxnPsf) {
+        next.buildingTxnPsf = txn.buildingTxnPsf;
+        next.buildingTxnCount = txn.buildingTxnCount;
+        stats.txnPsf++;
+      }
       next.comps = own.transactions.slice(0, 4).map((t) => ({
         source: "DLD",
         // Area-wide tables name the building each sale was in; same-building
@@ -421,8 +543,33 @@ export function enrich(listings, pages) {
 /** The cheapest set of pages that benchmarks a whole batch: one listing per
  *  (community, bedroom band). Printed by `--plan` for the daily sweep. */
 const pfUrl = (l) => l.sourceUrls?.["Property Finder"] ?? (/propertyfinder/.test(l.sourceUrl ?? "") ? l.sourceUrl : undefined);
+const anyUrl = (l) => pfUrl(l) ?? (l.sourceUrls ? Object.values(l.sourceUrls)[0] : l.sourceUrl);
 
-export function pagesToScrape(listings) {
+/**
+ * What to scrape. Two modes, and the choice is a budget decision:
+ *
+ * - **band** (default): one page per (community, bedroom band). The published
+ *   averages are per band, so this benchmarks everything for ~10 pages. What
+ *   it cannot give you is anything specific to a listing — its own tower's
+ *   sales — because those pages are never fetched.
+ * - **perListing**: every listing's own page. Roughly one credit per listing,
+ *   and in exchange every listing gets its own building's transactions, and
+ *   the band's area average becomes a vote across many pages rather than a
+ *   reading from one (see `consensusArea`).
+ */
+export function pagesToScrape(listings, { perListing = false } = {}) {
+  if (perListing) {
+    return listings
+      .filter((l) => anyUrl(l))
+      .map((l) => ({
+        id: l.id,
+        url: anyUrl(l),
+        isPf: Boolean(pfUrl(l)),
+        community: l.community,
+        band: band(l.beds),
+        covers: 1,
+      }));
+  }
   const seen = new Map();
   for (const l of listings) {
     const key = `${l.community}|${band(l.beds)}`;
@@ -433,7 +580,7 @@ export function pagesToScrape(listings) {
     if (existing && !(pfUrl(l) && !existing.isPf)) continue;
     seen.set(key, {
       id: l.id,
-      url: pfUrl(l) ?? (l.sourceUrls ? Object.values(l.sourceUrls)[0] : l.sourceUrl),
+      url: anyUrl(l),
       isPf: Boolean(pfUrl(l)),
       community: l.community,
       band: band(l.beds),
@@ -452,14 +599,24 @@ const readListings = (file) => {
 if (process.argv[1] && process.argv[1].endsWith("parse-detail-page.mjs")) {
   const args = process.argv.slice(2);
   if (args[0] === "--plan") {
-    if (!args[1]) {
-      console.error("Usage: node scripts/parse-detail-page.mjs --plan <listings.json>");
+    const perListing = args.includes("--per-listing");
+    const file = args.slice(1).find((a) => !a.startsWith("--"));
+    if (!file) {
+      console.error(
+        "Usage: node scripts/parse-detail-page.mjs --plan [--per-listing] <listings.json>",
+      );
       process.exit(1);
     }
-    const plan = pagesToScrape(readListings(args[1]));
+    const listings = readListings(file);
+    const plan = pagesToScrape(listings, { perListing });
     process.stdout.write(JSON.stringify(plan, null, 2));
+    const band = pagesToScrape(listings).length;
     console.error(
-      `Scrape ${plan.length} detail pages to benchmark ${plan.reduce((n, p) => n + p.covers, 0)} listings.`,
+      perListing
+        ? `Scrape ${plan.length} detail pages — one per listing (${plan.length - band} more than the ${band}-page band plan).\n` +
+            `Buys: every listing's own building sales, and the band average decided by vote instead of one reading.`
+        : `Scrape ${plan.length} detail pages to benchmark ${plan.reduce((n, p) => n + p.covers, 0)} listings.\n` +
+            `Add --per-listing for per-building data at ~1 credit per listing.`,
     );
     process.exit(0);
   }
@@ -490,6 +647,13 @@ if (process.argv[1] && process.argv[1].endsWith("parse-detail-page.mjs")) {
   console.error(
     `Enriched from ${stats.pages} pages covering ${stats.bands} bands: ` +
       `${stats.building} building averages, ${stats.area} area averages, ` +
-      `${stats.comps} comp sets, ${stats.rentals} rentals dropped.`,
+      `${stats.txnPsf} building sale figures, ${stats.comps} comp sets, ` +
+      `${stats.rentals} rentals dropped.`,
   );
+  for (const d of stats.disputed) {
+    console.error(
+      `  ! ${d.band}: ${d.votes} pages disagree by ${d.spreadPct}% — the median was taken, ` +
+        `but check one page before trusting this band.`,
+    );
+  }
 }
