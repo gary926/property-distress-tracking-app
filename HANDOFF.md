@@ -327,12 +327,25 @@ A hand-tidied transcript tests the parser against a page that never exists.
 
 ## Gotchas already hit
 
-- **The app's own domain is blocked from the Claude session's egress proxy.**
-  `distress-radar.pages.dev` returns 403 on CONNECT, so a session cannot call
-  `/api/ingest` or `/api/digest` — the two HTTP hops in the sweep. Writing to
-  D1 through the Cloudflare connector works and is how the first two loads were
-  done. Fixing this properly means allowing the host in the environment's
-  network policy; until then the routine cannot complete steps 4 and 5.
+- **The app's own domain needs an egress allowlist entry.** *(Resolved
+  2026-08-30 — kept because it will recur if the environment is recreated.)*
+  `distress-radar.pages.dev` returned 403 on CONNECT under the Default
+  environment's **Trusted** network level, so a session could not call
+  `/api/ingest` or `/api/digest` — the two HTTP hops in the sweep. The fix is
+  claude.ai/code → environment selector (the cloud icon above the message box)
+  → gear on **Default** → Network access **Custom** → add
+  `distress-radar.pages.dev`, and **tick "Also include default list of common
+  package managers"**, or npm and the registries stop resolving too. Firecrawl
+  is unaffected either way: MCP connector traffic does not go through the
+  session allowlist. Writing to D1 through the Cloudflare connector also works
+  and is how the first loads were done while this was blocked.
+- **`/api/digest` needs authentication.** Unauthenticated it returns
+  `{"ok":false,"error":{"code":"unauthorized"}}`, which is easy to mistake for
+  "no deals". Call it with `Authorization: Bearer $INGEST_TOKEN`.
+- **`recipient` comes back as an empty string, not null,** when no digest
+  address has been set in app Settings. Any fallback that only tests for `null`
+  will send the digest nowhere on the first day there is one. Either set the
+  address in Settings or treat empty as unset.
 
 - **Pages preview vs production is the one that bit us.** `wrangler pages deploy`
   infers the branch from git. Deploying while on a feature branch creates a
