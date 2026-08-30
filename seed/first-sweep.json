@@ -11,8 +11,8 @@
     "sqft": 1540,
     "askingPrice": 4000000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -27,27 +27,35 @@
     "imageHue": 10,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Marina Gate 2 · 2BR",
-        "date": "2026-08-30",
-        "price": 3399000,
-        "sqft": 1231,
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-30",
+        "price": 2700000,
+        "sqft": 1425,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Orra Marina · 2BR",
-        "date": "2026-08-30",
-        "price": 2048000,
-        "sqft": 1350,
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-24",
+        "price": 3100000,
+        "sqft": 1505,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Cayan Tower · 2BR",
-        "date": "2026-08-30",
-        "price": 2800000,
-        "sqft": 1525,
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-07",
+        "price": 3125000,
+        "sqft": 1471,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-06-26",
+        "price": 3100000,
+        "sqft": 1624,
         "beds": 2
       }
     ],
@@ -69,8 +77,8 @@
     "sqft": 2450,
     "askingPrice": 3000000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2176,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -83,12 +91,46 @@
       "phone": ""
     },
     "imageHue": 226,
-    "comps": [],
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-08-19",
+        "price": 3200000,
+        "sqft": 2409,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-07-14",
+        "price": 2500000,
+        "sqft": 2409,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-05-22",
+        "price": 3450000,
+        "sqft": 2451,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-05-19",
+        "price": 2570000,
+        "sqft": 2409,
+        "beds": 4
+      }
+    ],
     "firstSeen": "2026-08-30",
     "sourceUrl": "https://www.bayut.com/property/details-14066052.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-14066052.html"
-    }
+    },
+    "buildingPsf": 1357
   },
   {
     "id": "pf-16144392",
@@ -102,8 +144,8 @@
     "sqft": 693,
     "askingPrice": 1600000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -118,27 +160,35 @@
     "imageHue": 40,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Silverene Tower B · 1BR",
-        "date": "2026-08-30",
-        "price": 1449000,
-        "sqft": 598,
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-06-09",
+        "price": 1225000,
+        "sqft": 693,
         "beds": 1
       },
       {
-        "source": "Listing avg",
-        "label": "Marina View Tower B · 1BR",
-        "date": "2026-08-30",
-        "price": 1450000,
-        "sqft": 1224,
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-04-02",
+        "price": 1200000,
+        "sqft": 693,
         "beds": 1
       },
       {
-        "source": "Listing avg",
-        "label": "Sanibel Tower · 1BR",
-        "date": "2026-08-30",
-        "price": 1900000,
-        "sqft": 938,
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-03-11",
+        "price": 1650000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2025-12-05",
+        "price": 1380000,
+        "sqft": 646,
         "beds": 1
       }
     ],
@@ -160,8 +210,8 @@
     "sqft": 598,
     "askingPrice": 1449000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -218,8 +268,8 @@
     "sqft": 1231,
     "askingPrice": 3399000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -262,7 +312,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16015020.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16015020.html"
-    }
+    },
+    "buildingPsf": 3105
   },
   {
     "id": "pf-16065000",
@@ -276,8 +327,8 @@
     "sqft": 1350,
     "askingPrice": 2048000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -334,8 +385,8 @@
     "sqft": 1525,
     "askingPrice": 2800000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -392,8 +443,8 @@
     "sqft": 2550,
     "askingPrice": 7850000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2143,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -406,7 +457,40 @@
       "phone": ""
     },
     "imageHue": 333,
-    "comps": [],
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2026-06-22",
+        "price": 3452382,
+        "sqft": 1813,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2025-11-21",
+        "price": 3225000,
+        "sqft": 1661,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2025-11-12",
+        "price": 3725000,
+        "sqft": 1734,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2024-10-02",
+        "price": 3350000,
+        "sqft": 1647,
+        "beds": 3
+      }
+    ],
     "firstSeen": "2026-08-30",
     "sourceUrl": "https://www.bayut.com/property/details-15842273.html",
     "sourceUrls": {
@@ -425,8 +509,8 @@
     "sqft": 1224,
     "askingPrice": 1450000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -483,8 +567,8 @@
     "sqft": 1511,
     "askingPrice": 2895000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -541,8 +625,8 @@
     "sqft": 1417,
     "askingPrice": 3900000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -585,7 +669,8 @@
     "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html",
     "sourceUrls": {
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
-    }
+    },
+    "buildingPsf": 3105
   },
   {
     "id": "pf-137447162",
@@ -632,8 +717,8 @@
     "sqft": 938,
     "askingPrice": 1900000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -690,8 +775,8 @@
     "sqft": 718,
     "askingPrice": 1650000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
@@ -750,8 +835,8 @@
     "sqft": 909,
     "askingPrice": 1875000,
     "listingType": "sale",
-    "areaPsf": 2180,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2592,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -808,8 +893,8 @@
     "sqft": 2243,
     "askingPrice": 3699000,
     "listingType": "sale",
-    "areaPsf": 1916,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2079,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -866,8 +951,8 @@
     "sqft": 1837,
     "askingPrice": 2279093,
     "listingType": "sale",
-    "areaPsf": 1350,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1630,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -880,7 +965,40 @@
       "phone": ""
     },
     "imageHue": 354,
-    "comps": [],
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Luma Park Views · 2BR",
+        "date": "2026-08-29",
+        "price": 1994240,
+        "sqft": 1360,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Regent Court · 2BR",
+        "date": "2026-08-27",
+        "price": 2000000,
+        "sqft": 1912,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Luma Park Views · 2BR",
+        "date": "2026-08-26",
+        "price": 2016824,
+        "sqft": 1266,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Violet Tower · 2BR",
+        "date": "2026-08-25",
+        "price": 1671480,
+        "sqft": 1238,
+        "beds": 2
+      }
+    ],
     "firstSeen": "2026-08-30",
     "sourceUrl": "https://www.bayut.com/property/details-16177545.html",
     "sourceUrls": {
@@ -899,8 +1017,8 @@
     "sqft": 1049,
     "askingPrice": 999999,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -915,27 +1033,35 @@
     "imageHue": 244,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Binghatti Phantom · 1BR",
-        "date": "2026-08-30",
-        "price": 1110000,
-        "sqft": 795,
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-06-30",
+        "price": 750000,
+        "sqft": 839,
         "beds": 1
       },
       {
-        "source": "Listing avg",
-        "label": "Binghatti Emerald · 1BR",
-        "date": "2026-08-30",
-        "price": 949999,
-        "sqft": 646,
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-05-18",
+        "price": 750000,
+        "sqft": 776,
         "beds": 1
       },
       {
-        "source": "Listing avg",
-        "label": "Rise Residences · 1BR",
-        "date": "2026-08-30",
-        "price": 900000,
-        "sqft": 749,
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-02-03",
+        "price": 860000,
+        "sqft": 801,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2024-12-11",
+        "price": 825000,
+        "sqft": 767,
         "beds": 1
       }
     ],
@@ -957,8 +1083,8 @@
     "sqft": 795,
     "askingPrice": 1110000,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1015,8 +1141,8 @@
     "sqft": 442,
     "askingPrice": 590000,
     "listingType": "sale",
-    "areaPsf": 1350,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1702,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1031,11 +1157,35 @@
     "imageHue": 202,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Binghatti Apex · Studio",
-        "date": "2026-08-30",
-        "price": 670000,
-        "sqft": 427,
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 689010,
+        "sqft": 425,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 651840,
+        "sqft": 388,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 787440,
+        "sqft": 425,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 787440,
+        "sqft": 425,
         "beds": 0
       }
     ],
@@ -1057,8 +1207,8 @@
     "sqft": 646,
     "askingPrice": 949999,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1115,8 +1265,8 @@
     "sqft": 749,
     "askingPrice": 900000,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1173,8 +1323,8 @@
     "sqft": 427,
     "askingPrice": 670000,
     "listingType": "sale",
-    "areaPsf": 1350,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1702,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1215,8 +1365,8 @@
     "sqft": 879,
     "askingPrice": 1199999,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1273,8 +1423,8 @@
     "sqft": 759,
     "askingPrice": 1139503,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1331,8 +1481,8 @@
     "sqft": 782,
     "askingPrice": 1000000,
     "listingType": "sale",
-    "areaPsf": 1365,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1415,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1389,8 +1539,8 @@
     "sqft": 626,
     "askingPrice": 1500000,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1447,8 +1597,8 @@
     "sqft": 1051,
     "askingPrice": 1869000,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1505,8 +1655,8 @@
     "sqft": 520,
     "askingPrice": 849999,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1563,8 +1713,8 @@
     "sqft": 995,
     "askingPrice": 1600000,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1621,8 +1771,8 @@
     "sqft": 1167,
     "askingPrice": 1650000,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1679,8 +1829,8 @@
     "sqft": 861,
     "askingPrice": 1625000,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1737,8 +1887,8 @@
     "sqft": 996,
     "askingPrice": 1599990,
     "listingType": "sale",
-    "areaPsf": 1635,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1795,8 +1945,8 @@
     "sqft": 1475,
     "askingPrice": 2500000,
     "listingType": "sale",
-    "areaPsf": 1695,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1530,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
@@ -1847,8 +1997,8 @@
     "sqft": 2105,
     "askingPrice": 3750000,
     "listingType": "sale",
-    "areaPsf": 1695,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1530,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
@@ -1900,8 +2050,8 @@
     "sqft": 1835,
     "askingPrice": 2450000,
     "listingType": "sale",
-    "areaPsf": 1695,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1530,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1936,7 +2086,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16250259.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16250259.html"
-    }
+    },
+    "buildingPsf": 1530
   },
   {
     "id": "pf-16242165",
@@ -1950,8 +2101,8 @@
     "sqft": 2672,
     "askingPrice": 14599999,
     "listingType": "sale",
-    "areaPsf": 2562,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -1966,19 +2117,35 @@
     "imageHue": 106,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-30",
-        "price": 8400000,
-        "sqft": 3279,
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-08-19",
+        "price": 19000000,
+        "sqft": 4106,
         "beds": 2
       },
       {
-        "source": "Listing avg",
-        "label": "Burj Binghatti Jacob and Co Residences · 2BR",
-        "date": "2026-08-30",
-        "price": 8250000,
-        "sqft": 3279,
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-07-25",
+        "price": 19750000,
+        "sqft": 2412,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-07-23",
+        "price": 15800000,
+        "sqft": 3983,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-06-26",
+        "price": 15300000,
+        "sqft": 4093,
         "beds": 2
       }
     ],
@@ -2000,8 +2167,8 @@
     "sqft": 790,
     "askingPrice": 2709888,
     "listingType": "sale",
-    "areaPsf": 2778,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2016,19 +2183,35 @@
     "imageHue": 30,
     "comps": [
       {
-        "source": "Listing avg",
-        "label": "Binghatti Aquarise · 1BR",
-        "date": "2026-08-30",
-        "price": 1880000,
-        "sqft": 790,
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-07-30",
+        "price": 2948888,
+        "sqft": 825,
         "beds": 1
       },
       {
-        "source": "Listing avg",
-        "label": "Peninsula Two · 1BR",
-        "date": "2026-08-30",
-        "price": 1750000,
-        "sqft": 630,
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-06-29",
+        "price": 3055888,
+        "sqft": 825,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-04-22",
+        "price": 2774888,
+        "sqft": 798,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-04-03",
+        "price": 2880888,
+        "sqft": 825,
         "beds": 1
       }
     ],
@@ -2050,8 +2233,8 @@
     "sqft": 790,
     "askingPrice": 1880000,
     "listingType": "sale",
-    "areaPsf": 2778,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2100,8 +2283,8 @@
     "sqft": 3279,
     "askingPrice": 8400000,
     "listingType": "sale",
-    "areaPsf": 2562,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2150,8 +2333,8 @@
     "sqft": 3279,
     "askingPrice": 8250000,
     "listingType": "sale",
-    "areaPsf": 2562,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2200,8 +2383,8 @@
     "sqft": 630,
     "askingPrice": 1750000,
     "listingType": "sale",
-    "areaPsf": 2778,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [
@@ -2238,7 +2421,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16110541.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16110541.html"
-    }
+    },
+    "buildingPsf": 2627
   },
   {
     "id": "pf-16142136",
@@ -2252,8 +2436,8 @@
     "sqft": 512,
     "askingPrice": 1390962,
     "listingType": "sale",
-    "areaPsf": 2747,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 2784,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2266,7 +2450,40 @@
       "phone": ""
     },
     "imageHue": 181,
-    "comps": [],
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-07-15",
+        "price": 1100000,
+        "sqft": 386,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-06-22",
+        "price": 965250,
+        "sqft": 411,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-06-11",
+        "price": 1235293,
+        "sqft": 411,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-04-27",
+        "price": 1360290,
+        "sqft": 510,
+        "beds": 0
+      }
+    ],
     "firstSeen": "2026-08-30",
     "sourceUrl": "https://www.bayut.com/property/details-16142136.html",
     "sourceUrls": {
@@ -2285,8 +2502,8 @@
     "sqft": 6245,
     "askingPrice": 22500888,
     "listingType": "sale",
-    "areaPsf": 2747,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 3484,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2299,7 +2516,40 @@
       "phone": ""
     },
     "imageHue": 106,
-    "comps": [],
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-19",
+        "price": 24800000,
+        "sqft": 3080,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-12",
+        "price": 25000000,
+        "sqft": 4002,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-12",
+        "price": 20820100,
+        "sqft": 4204,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-10",
+        "price": 20000000,
+        "sqft": 3850,
+        "beds": 3
+      }
+    ],
     "firstSeen": "2026-08-30",
     "sourceUrl": "https://www.bayut.com/property/details-15812781.html",
     "sourceUrls": {
@@ -2318,8 +2568,8 @@
     "sqft": 2504,
     "askingPrice": 1730000,
     "listingType": "sale",
-    "areaPsf": 691,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1005,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2351,7 +2601,7 @@
     "sqft": 2315,
     "askingPrice": 1600000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2369,7 +2619,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16319141.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16319141.html"
-    }
+    },
+    "areaPsf": 985
   },
   {
     "id": "pf-16319723",
@@ -2383,8 +2634,8 @@
     "sqft": 2800,
     "askingPrice": 2699000,
     "listingType": "sale",
-    "areaPsf": 691,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1004,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2425,8 +2676,8 @@
     "sqft": 3705,
     "askingPrice": 2000000,
     "listingType": "sale",
-    "areaPsf": 691,
-    "benchmarkSource": "Listing averages",
+    "areaPsf": 1004,
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2467,7 +2718,7 @@
     "sqft": 3702,
     "askingPrice": 2030000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2485,7 +2736,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16319168.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16319168.html"
-    }
+    },
+    "areaPsf": 850
   },
   {
     "id": "pf-16307451",
@@ -2499,7 +2751,7 @@
     "sqft": 2150,
     "askingPrice": 1500000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2517,7 +2769,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16307451.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16307451.html"
-    }
+    },
+    "areaPsf": 812,
+    "buildingPsf": 801
   },
   {
     "id": "pf-16313187",
@@ -2531,7 +2785,7 @@
     "sqft": 337,
     "askingPrice": 440000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2549,7 +2803,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16313187.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16313187.html"
-    }
+    },
+    "areaPsf": 1315
   },
   {
     "id": "pf-16320088",
@@ -2563,7 +2818,7 @@
     "sqft": 1900,
     "askingPrice": 1870000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2581,7 +2836,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16320088.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16320088.html"
-    }
+    },
+    "areaPsf": 980,
+    "buildingPsf": 980
   },
   {
     "id": "pf-16304659",
@@ -2595,7 +2852,7 @@
     "sqft": 4004,
     "askingPrice": 3050000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2613,7 +2870,9 @@
     "sourceUrl": "https://www.bayut.com/property/details-16304659.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16304659.html"
-    }
+    },
+    "areaPsf": 822,
+    "buildingPsf": 815
   },
   {
     "id": "pf-16321016",
@@ -2627,7 +2886,7 @@
     "sqft": 2100,
     "askingPrice": 1597000,
     "listingType": "sale",
-    "benchmarkSource": "Listing averages",
+    "benchmarkSource": "Portal published",
     "listedDate": "2026-08-30",
     "relistCount": 0,
     "keywords": [],
@@ -2645,6 +2904,8 @@
     "sourceUrl": "https://www.bayut.com/property/details-16321016.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16321016.html"
-    }
+    },
+    "areaPsf": 881,
+    "buildingPsf": 736
   }
 ]

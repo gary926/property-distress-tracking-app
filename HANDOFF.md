@@ -59,15 +59,6 @@ UAE) with Firecrawl + Gmail connectors and this job:
    Costs ~5 credits per page. **Bayut's `?q=` param does not filter** — it
    silently returns the generic listing page, so don't try keyword search;
    scrape area pages and let the scoring engine find the signals.
-1b. **Enrich (optional but this is where the good benchmarks come from).**
-   Search pages carry no averages. The *listing detail page* does — verified
-   2026-08-29 on `bayut.com/property/details-16083937.html`, which publishes
-   "Average AED/sqft for DAMAC Heights: 1,500" and "for Dubai Marina area:
-   1,200". Scrape detail pages for the listings you care about, asking for
-   `buildingAveragePricePerSqft` and `areaAveragePricePerSqft` (the transform
-   reads exactly those names and prefers them over anything it computes).
-   **Costs ~5 credits per listing**, so enrich selectively — the top-scoring
-   listings, or ones whose price just moved — not the whole batch.
 2. **Transform**: `node scripts/transform-listings.mjs raw.json > listings.json`
    — maps loose extraction fields to the `Listing` shape, detects distress
    keywords, drops any rental, and derives **two** benchmarks per listing:
@@ -84,8 +75,44 @@ UAE) with Firecrawl + Gmail connectors and this job:
    sale prices and poison every psf benchmark there. Note the filter must NOT
    match period words in titles: UAE sale listings advertise instalment plans
    ("1% MONTHLY PAYMENT PLAN"), and matching "monthly" there drops real deals.
-3. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
-4. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
+3. **Enrich — this is where the real benchmarks come from.**
+   Search pages carry no averages. The *listing detail page* does, under
+   "Trends & Indices": an average AED/sqft for the area AND a per-building
+   table, both already banded by bedroom count, plus recent transactions in
+   the same building. Scrape with `formats: ["markdown"]`,
+   `onlyMainContent: false`, `includeTags: ["table","svg"]`,
+   `excludeTags: ["img","picture","nav","footer","a","aside"]`,
+   `waitFor: 5000`, `maxAge: 0`. All five matter:
+   - the trends block is rendered by JS, so without `waitFor` those sections
+     come back **empty** and a cache hit can serve the JS-less version;
+   - the area average lives in an SVG, so excluding `svg` silently drops it;
+   - `includeTags` cuts the page to ~1 KB, and markdown costs **1 credit**
+     where a `json`/`query` extraction of the same page costs 5.
+
+   Save each page as `seed/detail-pages/<listing id>.md`, then
+   `node scripts/parse-detail-page.mjs seed/detail-pages listings.json`.
+
+   **You do not need a page per listing.** The published figures are per area
+   *and bedroom band*, so one page benchmarks every listing in its band.
+   `node scripts/parse-detail-page.mjs --plan listings.json` prints the
+   cheapest set: 23 pages covered all 54 listings in the first sweep.
+
+   What it yields, and what it does not: the per-building table lists the five
+   most-searched *locations* in that band, which are towers in Dubai Marina and
+   Business Bay but sub-districts in JVC and Al Reem. So a building average
+   only lands when a listing's own tower is in that table — 9 of 54 on the
+   first sweep. That is the honest ceiling of what Bayut publishes, and the
+   detail screen says "Not available" rather than substituting the area figure.
+   Same-building *transactions* are captured too, but as comps, never as the
+   benchmark: those are settled prices and the listing is an asking price, so
+   folding them together would bias every score.
+
+   Property Finder publishes the same building-vs-area comparison, but only as
+   a plotted chart — the values are not in the page text, so nothing is
+   extractable there beyond its transactions table.
+
+4. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
+5. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
    to the configured recipient via Gmail and send a phone push with the count
    and top deal.
 
@@ -97,6 +124,17 @@ days-on-market, so only the below-market and keyword signals can fire (max 50
 of 100). Price-drop (35) and staleness (15) accrue as the sweep repeats — the
 radar gets sharper every day it runs, and Hot deals appear once listings have
 been observed dropping.
+
+## Deployment state (2026-08-30)
+
+- **Live D1 backfilled** with the two-benchmark shape: all 54 rows carry
+  `listingType: "sale"` and a portal-published `areaPsf`, 9 carry a real
+  `buildingPsf`, and the legacy `benchmarkPsf` is gone. The app picks this up
+  on the next deploy — no re-ingest needed for it. Re-ingesting
+  `seed/first-sweep.json` additionally replaces the synthetic comps with the
+  real same-building transactions the enrichment captured.
+- `seed/detail-pages/` holds the 22 trimmed detail-page transcripts the
+  benchmarks were read from, so the parse is reproducible offline.
 
 ## Deployment state (2026-08-29)
 
