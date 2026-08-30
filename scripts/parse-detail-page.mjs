@@ -149,7 +149,14 @@ function parseBuildingAverages(markdown) {
  *  prices, not asking prices, so they are shown as comps rather than folded
  *  into the benchmark — mixing the two bases would quietly bias every score. */
 function parseTransactions(markdown, beds) {
-  const block = section(markdown, "## Similar Property Transactions");
+  return parseTransactionRows(section(markdown, "## Similar Property Transactions"), beds);
+}
+
+/** Rows out of an already-isolated transactions table. Split from the lookup
+ *  above because Property Finder's tables cannot be found by their heading:
+ *  Firecrawl hoists every table to the top of the markdown, away from the
+ *  "Transactions for Similar Properties" caption that names them. */
+function parseTransactionRows(block, beds) {
   if (!block) return [];
   const out = [];
   for (const line of block.split("\n")) {
@@ -176,6 +183,92 @@ function parseTransactions(markdown, beds) {
   return out;
 }
 
+/** Which portal a page came from. The two publish the same facts in
+ *  different shapes, and no page carries both sets of markers. */
+function parsePortal(markdown) {
+  if (/Trends & Indices|Popular locations|Avg\. price\/sqft/i.test(markdown)) return "bayut";
+  if (/Transactions for Similar Properties|Average Sale Price is|Property Finder/i.test(markdown))
+    return "propertyfinder";
+  return undefined;
+}
+
+/** Property Finder states its scope in words, which is what makes it the
+ *  benchmark to prefer:
+ *
+ *    Average Sale Price is 2,996,887 AED
+ *    Average size is 1,407 sqft
+ *    ...average prices and sizes of all listings that were live on
+ *    Property Finder in Dubai Marina
+ *
+ *  Dividing the two gives an asking-price psf. Two pages in the same building
+ *  on 2026-08-30 proved it is banded by bedroom despite the wording: the 1-bed
+ *  said 1,842,999 / 841 sqft (2,192) and the 2-bed 2,996,887 / 1,407 (2,130).
+ *  So it is a community-and-band figure, named in text — no digit-splitting,
+ *  and none of the sub-development ambiguity Bayut's chart carries. */
+function parsePfAverages(markdown) {
+  const areaName = markdown.match(/live on Property Finder in ([^\n.]+)/)?.[1]?.trim();
+  const price = toNumber(markdown.match(/Average Sale Price is\s*([\d,]+)\s*AED/)?.[1]);
+  const sqft = toNumber(markdown.match(/Average size is\s*([\d,]+)\s*sqft/)?.[1]);
+  if (!price || !sqft) return { areaName };
+  return { areaName, areaPsf: Math.round(price / sqft), areaAvgPrice: price, areaAvgSqft: sqft };
+}
+
+/** The sold table, told apart from the rented one by its header alone:
+ *  Property Finder prints "AED" for sales and "AED/year" for rentals. Since
+ *  the tables arrive hoisted away from their caption, the header is the only
+ *  thing that identifies them. */
+function parsePfSaleTable(markdown) {
+  return (
+    markdown
+      .split(/\n\s*\n/)
+      .find((block) => /^\|\s*Date\s*\|\s*AED\s*\|/im.test(block)) ?? ""
+  );
+}
+
+/** "Transactions for Similar Properties / 2 Beds Apartment in Barcelo
+ *  Residences (Al Dar Tower)" — the table is scoped to the building, and says
+ *  so. The bedroom label is not enforced, though: the 1-bed page of that same
+ *  tower listed its 1,095 sqft 2-bed sales too. So the building is taken from
+ *  the caption and the band is re-applied here by size. */
+function parsePfTransactionScope(markdown) {
+  const m = markdown.match(
+    /Transactions for Similar Properties\s*\n+\s*(?:(\d+)\s+Beds?|(Studio))[^\n]*?\sin\s+([^\n]+)/i,
+  );
+  if (!m) return {};
+  return { beds: m[2] ? 0 : Number(m[1]), building: m[3].trim() };
+}
+
+function parsePfDetailPage(markdown, listing) {
+  const scope = parsePfTransactionScope(markdown);
+  const rows = parseTransactionRows(parsePfSaleTable(markdown), listing.beds ?? scope.beds);
+  // Same building but any size, so keep only what is genuinely comparable.
+  // Without this a 719 sqft sale would be shown as a comp for a 1,511 sqft unit.
+  const comparable = listing.sqft
+    ? rows.filter((t) => Math.abs(t.sqft - listing.sqft) / listing.sqft <= 0.35)
+    : rows;
+  return {
+    portal: "propertyfinder",
+    purpose: parsePfPurpose(markdown),
+    ...parsePfAverages(markdown),
+    // The scope is stated on the page, so it never needs inferring.
+    areaPsfScope: parsePfAverages(markdown).areaPsf ? "community" : undefined,
+    areaPsfLocation: undefined,
+    // Property Finder publishes no per-building asking average — only settled
+    // sales, which stay out of the benchmark and are shown as comps instead.
+    buildingAverages: [],
+    buildingPsf: undefined,
+    transactions: comparable.map((t) => ({ ...t, location: scope.building })),
+  };
+}
+
+/** Conservative: only the two phrasings that state it outright. Anything else
+ *  leaves the verdict unset, and the transform's own filter stands. */
+function parsePfPurpose(markdown) {
+  if (/Average Rent(?:al)? Price is/i.test(markdown)) return "rent";
+  if (/Average Sale Price is/i.test(markdown)) return "sale";
+  return undefined;
+}
+
 function parsePurpose(markdown) {
   if (/Purpose\s*For Rent/i.test(markdown)) return "rent";
   if (/Purpose\s*For Sale/i.test(markdown)) return "sale";
@@ -188,6 +281,7 @@ function parsePurpose(markdown) {
  */
 export function parseDetailPage(markdown, listing = {}) {
   const md = String(markdown ?? "");
+  if (parsePortal(md) === "propertyfinder") return parsePfDetailPage(md, listing);
   const listingPsf =
     listing.askingPrice && listing.sqft ? listing.askingPrice / listing.sqft : undefined;
   const buildingAverages = parseBuildingAverages(md);
@@ -211,6 +305,7 @@ export function parseDetailPage(markdown, listing = {}) {
     : undefined;
 
   return {
+    portal: parsePortal(md),
     purpose: parsePurpose(md),
     ...area,
     areaPsfScope: area.areaPsf ? (scopedTo ? "location" : "community") : undefined,
@@ -253,11 +348,20 @@ export function enrich(listings, pages) {
     perListing.set(page.id, parsed);
     const key = `${owner.community}|${band(owner.beds)}`;
     const existing = benchmarks.get(key) ?? { buildingAverages: [] };
+    // Only a community-scoped figure describes the band as a whole. A
+    // location-scoped one still reaches the listings it covers, through the
+    // per-location table it was matched against.
+    const offered = parsed.areaPsfScope === "community" ? parsed.areaPsf : undefined;
+    // Where both portals cover a band, take Property Finder's: it names the
+    // community it averaged in words, so it cannot be a sub-development's
+    // figure wearing the community's label.
+    const takeOffered =
+      offered &&
+      (!existing.areaPsf ||
+        (existing.areaPsfPortal !== "propertyfinder" && parsed.portal === "propertyfinder"));
     benchmarks.set(key, {
-      // Only a community-scoped figure describes the band as a whole. A
-      // location-scoped one still reaches the listings it covers, through the
-      // per-location table it was matched against.
-      areaPsf: existing.areaPsf ?? (parsed.areaPsfScope === "community" ? parsed.areaPsf : undefined),
+      areaPsf: takeOffered ? offered : existing.areaPsf,
+      areaPsfPortal: takeOffered ? parsed.portal : existing.areaPsfPortal,
       // Merge tables across pages in the same band — different pages surface
       // slightly different "popular" buildings.
       buildingAverages: [
@@ -316,14 +420,21 @@ export function enrich(listings, pages) {
 
 /** The cheapest set of pages that benchmarks a whole batch: one listing per
  *  (community, bedroom band). Printed by `--plan` for the daily sweep. */
+const pfUrl = (l) => l.sourceUrls?.["Property Finder"] ?? (/propertyfinder/.test(l.sourceUrl ?? "") ? l.sourceUrl : undefined);
+
 export function pagesToScrape(listings) {
   const seen = new Map();
   for (const l of listings) {
     const key = `${l.community}|${band(l.beds)}`;
-    if (seen.has(key)) continue;
+    // One page per band, but not just any page: a Property Finder listing
+    // states the scope of its average in words, where Bayut's has to be
+    // inferred and is sometimes a sub-development's. Same cost, better figure.
+    const existing = seen.get(key);
+    if (existing && !(pfUrl(l) && !existing.isPf)) continue;
     seen.set(key, {
       id: l.id,
-      url: l.sourceUrls ? Object.values(l.sourceUrls)[0] : l.sourceUrl,
+      url: pfUrl(l) ?? (l.sourceUrls ? Object.values(l.sourceUrls)[0] : l.sourceUrl),
+      isPf: Boolean(pfUrl(l)),
       community: l.community,
       band: band(l.beds),
       covers: listings.filter((o) => `${o.community}|${band(o.beds)}` === key).length,

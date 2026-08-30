@@ -227,3 +227,125 @@ describe("pagesToScrape", () => {
     expect(plan.map((p: { band: string }) => p.band)).toEqual(["2", "4plus", "studio"]);
   });
 });
+
+describe("Property Finder pages", () => {
+  const pfPage = readFileSync(new URL("./fixtures/propertyfinder-detail.md", import.meta.url), "utf8");
+  const pfUnit = {
+    id: "pf-137447722",
+    building: "Barcelo Residences (Al Dar Tower)",
+    community: "Dubai Marina",
+    beds: 2,
+    askingPrice: 2_895_000,
+    sqft: 1511,
+    listingType: "sale",
+    benchmarkSource: "Listing averages",
+    comps: [],
+  };
+
+  it("is recognised as Property Finder, not Bayut", () => {
+    expect(parseDetailPage(pfPage, pfUnit).portal).toBe("propertyfinder");
+    expect(parseDetailPage(page, unit).portal).toBe("bayut");
+  });
+
+  it("divides the stated average price by the stated average size", () => {
+    // 2,996,887 / 1,407 = 2,130. Property Finder prints both figures in plain
+    // text, so no digit-splitting is needed to recover the benchmark.
+    const parsed = parseDetailPage(pfPage, pfUnit);
+    expect(parsed.areaPsf).toBe(2130);
+    expect(parsed.areaName).toBe("Dubai Marina");
+  });
+
+  it("treats the stated figure as the community's, never a building's", () => {
+    // The page names the area it averaged, so the scope is read, not guessed.
+    const parsed = parseDetailPage(pfPage, pfUnit);
+    expect(parsed.areaPsfScope).toBe("community");
+    expect(parsed.areaPsfLocation).toBeUndefined();
+    expect(parsed.buildingPsf).toBeUndefined();
+  });
+
+  it("reads the sold table and ignores the rented one", () => {
+    // Both tables are Date/amount/area; only the header separates them, and
+    // Firecrawl hoists them away from their captions.
+    const { transactions } = parseDetailPage(pfPage, pfUnit);
+    expect(transactions.map((t) => t.price)).toEqual([1_960_000, 1_910_000, 1_400_000]);
+    expect(transactions.every((t) => t.location === "Barcelo Residences (Al Dar Tower)")).toBe(true);
+  });
+
+  it("re-bands the building's sales by size, because the caption does not", () => {
+    // The real 1-bed page of this tower listed its 1,095 sqft 2-bed sales
+    // under a "1 Bed Apartment in …" caption, so the label cannot be trusted.
+    const oneBed = { ...pfUnit, id: "pf-137444864", beds: 1, askingPrice: 1_650_000, sqft: 718 };
+    const withSmallSale = pfPage.replace(
+      "| 25 Feb 2026 | 1,960,000 | 1,101 |",
+      "| 25 Feb 2026 | 1,960,000 | 1,101 |\n| 22 Jul 2026 | 1,150,000 | 719 |",
+    );
+    const { transactions } = parseDetailPage(withSmallSale, oneBed);
+    expect(transactions.map((t) => t.sqft)).toEqual([719]);
+  });
+
+  it("reads sale/rent from the wording, and stays silent otherwise", () => {
+    expect(parseDetailPage(pfPage, pfUnit).purpose).toBe("sale");
+    expect(
+      parseDetailPage(pfPage.replace("Average Sale Price is", "Average Rental Price is"), pfUnit)
+        .purpose,
+    ).toBe("rent");
+  });
+
+  it("benchmarks the band from a Property Finder page", () => {
+    const sibling = { ...pfUnit, id: "pf-999", building: "Sanibel Tower", comps: [] };
+    const { listings, stats } = enrich([pfUnit, sibling], [{ id: pfUnit.id, markdown: pfPage }]);
+    expect(listings[0].areaPsf).toBe(2130);
+    expect(listings[1].areaPsf).toBe(2130);
+    expect(listings[0].benchmarkSource).toBe("Portal published");
+    expect(stats.area).toBe(2);
+    // Only the page's own listing gets that building's sales as comps.
+    expect(listings[0].comps).toHaveLength(3);
+    expect(listings[1].comps).toHaveLength(0);
+  });
+
+  it("prefers Property Finder's stated scope over Bayut's inferred one", () => {
+    // Same community and band, both portals scraped. Bayut's chart figure has
+    // to be recovered from a run-together pair and its scope inferred;
+    // Property Finder states both, so it wins regardless of scrape order.
+    const bayutOwner = {
+      ...pfUnit,
+      id: "bayut-1",
+      building: "Horizon Tower",
+      askingPrice: 3_000_000,
+      sqft: 2450,
+      comps: [],
+    };
+    const bayutPage = { id: "bayut-1", markdown: page };
+    const pfPageEntry = { id: pfUnit.id, markdown: pfPage };
+
+    for (const pages of [
+      [bayutPage, pfPageEntry],
+      [pfPageEntry, bayutPage],
+    ]) {
+      const { listings } = enrich([pfUnit, bayutOwner], pages);
+      expect(listings.map((l: { areaPsf?: number }) => l.areaPsf)).toEqual([2130, 2130]);
+    }
+
+    // Sanity: Bayut's own figure for that band really is the different one, so
+    // the assertion above is a preference and not a coincidence.
+    expect(parseDetailPage(page, bayutOwner).areaPsf).toBe(2176);
+  });
+});
+
+describe("pagesToScrape portal preference", () => {
+  it("represents a band with a Property Finder listing when one exists", () => {
+    const plan = pagesToScrape([
+      { id: "b1", community: "Dubai Marina", beds: 2, sourceUrl: "https://www.bayut.com/x" },
+      { id: "p1", community: "Dubai Marina", beds: 2, sourceUrls: { "Property Finder": "https://www.propertyfinder.ae/y" } },
+    ]);
+    expect(plan).toHaveLength(1);
+    expect(plan[0]).toMatchObject({ id: "p1", covers: 2, isPf: true });
+  });
+
+  it("still covers a band that only Bayut lists", () => {
+    const plan = pagesToScrape([
+      { id: "b1", community: "JVC", beds: 1, sourceUrl: "https://www.bayut.com/x" },
+    ]);
+    expect(plan[0]).toMatchObject({ id: "b1", isPf: false });
+  });
+});

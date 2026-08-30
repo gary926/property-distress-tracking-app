@@ -117,15 +117,21 @@ The job it runs:
    most-searched *locations* in that band, which are towers in Dubai Marina and
    Business Bay but sub-districts in JVC and Al Reem. So a building average
    only lands when a listing's own tower is in that table — 9 of 54 on the
-   first sweep. That is the honest ceiling of what Bayut publishes, and the
-   detail screen says "Not available" rather than substituting the area figure.
-   Same-building *transactions* are captured too, but as comps, never as the
-   benchmark: those are settled prices and the listing is an asking price, so
-   folding them together would bias every score.
+   first sweep. That is the ceiling of *that table*, not of the portals (an
+   earlier note in this file claimed otherwise; see "Property Finder is the
+   better benchmark" below). The detail screen says "Not available" rather than
+   substituting the area figure. Same-building *transactions* are captured too,
+   but as comps, never as the benchmark: those are settled prices and the
+   listing is an asking price, so folding them together would bias every score.
 
-   Property Finder publishes the same building-vs-area comparison, but only as
-   a plotted chart — the values are not in the page text, so nothing is
-   extractable there beyond its transactions table.
+   **Property Finder pages parse differently and are preferred.** Same cost,
+   same `formats: ["markdown"]`, but `includeTags: ["table","p"]` — the `p` is
+   load-bearing, because PF states its averages in prose, not in an SVG.
+   Firecrawl hoists every table to the top of the markdown, away from the
+   caption naming it, so the tables are identified by their header alone:
+   `| Date | AED | ...` is the sold table and `| Date | AED/year | ...` the
+   rented one. `parseDetailPage` detects the portal and dispatches; the Bayut
+   path is untouched.
 
 4. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
 5. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
@@ -192,6 +198,78 @@ A corollary worth keeping: what the per-location table names is often the
 therefore travels with `buildingPsfLabel` naming what was actually matched, and
 the detail screen says "Same development" rather than pretending it is the
 tower's own figure.
+
+## Property Finder is the better benchmark (2026-08-30)
+
+An earlier version of this file said PF's building-vs-area comparison was "only
+a plotted chart… nothing extractable beyond its transactions table". That was
+wrong, and it cost the project a worse benchmark for a day. PF states, in page
+text, on every sale listing:
+
+    Transactions for Similar Properties
+    2 Beds Apartment in Barcelo Residences (Al Dar Tower)
+
+    This property costs 3% less than the average
+    Average Sale Price is 2,996,887 AED
+    This property is 7% bigger than the average
+    Average size is 1,407 sqft
+
+    ...average prices and sizes of all listings that were live on
+    Property Finder in Dubai Marina
+
+Dividing the two averages gives an asking-price psf. **The scope is stated, not
+inferred** — which is the whole point, because Bayut's has to be guessed and is
+sometimes a sub-development's (see the traps section below).
+
+Two live checks on 2026-08-30 pinned what that figure is scoped to:
+
+- **Banded by bedroom.** Same building, two bands: 1-bed 1,842,999 / 841 sqft
+  (2,191); 2-bed 2,996,887 / 1,407 sqft (2,130). It moves with the band despite
+  the disclaimer not saying so.
+- **Scoped to the community, not the building.** Barcelo Residences and Marina
+  View Tower B — different towers — report the *identical* 1,842,999 / 841 for
+  Dubai Marina 1-beds.
+
+So it is a community-and-band asking average: exactly the denominator the
+below-market signal wants, and the same basis as our own number.
+
+**Where the portals disagree, PF wins.** On Dubai Marina 1-beds Bayut published
+2,592 and PF 2,191 — an 18% gap, and not a parse error on either side. Bayut's
+own top-five table for that same band reads 2,999 / 1,338 / 1,570 / 2,237 /
+1,526 (mean 1,934), so its stated area average sits above four of the five
+towers it lists; PF's 2,191 sits inside that range and is corroborated across
+two buildings. `enrich` therefore prefers a PF figure over a Bayut one for the
+same band, regardless of scrape order, and `--plan` picks a PF listing as a
+band's representative when one exists. The 2-bed band, where the two agree
+within 2.5% (2,130 vs 2,079), is the control that says this is a scoping
+disagreement and not a systematic portal difference.
+
+What switching to PF did to the seed batch (14 listings re-benchmarked, all
+Dubai Marina): three below-market signals that should never have fired went to
+zero — Bay Central West and Barcelo's 1-bed both moved from "11% below" to 5%
+*above* market, Silverene Tower B from 7% below to 11% above — and Sanibel
+Tower and Fairfield Tower fell from 22%/20% below to 8%/6%. The genuine top
+signal survived (Marina View Tower B, 54% → 46%). Net: fewer false positives,
+same real deals.
+
+**One caveat, proven on live pages.** PF's transactions table is scoped to the
+building but its bedroom caption is *not* enforced: the 1-bed page of Barcelo
+Residences listed that tower's 1,095 sqft 2-bed sales under a "1 Bed Apartment
+in…" heading. The parser re-bands those rows by size (±35% of the listing's
+sqft) rather than trusting the caption.
+
+**Also worth knowing:** PF's own "% less than the average" is size-blind — it
+compares total price. A 718 sqft 1-bed at 1,650,000 is advertised as "10% less
+than the average" while also being "15% smaller"; per sqft it is 2,298 against
+a 2,191 average, i.e. 5% *above* market. That size-blind comparison is exactly
+what the bed banding exists to avoid. Never surface PF's percentage as-is.
+
+**Still unbuilt:** per-listing enrichment. Everything genuinely per-listing —
+a tower's own average, its own transactions — is only available for the ~1 page
+per band we actually fetch (10 pages covered 39 listings; only 2 of 75 rows in
+D1 carry their own building's sales). Getting it for every listing means one
+page per listing: ~75 credits a day instead of ~10. Not done; decide before
+building.
 
 ## Gotchas already hit
 
