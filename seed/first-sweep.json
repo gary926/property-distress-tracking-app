@@ -1,0 +1,3034 @@
+[
+  {
+    "id": "pf-16083937",
+    "title": "Vacant | Marina View | High Floor",
+    "building": "DAMAC Heights",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1540,
+    "askingPrice": 4000000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant | Marina View | High Floor",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 10,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-30",
+        "price": 2700000,
+        "sqft": 1425,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-24",
+        "price": 3100000,
+        "sqft": 1505,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-07-07",
+        "price": 3125000,
+        "sqft": 1471,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-06-26",
+        "price": 3100000,
+        "sqft": 1624,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16083937.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16083937.html"
+    },
+    "buildingTxnPsf": 1984,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1895,
+    "buildingTxnHigh": 2305
+  },
+  {
+    "id": "pf-14066052",
+    "title": "Fully Upgraded | Generous Layout | Vacant",
+    "building": "Horizon Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2450,
+    "askingPrice": 3000000,
+    "listingType": "sale",
+    "areaPsf": 2176,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Fully Upgraded | Generous Layout | Vacant",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 226,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-08-19",
+        "price": 3200000,
+        "sqft": 2409,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-07-14",
+        "price": 2500000,
+        "sqft": 2409,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-05-22",
+        "price": 3450000,
+        "sqft": 2451,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Horizon Tower · 4BR",
+        "date": "2026-05-19",
+        "price": 2570000,
+        "sqft": 2409,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-14066052.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-14066052.html"
+    },
+    "buildingPsf": 1357,
+    "buildingPsfLabel": "Horizon Tower",
+    "buildingTxnPsf": 1052,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 955,
+    "buildingTxnHigh": 1408
+  },
+  {
+    "id": "pf-16144392",
+    "title": "Marina View | Unfurnished | Vacant",
+    "building": "Bay Central West",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 693,
+    "askingPrice": 1600000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Marina View | Unfurnished | Vacant",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 40,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-06-09",
+        "price": 1225000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-04-02",
+        "price": 1200000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-03-11",
+        "price": 1650000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Bay Central West · 1BR",
+        "date": "2025-12-05",
+        "price": 1380000,
+        "sqft": 646,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16144392.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16144392.html"
+    },
+    "buildingTxnPsf": 2230,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1732,
+    "buildingTxnHigh": 2478
+  },
+  {
+    "id": "pf-15462731",
+    "title": "Vacant | Fully Furnished | Close to Mall",
+    "building": "Silverene Tower B",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 598,
+    "askingPrice": 1449000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant | Fully Furnished | Close to Mall",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 160,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1450000,
+        "sqft": 1224,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Sanibel Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1900000,
+        "sqft": 938,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15462731.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15462731.html"
+    }
+  },
+  {
+    "id": "pf-16015020",
+    "title": "Exclusive | Penthouse Level | Sunset View",
+    "building": "Marina Gate 2",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Penthouse",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1231,
+    "askingPrice": 3399000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Exclusive | Penthouse Level | Sunset View",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 19,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-07-07",
+        "price": 3100000,
+        "sqft": 1229,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-06-26",
+        "price": 3100000,
+        "sqft": 1204,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-06-03",
+        "price": 3550000,
+        "sqft": 1231,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-04-16",
+        "price": 3650000,
+        "sqft": 1207,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16015020.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16015020.html"
+    },
+    "buildingPsf": 3105,
+    "buildingPsfLabel": "Marina Gate",
+    "buildingTxnPsf": 2740,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 2522,
+    "buildingTxnHigh": 3037
+  },
+  {
+    "id": "pf-16065000",
+    "title": "Vacant Now | Marina Access | City Views",
+    "building": "Orra Marina",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1350,
+    "askingPrice": 2048000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant Now | Marina Access | City Views",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 316,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-08-30",
+        "price": 4000000,
+        "sqft": 1540,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-08-30",
+        "price": 3399000,
+        "sqft": 1231,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Cayan Tower · 2BR",
+        "date": "2026-08-30",
+        "price": 2800000,
+        "sqft": 1525,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16065000.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16065000.html"
+    }
+  },
+  {
+    "id": "pf-15966507",
+    "title": "High Floor | Vacant | Expansive Layout",
+    "building": "Cayan Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1525,
+    "askingPrice": 2800000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High Floor | Vacant | Expansive Layout",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 333,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "DAMAC Heights · 2BR",
+        "date": "2026-08-30",
+        "price": 4000000,
+        "sqft": 1540,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina Gate 2 · 2BR",
+        "date": "2026-08-30",
+        "price": 3399000,
+        "sqft": 1231,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Orra Marina · 2BR",
+        "date": "2026-08-30",
+        "price": 2048000,
+        "sqft": 1350,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15966507.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15966507.html"
+    }
+  },
+  {
+    "id": "pf-15842273",
+    "title": "Upgraded Penthouse | Exclusive | Sea View",
+    "building": "Cayan Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Penthouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2550,
+    "askingPrice": 7850000,
+    "listingType": "sale",
+    "areaPsf": 2143,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Upgraded Penthouse | Exclusive | Sea View",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 333,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2026-06-22",
+        "price": 3452382,
+        "sqft": 1813,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2025-11-21",
+        "price": 3225000,
+        "sqft": 1661,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2025-11-12",
+        "price": 3725000,
+        "sqft": 1734,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Cayan Tower · 3BR",
+        "date": "2024-10-02",
+        "price": 3350000,
+        "sqft": 1647,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15842273.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15842273.html"
+    },
+    "buildingTxnPsf": 1942,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1848,
+    "buildingTxnHigh": 2148
+  },
+  {
+    "id": "pf-137449378",
+    "title": "Furnished 1BR | Marina Living | High ROI| Hot Deal",
+    "building": "Marina View Tower B",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 1224,
+    "askingPrice": 1450000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Furnished 1BR | Marina Living | High ROI| Hot Deal",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 262,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2025-08-26",
+        "price": 1600000,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2025-01-19",
+        "price": 1500000,
+        "sqft": 1224,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2024-05-15",
+        "price": 1225000,
+        "sqft": 1224,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html"
+    },
+    "buildingTxnPsf": 1225,
+    "buildingTxnCount": 3,
+    "buildingTxnLow": 1001,
+    "buildingTxnHigh": 1525
+  },
+  {
+    "id": "pf-137447722",
+    "title": "Canal And Partial Sea View | Corner | Vacant",
+    "building": "Barcelo Residences (Al Dar Tower)",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1511,
+    "askingPrice": 2895000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Canal And Partial Sea View | Corner | Vacant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 35,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Barcelo Residences (Al Dar Tower) · 2BR",
+        "date": "2026-02-25",
+        "price": 1960000,
+        "sqft": 1101,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Barcelo Residences (Al Dar Tower) · 2BR",
+        "date": "2025-06-29",
+        "price": 1910000,
+        "sqft": 1095,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Barcelo Residences (Al Dar Tower) · 2BR",
+        "date": "2025-04-13",
+        "price": 1400000,
+        "sqft": 1095,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html"
+    },
+    "buildingTxnPsf": 1744,
+    "buildingTxnCount": 3,
+    "buildingTxnLow": 1279,
+    "buildingTxnHigh": 1780
+  },
+  {
+    "id": "pf-137447197",
+    "title": "Best Priced | 2BR-Vacant-Unfurnished | High Floor",
+    "building": "Jumeirah Living Marina Gate",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1417,
+    "askingPrice": 3900000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Best Priced | 2BR-Vacant-Unfurnished | High Floor",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 359,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2026-07-21",
+        "price": 4450000,
+        "sqft": 1421,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2025-11-18",
+        "price": 4650000,
+        "sqft": 1421,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2024-12-09",
+        "price": 3000000,
+        "sqft": 1417,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Jumeirah Living Marina Gate · 2BR",
+        "date": "2024-04-30",
+        "price": 4100000,
+        "sqft": 1422,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-jumeirah-living-marina-gate-137447197.html"
+    },
+    "buildingPsf": 3105,
+    "buildingPsfLabel": "Marina Gate",
+    "buildingTxnPsf": 2883,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 2117,
+    "buildingTxnHigh": 3272
+  },
+  {
+    "id": "pf-137447162",
+    "title": "Best Priced | Fully Furnished | Pool View",
+    "building": "Rove Home Dubai Marina",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 395,
+    "askingPrice": 1275000,
+    "listingType": "sale",
+    "areaPsf": 2584,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Best Priced | Fully Furnished | Pool View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 186,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Rove Home Dubai Marina · Studio",
+        "date": "2025-06-02",
+        "price": 1450400,
+        "sqft": 395,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Rove Home Dubai Marina · Studio",
+        "date": "2025-06-01",
+        "price": 1407600,
+        "sqft": 395,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Rove Home Dubai Marina · Studio",
+        "date": "2025-05-12",
+        "price": 1370000,
+        "sqft": 395,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Rove Home Dubai Marina · Studio",
+        "date": "2025-05-12",
+        "price": 1355000,
+        "sqft": 395,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html"
+    },
+    "buildingTxnPsf": 3468,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 3359,
+    "buildingTxnHigh": 3672
+  },
+  {
+    "id": "pf-137446798",
+    "title": "Full Marina View | Vacant Soon | Large Layout",
+    "building": "Sanibel Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 938,
+    "askingPrice": 1900000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Full Marina View | Vacant Soon | Large Layout",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 183,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Silverene Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1449000,
+        "sqft": 598,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1450000,
+        "sqft": 1224,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-sanibel-tower-137446798.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-sanibel-tower-137446798.html"
+    }
+  },
+  {
+    "id": "pf-137444864",
+    "title": "Reduced Price|Partial Marina View|High Floor",
+    "building": "Barcelo Residences (Al Dar Tower)",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 718,
+    "askingPrice": 1650000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [
+      "reduced price"
+    ],
+    "description": "Reduced Price|Partial Marina View|High Floor",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 35,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Silverene Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1449000,
+        "sqft": 598,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1450000,
+        "sqft": 1224,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137444864.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137444864.html"
+    }
+  },
+  {
+    "id": "pf-137437380",
+    "title": "Marine View | Fully Furnished 1BR | Good Location",
+    "building": "Fairfield Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 909,
+    "askingPrice": 1875000,
+    "listingType": "sale",
+    "areaPsf": 2191,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Marine View | Fully Furnished 1BR | Good Location",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 23,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bay Central West · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 693,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Silverene Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1449000,
+        "sqft": 598,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Marina View Tower B · 1BR",
+        "date": "2026-08-30",
+        "price": 1450000,
+        "sqft": 1224,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-fairfield-tower-137437380.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-park-island-fairfield-tower-137437380.html"
+    }
+  },
+  {
+    "id": "pf-137433484",
+    "title": "Marina View | Furnished | Vacant",
+    "building": "The Jewel Tower B",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 2243,
+    "askingPrice": 3699000,
+    "listingType": "sale",
+    "areaPsf": 2130,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Marina View | Furnished | Vacant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 43,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2026-07-08",
+        "price": 2326710,
+        "sqft": 2244,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2026-06-28",
+        "price": 2400000,
+        "sqft": 1937,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2025-04-22",
+        "price": 2450000,
+        "sqft": 1937,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "The Jewel Tower B · 2BR",
+        "date": "2024-10-03",
+        "price": 2250000,
+        "sqft": 2151,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html"
+    },
+    "buildingTxnPsf": 1046,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1025,
+    "buildingTxnHigh": 1265
+  },
+  {
+    "id": "pf-16177545",
+    "title": "Prime Investment | Spacious 2 BR | High ROI",
+    "building": "DMS Building",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1837,
+    "askingPrice": 2279093,
+    "listingType": "sale",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Prime Investment | Spacious 2 BR | High ROI",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 354,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Luma Park Views · 2BR",
+        "date": "2026-08-29",
+        "price": 1994240,
+        "sqft": 1360,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Regent Court · 2BR",
+        "date": "2026-08-27",
+        "price": 2000000,
+        "sqft": 1912,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Luma Park Views · 2BR",
+        "date": "2026-08-26",
+        "price": 2016824,
+        "sqft": 1266,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Violet Tower · 2BR",
+        "date": "2026-08-25",
+        "price": 1671480,
+        "sqft": 1238,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16177545.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16177545.html"
+    },
+    "buildingTxnPsf": 1447,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1046,
+    "buildingTxnHigh": 1595
+  },
+  {
+    "id": "pf-16315729",
+    "title": "Spacious Apartment | Laundry | Big Balcony",
+    "building": "Crystal Residence",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 1049,
+    "askingPrice": 999999,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious Apartment | Laundry | Big Balcony",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 244,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-06-30",
+        "price": 750000,
+        "sqft": 839,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-05-18",
+        "price": 750000,
+        "sqft": 776,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-02-03",
+        "price": 860000,
+        "sqft": 801,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Crystal Residence · 1BR",
+        "date": "2024-12-11",
+        "price": 825000,
+        "sqft": 767,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16315729.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16315729.html"
+    },
+    "buildingTxnPsf": 930,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 737,
+    "buildingTxnHigh": 1076
+  },
+  {
+    "id": "pf-15444304",
+    "title": "Brand new I Private pool I Spacious layout",
+    "building": "Binghatti Phantom",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 795,
+    "askingPrice": 1110000,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Brand new I Private pool I Spacious layout",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 241,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Emerald · 1BR",
+        "date": "2026-08-30",
+        "price": 949999,
+        "sqft": 646,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Rise Residences · 1BR",
+        "date": "2026-08-30",
+        "price": 900000,
+        "sqft": 749,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15444304.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15444304.html"
+    }
+  },
+  {
+    "id": "pf-16250286",
+    "title": "1% MONTHLY PAYMENT PLAN | BOUTIQUE | JVC | STUDIO | CASH DEAL",
+    "building": "Beverly Crown",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 442,
+    "askingPrice": 590000,
+    "listingType": "sale",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "1% MONTHLY PAYMENT PLAN | BOUTIQUE | JVC | STUDIO | CASH DEAL",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 202,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 689010,
+        "sqft": 425,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 651840,
+        "sqft": 388,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 787440,
+        "sqft": 425,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Oxford Cove by Iman · Studio",
+        "date": "2026-08-27",
+        "price": 787440,
+        "sqft": 425,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16250286.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16250286.html"
+    },
+    "buildingTxnPsf": 1752,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1621,
+    "buildingTxnHigh": 1853
+  },
+  {
+    "id": "pf-16271936",
+    "title": "Smart Home | Next to Al Khail Exit | High Floor",
+    "building": "Binghatti Emerald",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 646,
+    "askingPrice": 949999,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Smart Home | Next to Al Khail Exit | High Floor",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 212,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Phantom · 1BR",
+        "date": "2026-08-30",
+        "price": 1110000,
+        "sqft": 795,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Rise Residences · 1BR",
+        "date": "2026-08-30",
+        "price": 900000,
+        "sqft": 749,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16271936.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16271936.html"
+    }
+  },
+  {
+    "id": "pf-16046188",
+    "title": "OPEN VIEW | LARGE LAYOUT | HIGH QUALITY FINISHING",
+    "building": "Rise Residences",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 749,
+    "askingPrice": 900000,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "OPEN VIEW | LARGE LAYOUT | HIGH QUALITY FINISHING",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 24,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Phantom · 1BR",
+        "date": "2026-08-30",
+        "price": 1110000,
+        "sqft": 795,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Emerald · 1BR",
+        "date": "2026-08-30",
+        "price": 949999,
+        "sqft": 646,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16046188.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16046188.html"
+    }
+  },
+  {
+    "id": "pf-16308585",
+    "title": "BRAND NEW | PREMIUM QUALITY | HIGHER FLOOR",
+    "building": "Binghatti Apex",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 427,
+    "askingPrice": 670000,
+    "listingType": "sale",
+    "areaPsf": 1350,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "BRAND NEW | PREMIUM QUALITY | HIGHER FLOOR",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 272,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Beverly Crown · Studio",
+        "date": "2026-08-30",
+        "price": 590000,
+        "sqft": 442,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16308585.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16308585.html"
+    }
+  },
+  {
+    "id": "pf-15837924",
+    "title": "BRAND NEW | 1BHK | LOWEST PRICE | READY TO MOVE",
+    "building": "Luma Park Views",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 879,
+    "askingPrice": 1199999,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "BRAND NEW | 1BHK | LOWEST PRICE | READY TO MOVE",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 307,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Phantom · 1BR",
+        "date": "2026-08-30",
+        "price": 1110000,
+        "sqft": 795,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Emerald · 1BR",
+        "date": "2026-08-30",
+        "price": 949999,
+        "sqft": 646,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15837924.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15837924.html"
+    }
+  },
+  {
+    "id": "pf-15944843",
+    "title": "Investor Deal | Attractive PP | Near To Circle Mall",
+    "building": "Stax Tower B",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 759,
+    "askingPrice": 1139503,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Investor Deal | Attractive PP | Near To Circle Mall",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 355,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Phantom · 1BR",
+        "date": "2026-08-30",
+        "price": 1110000,
+        "sqft": 795,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Emerald · 1BR",
+        "date": "2026-08-30",
+        "price": 949999,
+        "sqft": 646,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15944843.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15944843.html"
+    }
+  },
+  {
+    "id": "pf-15172708",
+    "title": "Beautifully Furnished | Fully Modernized | Pool View | VOT",
+    "building": "Oxford Residence",
+    "community": "Jumeirah Village Circle (JVC)",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 782,
+    "askingPrice": 1000000,
+    "listingType": "sale",
+    "areaPsf": 1365,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Beautifully Furnished | Fully Modernized | Pool View | VOT",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 132,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residence · 1BR",
+        "date": "2026-08-30",
+        "price": 999999,
+        "sqft": 1049,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Phantom · 1BR",
+        "date": "2026-08-30",
+        "price": 1110000,
+        "sqft": 795,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Emerald · 1BR",
+        "date": "2026-08-30",
+        "price": 949999,
+        "sqft": 646,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15172708.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15172708.html"
+    }
+  },
+  {
+    "id": "pf-14649430",
+    "title": "Stylish 1BHK | Spacious Layout | High Floor",
+    "building": "Renad Tower",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 626,
+    "askingPrice": 1500000,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Stylish 1BHK | Spacious Layout | High Floor",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 331,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Amara · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 995,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-14649430.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-14649430.html"
+    }
+  },
+  {
+    "id": "pf-16221573",
+    "title": "Spacious 1BR | Prime Location | Exceptional Value",
+    "building": "Radisson Residences Tower 1",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 1051,
+    "askingPrice": 1869000,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious 1BR | Prime Location | Exceptional Value",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 18,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Amara · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 995,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16221573.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16221573.html"
+    }
+  },
+  {
+    "id": "pf-16090144",
+    "title": "Premium 1BHK | Stunning View | Luxury Living",
+    "building": "Vista 3",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 520,
+    "askingPrice": 849999,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Premium 1BHK | Stunning View | Luxury Living",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 242,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Amara · 1BR",
+        "date": "2026-08-30",
+        "price": 1600000,
+        "sqft": 995,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16090144.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16090144.html"
+    }
+  },
+  {
+    "id": "pf-16315609",
+    "title": "Amara Tower | High Floor | Gated Community | Resale",
+    "building": "Amara",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 995,
+    "askingPrice": 1600000,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Amara Tower | High Floor | Gated Community | Resale",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 122,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16315609.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16315609.html"
+    }
+  },
+  {
+    "id": "pf-15466765",
+    "title": "Hot Deal!!!! | Corner Apartment | Big Size | Stunning Views",
+    "building": "Radiant Garden Towers",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 1167,
+    "askingPrice": 1650000,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Hot Deal!!!! | Corner Apartment | Big Size | Stunning Views",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 208,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15466765.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15466765.html"
+    }
+  },
+  {
+    "id": "pf-16000456",
+    "title": "1BR+Balcony | Waterfront Living | Best Investment!",
+    "building": "Elie Saab Waterfront by Ohana",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 861,
+    "askingPrice": 1625000,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "1BR+Balcony | Waterfront Living | Best Investment!",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 140,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16000456.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16000456.html"
+    }
+  },
+  {
+    "id": "pf-15471011",
+    "title": "Contemporary 1BR Apartment | Vibrant Community",
+    "building": "Amara",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 996,
+    "askingPrice": 1599990,
+    "listingType": "sale",
+    "areaPsf": 1839,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Contemporary 1BR Apartment | Vibrant Community",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 122,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Renad Tower · 1BR",
+        "date": "2026-08-30",
+        "price": 1500000,
+        "sqft": 626,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Radisson Residences Tower 1 · 1BR",
+        "date": "2026-08-30",
+        "price": 1869000,
+        "sqft": 1051,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-08-30",
+        "price": 849999,
+        "sqft": 520,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15471011.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15471011.html"
+    }
+  },
+  {
+    "id": "pf-16048920",
+    "title": "Full Sea View | Motivated Seller | 2BR+Maids Room",
+    "building": "Manzel",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1475,
+    "askingPrice": 2500000,
+    "listingType": "sale",
+    "areaPsf": 1695,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [
+      "motivated seller"
+    ],
+    "description": "Full Sea View | Motivated Seller | 2BR+Maids Room",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 255,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Elie Saab Waterfront by Ohana · 2BR",
+        "date": "2026-08-30",
+        "price": 3750000,
+        "sqft": 2105,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Reem Hills · 2BR",
+        "date": "2026-08-30",
+        "price": 2450000,
+        "sqft": 1835,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16048920.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16048920.html"
+    }
+  },
+  {
+    "id": "pf-16137656",
+    "title": "Sea View | Below OP | Corner 2BR+M | Motivated Seller",
+    "building": "Elie Saab Waterfront by Ohana",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 2105,
+    "askingPrice": 3750000,
+    "listingType": "sale",
+    "areaPsf": 1695,
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [
+      "motivated seller"
+    ],
+    "description": "Sea View | Below OP | Corner 2BR+M | Motivated Seller",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 140,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Manzel · 2BR",
+        "date": "2026-08-30",
+        "price": 2500000,
+        "sqft": 1475,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Reem Hills · 2BR",
+        "date": "2026-08-30",
+        "price": 2450000,
+        "sqft": 1835,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16137656.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16137656.html"
+    }
+  },
+  {
+    "id": "pf-16250259",
+    "title": "Spacious 2BR With Balcony | Hot Deal | High ROI!",
+    "building": "Reem Hills",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1835,
+    "askingPrice": 2450000,
+    "listingType": "sale",
+    "areaPsf": 1695,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious 2BR With Balcony | Hot Deal | High ROI!",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 213,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Manzel · 2BR",
+        "date": "2026-08-30",
+        "price": 2500000,
+        "sqft": 1475,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Elie Saab Waterfront by Ohana · 2BR",
+        "date": "2026-08-30",
+        "price": 3750000,
+        "sqft": 2105,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16250259.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16250259.html"
+    },
+    "buildingPsf": 1530,
+    "buildingPsfLabel": "Reem Hills"
+  },
+  {
+    "id": "pf-16242165",
+    "title": "Special Offer | Branded Residences | Ultra Luxury",
+    "building": "Bugatti Residences by Binghatti",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 2672,
+    "askingPrice": 14599999,
+    "listingType": "sale",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Special Offer | Branded Residences | Ultra Luxury",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 106,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-08-19",
+        "price": 19000000,
+        "sqft": 4106,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-07-25",
+        "price": 19750000,
+        "sqft": 2412,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-07-23",
+        "price": 15800000,
+        "sqft": 3983,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-06-26",
+        "price": 15300000,
+        "sqft": 4093,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16242165.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16242165.html"
+    }
+  },
+  {
+    "id": "pf-16102278",
+    "title": "Boutique Luxury | Palace Branded | Burj Khalifa Views | Direct Metro",
+    "building": "Avarra by Palace",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 790,
+    "askingPrice": 2709888,
+    "listingType": "sale",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Boutique Luxury | Palace Branded | Burj Khalifa Views | Direct Metro",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 30,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-07-30",
+        "price": 2948888,
+        "sqft": 825,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-06-29",
+        "price": 3055888,
+        "sqft": 825,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-04-22",
+        "price": 2774888,
+        "sqft": 798,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-04-03",
+        "price": 2880888,
+        "sqft": 825,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16102278.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16102278.html"
+    },
+    "buildingTxnPsf": 3533,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 3462,
+    "buildingTxnHigh": 3888
+  },
+  {
+    "id": "pf-16139080",
+    "title": "Prime Investment | Cash Buyer Exclusive | High ROI",
+    "building": "Binghatti Aquarise",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 790,
+    "askingPrice": 1880000,
+    "listingType": "sale",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Prime Investment | Cash Buyer Exclusive | High ROI",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 341,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-08-30",
+        "price": 2709888,
+        "sqft": 790,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Peninsula Two · 1BR",
+        "date": "2026-08-30",
+        "price": 1750000,
+        "sqft": 630,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16139080.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16139080.html"
+    }
+  },
+  {
+    "id": "pf-16232833",
+    "title": "WORLD CLASS AMENITIES | ICONIC SKYSCRAPER | Q2 2027",
+    "building": "Burj Binghatti Jacob and Co Residences",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 3279,
+    "askingPrice": 8400000,
+    "listingType": "sale",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "WORLD CLASS AMENITIES | ICONIC SKYSCRAPER | Q2 2027",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 238,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-08-30",
+        "price": 14599999,
+        "sqft": 2672,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Burj Binghatti Jacob and Co Residences · 2BR",
+        "date": "2026-08-30",
+        "price": 8250000,
+        "sqft": 3279,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16232833.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16232833.html"
+    }
+  },
+  {
+    "id": "pf-16328711",
+    "title": "Best Branded Deal | Top Class Amenities | High Floor | Amazing Views",
+    "building": "Burj Binghatti Jacob and Co Residences",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 3279,
+    "askingPrice": 8250000,
+    "listingType": "sale",
+    "areaPsf": 2684,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Best Branded Deal | Top Class Amenities | High Floor | Amazing Views",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 238,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Bugatti Residences by Binghatti · 2BR",
+        "date": "2026-08-30",
+        "price": 14599999,
+        "sqft": 2672,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Burj Binghatti Jacob and Co Residences · 2BR",
+        "date": "2026-08-30",
+        "price": 8400000,
+        "sqft": 3279,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16328711.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16328711.html"
+    }
+  },
+  {
+    "id": "pf-16110541",
+    "title": "High Floor | Corner Unit | Motivated Seller",
+    "building": "Peninsula Two",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 630,
+    "askingPrice": 1750000,
+    "listingType": "sale",
+    "areaPsf": 2601,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [
+      "motivated seller"
+    ],
+    "description": "High Floor | Corner Unit | Motivated Seller",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 209,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Avarra by Palace · 1BR",
+        "date": "2026-08-30",
+        "price": 2709888,
+        "sqft": 790,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Aquarise · 1BR",
+        "date": "2026-08-30",
+        "price": 1880000,
+        "sqft": 790,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16110541.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16110541.html"
+    },
+    "buildingPsf": 2627,
+    "buildingPsfLabel": "Peninsula"
+  },
+  {
+    "id": "pf-16142136",
+    "title": "PRIME RESIDENCES | LIMITED AVAILABILITY | 3-YEAR POST-HANDOVER PLAN",
+    "building": "Urban Life Residences",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 512,
+    "askingPrice": 1390962,
+    "listingType": "sale",
+    "areaPsf": 2784,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "PRIME RESIDENCES | LIMITED AVAILABILITY | 3-YEAR POST-HANDOVER PLAN",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 181,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-07-15",
+        "price": 1100000,
+        "sqft": 386,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-06-22",
+        "price": 965250,
+        "sqft": 411,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-06-11",
+        "price": 1235293,
+        "sqft": 411,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Urban Life Residences · Studio",
+        "date": "2026-04-27",
+        "price": 1360290,
+        "sqft": 510,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16142136.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16142136.html"
+    },
+    "buildingTxnPsf": 2694,
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 2349,
+    "buildingTxnHigh": 3006
+  },
+  {
+    "id": "pf-15812781",
+    "title": "Wealthy Luxurious 3BR | Bugatti Branded | Best Price | Ready Soon",
+    "building": "Bugatti Residences by Binghatti",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 6245,
+    "askingPrice": 22500888,
+    "listingType": "sale",
+    "areaPsf": 3484,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Wealthy Luxurious 3BR | Bugatti Branded | Best Price | Ready Soon",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 106,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-19",
+        "price": 24800000,
+        "sqft": 3080,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-12",
+        "price": 25000000,
+        "sqft": 4002,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-12",
+        "price": 20820100,
+        "sqft": 4204,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Bugatti Residences by Binghatti · 3BR",
+        "date": "2026-08-10",
+        "price": 20000000,
+        "sqft": 3850,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-15812781.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-15812781.html"
+    }
+  },
+  {
+    "id": "pf-16323718",
+    "title": "Contemporary House | Lush Landscapes and Peaceful Setting | Resale",
+    "building": "Kaya",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2504,
+    "askingPrice": 1730000,
+    "listingType": "sale",
+    "areaPsf": 1005,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Contemporary House | Lush Landscapes and Peaceful Setting | Resale",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 30,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16323718.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16323718.html"
+    }
+  },
+  {
+    "id": "pf-16319141",
+    "title": "Prestige Eco Residence | Advanced Smart Living | Resale",
+    "building": "Sharjah Sustainable City",
+    "community": "Al Rahmaniya",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2315,
+    "askingPrice": 1600000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Prestige Eco Residence | Advanced Smart Living | Resale",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 165,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319141.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319141.html"
+    },
+    "areaPsf": 985
+  },
+  {
+    "id": "pf-16319723",
+    "title": "4BHK | Freehold | Direct Access to kids play area",
+    "building": "Robinia",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 2800,
+    "askingPrice": 2699000,
+    "listingType": "sale",
+    "areaPsf": 1004,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "4BHK | Freehold | Direct Access to kids play area",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 348,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Robinia · 4BR",
+        "date": "2026-08-30",
+        "price": 2000000,
+        "sqft": 3705,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319723.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319723.html"
+    }
+  },
+  {
+    "id": "pf-16323685",
+    "title": "Beautiful Masaar Retreat | Comfortable Indoor-Outdoor Living | Resale",
+    "building": "Robinia",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3705,
+    "askingPrice": 2000000,
+    "listingType": "sale",
+    "areaPsf": 1004,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Beautiful Masaar Retreat | Comfortable Indoor-Outdoor Living | Resale",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 348,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Robinia · 4BR",
+        "date": "2026-08-30",
+        "price": 2699000,
+        "sqft": 2800,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16323685.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16323685.html"
+    }
+  },
+  {
+    "id": "pf-16319168",
+    "title": "Contemporary Green Villa | Sophisticated Family Lifestyle | Resale",
+    "building": "Sharjah Sustainable City",
+    "community": "Al Rahmaniya",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3702,
+    "askingPrice": 2030000,
+    "listingType": "sale",
+    "benchmarkSource": "Listing averages",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Contemporary Green Villa | Sophisticated Family Lifestyle | Resale",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 165,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16319168.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16319168.html"
+    }
+  },
+  {
+    "id": "pf-16307451",
+    "title": "Premium 3BR Townhouse | With Maidroom + Lawn | Only 1.5 Million",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2150,
+    "askingPrice": 1500000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Premium 3BR Townhouse | With Maidroom + Lawn | Only 1.5 Million",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16307451.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16307451.html"
+    },
+    "areaPsf": 812,
+    "buildingPsf": 801,
+    "buildingPsfLabel": "Nasma Residence"
+  },
+  {
+    "id": "pf-16313187",
+    "title": "High ROI Investment | Modern Studio + Balcony | Maryam Island",
+    "building": "Rimal Residences",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 337,
+    "askingPrice": 440000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High ROI Investment | Modern Studio + Balcony | Maryam Island",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 122,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16313187.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16313187.html"
+    },
+    "areaPsf": 1315
+  },
+  {
+    "id": "pf-16320088",
+    "title": "NEW LAUNCH | FROM AED 1.87M | 5% DP | INVEST NOW",
+    "building": "Masaar 3",
+    "community": "Al Menhaz",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 4,
+    "sqft": 1900,
+    "askingPrice": 1870000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "NEW LAUNCH | FROM AED 1.87M | 5% DP | INVEST NOW",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 320,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16320088.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16320088.html"
+    },
+    "buildingPsf": 980,
+    "buildingPsfLabel": "Masaar 3"
+  },
+  {
+    "id": "pf-16304659",
+    "title": "Own a Villa with Just 10% | An Opportunity Worth Buying",
+    "building": "Shoumous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 4004,
+    "askingPrice": 3050000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Own a Villa with Just 10% | An Opportunity Worth Buying",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 279,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16304659.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16304659.html"
+    },
+    "areaPsf": 822,
+    "buildingPsf": 815,
+    "buildingPsfLabel": "Shoumous Residential Complex"
+  },
+  {
+    "id": "pf-16321016",
+    "title": "Great Opportunity to Own a Luxury 3BR Apartment in Al Ghaf Tower",
+    "building": "Al Ghaf Tower",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2100,
+    "askingPrice": 1597000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-08-30",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Great Opportunity to Own a Luxury 3BR Apartment in Al Ghaf Tower",
+    "portals": [
+      "Bayut"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 60,
+    "comps": [],
+    "firstSeen": "2026-08-30",
+    "sourceUrl": "https://www.bayut.com/property/details-16321016.html",
+    "sourceUrls": {
+      "Bayut": "https://www.bayut.com/property/details-16321016.html"
+    },
+    "areaPsf": 881,
+    "buildingPsf": 736,
+    "buildingPsfLabel": "Al Ghaf Tower by Tiger Properties"
+  }
+]
