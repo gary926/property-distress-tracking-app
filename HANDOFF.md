@@ -290,6 +290,19 @@ building.
   median settles it, and `enrich` reports any band whose pages disagree by more
   than 15%. Property Finder still wins outright where present.
 
+**Three gates before a figure is published**, because the card says "what
+buyers paid" and a person will act on it: at least three sales, a spread under
+2x among them, and a median within 0.4–2.5x of the area average. Bugatti
+Residences forced the third one. Its table parsed correctly and its same-size
+sales were only 1.6x apart, so the first two gates passed — but the ±35% size
+filter had kept only the small units, which in a branded tower are the premium
+ones. The median came out at 12,217 against a 2,684 area average and a 5,464
+asking price: a 55% "bargain" that is really a tower not comparable to its
+neighbourhood. Rejected figures are also actively *cleared*, not merely
+not-set, or a listing carrying one from a looser earlier run would keep
+publishing it. The published median always travels with its low and high so the
+card can show a range rather than false precision.
+
 **`buildingTxnPsf` is deliberately not scored.** These are settled prices and
 `askingPrice` is an asking price; folding them into `buildingPsf` would compare
 what a seller wants against what buyers paid and read the ordinary gap between

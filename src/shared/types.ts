@@ -76,8 +76,12 @@ export interface Listing {
    *  an asking price, so it is deliberately kept out of `buildingPsf` and out
    *  of the score. Shown as evidence, not used as the benchmark. */
   buildingTxnPsf?: number;
-  /** How many sales that median is over. Two is thin; six is worth trusting. */
+  /** How many sales that median is over. Fewer than three is not published. */
   buildingTxnCount?: number;
+  /** The cheapest and dearest of those sales. Shown alongside the median so a
+   *  spread is visible rather than hidden behind one confident-looking number. */
+  buildingTxnLow?: number;
+  buildingTxnHigh?: number;
   /** Average AED/sqft for the surrounding area/community, when known.
    *  Weaker evidence on its own — a whole tower can sit below its area. */
   areaPsf?: number;

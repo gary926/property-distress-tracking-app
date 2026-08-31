@@ -398,14 +398,42 @@ export function consensusArea(candidates) {
  * listing is an asking price, so the two cannot share a field without biasing
  * every score. It travels separately, labelled, as the evidence it is.
  */
-export function transactionPsf(transactions, sqft) {
+export function transactionPsf(transactions, sqft, areaPsf) {
   const rows = sqft
     ? transactions.filter((t) => t.sqft > 0 && Math.abs(t.sqft - sqft) / sqft <= 0.35)
     : transactions.filter((t) => t.sqft > 0);
   if (rows.length === 0) return {};
+  const values = rows.map((t) => t.price / t.sqft).sort((a, b) => a - b);
+  const low = Math.round(values[0]);
+  const high = Math.round(values[values.length - 1]);
+
+  // Three gates, because this figure is shown to a person as "what buyers
+  // paid" and they will act on it.
+  //
+  // Two sales cannot describe anything, and a median cannot describe a
+  // building whose own units disagree wildly.
+  if (rows.length < 3) return { buildingTxnCount: rows.length };
+  if (low > 0 && high / low > 2) return { buildingTxnCount: rows.length, buildingTxnSpread: true };
+
+  // The third gate is the one Bugatti Residences forced. Its table parsed
+  // correctly and its same-size sales were only 1.6x apart, so neither gate
+  // above fired — but the ±35% size filter had kept only the small units, and
+  // in a branded tower those are the premium ones. The median came out at
+  // 12,217 against a 2,684 area average and a 5,464 asking price, which reads
+  // as a 55% bargain and is really just a tower that is not comparable to its
+  // neighbourhood. When the building's settled median and the community's
+  // asking average tell stories that far apart, the honest move is to show no
+  // headline figure rather than the more dramatic one.
+  const psf = Math.round(median(values));
+  if (areaPsf > 0 && (psf / areaPsf > 2.5 || psf / areaPsf < 0.4)) {
+    return { buildingTxnCount: rows.length, buildingTxnOutOfLine: true };
+  }
+
   return {
-    buildingTxnPsf: Math.round(median(rows.map((t) => t.price / t.sqft))),
+    buildingTxnPsf: psf,
     buildingTxnCount: rows.length,
+    buildingTxnLow: low,
+    buildingTxnHigh: high,
   };
 }
 
@@ -437,6 +465,7 @@ export function enrich(listings, pages) {
     rentals: 0,
     bands: 0,
     txnPsf: 0,
+    txnRejected: 0,
     /** Bands whose pages disagreed by more than 15% — worth a look before
      *  ingesting, because it means something is scoped differently from what
      *  it says. Only ever populated when several pages cover one band. */
@@ -517,11 +546,23 @@ export function enrich(listings, pages) {
       // from buildingPsf, which is an asking-price average — folding the two
       // together would compare an asking price against what people actually
       // paid and read the gap as a great deal.
-      const txn = transactionPsf(own.transactions, listing.sqft);
+      const txn = transactionPsf(own.transactions, listing.sqft, next.areaPsf ?? listing.areaPsf);
       if (txn.buildingTxnPsf) {
         next.buildingTxnPsf = txn.buildingTxnPsf;
         next.buildingTxnCount = txn.buildingTxnCount;
+        next.buildingTxnLow = txn.buildingTxnLow;
+        next.buildingTxnHigh = txn.buildingTxnHigh;
         stats.txnPsf++;
+      } else {
+        // A rejected figure has to be cleared, not merely not-set: the listing
+        // may be carrying one from an earlier run whose gates were looser, and
+        // leaving it would publish exactly the number we just decided not to
+        // trust.
+        delete next.buildingTxnPsf;
+        delete next.buildingTxnCount;
+        delete next.buildingTxnLow;
+        delete next.buildingTxnHigh;
+        if (txn.buildingTxnCount) stats.txnRejected++;
       }
       next.comps = own.transactions.slice(0, 4).map((t) => ({
         source: "DLD",
@@ -647,7 +688,8 @@ if (process.argv[1] && process.argv[1].endsWith("parse-detail-page.mjs")) {
   console.error(
     `Enriched from ${stats.pages} pages covering ${stats.bands} bands: ` +
       `${stats.building} building averages, ${stats.area} area averages, ` +
-      `${stats.txnPsf} building sale figures, ${stats.comps} comp sets, ` +
+      `${stats.txnPsf} building sale figures (${stats.txnRejected} rejected as too few or too scattered), ` +
+      `${stats.comps} comp sets, ` +
       `${stats.rentals} rentals dropped.`,
   );
   for (const d of stats.disputed) {

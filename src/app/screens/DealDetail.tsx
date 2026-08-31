@@ -211,7 +211,12 @@ export function DealDetail({ id }: { id: string }) {
               />
               {deal.buildingTxnPsf ? (
                 <BenchmarkCard
-                  label={`${deal.buildingTxnCount} recorded sale${deal.buildingTxnCount === 1 ? "" : "s"} in ${deal.building}`}
+                  label={
+                    deal.buildingTxnLow && deal.buildingTxnHigh
+                      ? `${deal.buildingTxnCount} sales in ${deal.building}, ` +
+                        `${Math.round(deal.buildingTxnLow).toLocaleString()}–${Math.round(deal.buildingTxnHigh).toLocaleString()}`
+                      : `${deal.buildingTxnCount} recorded sale${deal.buildingTxnCount === 1 ? "" : "s"} in ${deal.building}`
+                  }
                   scope="What buyers paid"
                   psf={deal.buildingTxnPsf}
                   pct={((deal.buildingTxnPsf - deal.psf) / deal.buildingTxnPsf) * 100}

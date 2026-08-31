@@ -65,7 +65,9 @@
       "Bayut": "https://www.bayut.com/property/details-16083937.html"
     },
     "buildingTxnPsf": 1984,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1895,
+    "buildingTxnHigh": 2305
   },
   {
     "id": "pf-14066052",
@@ -135,7 +137,9 @@
     "buildingPsf": 1357,
     "buildingPsfLabel": "Horizon Tower",
     "buildingTxnPsf": 1052,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 955,
+    "buildingTxnHigh": 1408
   },
   {
     "id": "pf-16144392",
@@ -203,7 +207,9 @@
       "Bayut": "https://www.bayut.com/property/details-16144392.html"
     },
     "buildingTxnPsf": 2230,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1732,
+    "buildingTxnHigh": 2478
   },
   {
     "id": "pf-15462731",
@@ -331,7 +337,9 @@
     "buildingPsf": 3105,
     "buildingPsfLabel": "Marina Gate",
     "buildingTxnPsf": 2740,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 2522,
+    "buildingTxnHigh": 3037
   },
   {
     "id": "pf-16065000",
@@ -515,7 +523,9 @@
       "Bayut": "https://www.bayut.com/property/details-15842273.html"
     },
     "buildingTxnPsf": 1942,
-    "buildingTxnCount": 5
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1848,
+    "buildingTxnHigh": 2148
   },
   {
     "id": "pf-137449378",
@@ -575,7 +585,9 @@
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-view-marina-view-tower-b-137449378.html"
     },
     "buildingTxnPsf": 1225,
-    "buildingTxnCount": 3
+    "buildingTxnCount": 3,
+    "buildingTxnLow": 1001,
+    "buildingTxnHigh": 1525
   },
   {
     "id": "pf-137447722",
@@ -635,7 +647,9 @@
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-barcelo-residences-al-dar-tower-137447722.html"
     },
     "buildingTxnPsf": 1744,
-    "buildingTxnCount": 3
+    "buildingTxnCount": 3,
+    "buildingTxnLow": 1279,
+    "buildingTxnHigh": 1780
   },
   {
     "id": "pf-137447197",
@@ -705,7 +719,9 @@
     "buildingPsf": 3105,
     "buildingPsfLabel": "Marina Gate",
     "buildingTxnPsf": 2883,
-    "buildingTxnCount": 5
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 2117,
+    "buildingTxnHigh": 3272
   },
   {
     "id": "pf-137447162",
@@ -773,7 +789,9 @@
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-rove-home-dubai-marina-137447162.html"
     },
     "buildingTxnPsf": 3468,
-    "buildingTxnCount": 5
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 3359,
+    "buildingTxnHigh": 3672
   },
   {
     "id": "pf-137446798",
@@ -1017,7 +1035,9 @@
       "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-the-jewels-the-jewel-tower-b-137433484.html"
     },
     "buildingTxnPsf": 1046,
-    "buildingTxnCount": 5
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1025,
+    "buildingTxnHigh": 1265
   },
   {
     "id": "pf-16177545",
@@ -1085,7 +1105,9 @@
       "Bayut": "https://www.bayut.com/property/details-16177545.html"
     },
     "buildingTxnPsf": 1447,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1046,
+    "buildingTxnHigh": 1595
   },
   {
     "id": "pf-16315729",
@@ -1153,7 +1175,9 @@
       "Bayut": "https://www.bayut.com/property/details-16315729.html"
     },
     "buildingTxnPsf": 930,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 737,
+    "buildingTxnHigh": 1076
   },
   {
     "id": "pf-15444304",
@@ -1279,7 +1303,9 @@
       "Bayut": "https://www.bayut.com/property/details-16250286.html"
     },
     "buildingTxnPsf": 1752,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 1621,
+    "buildingTxnHigh": 1853
   },
   {
     "id": "pf-16271936",
@@ -2239,9 +2265,7 @@
     "sourceUrl": "https://www.bayut.com/property/details-16242165.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-16242165.html"
-    },
-    "buildingTxnPsf": 12217,
-    "buildingTxnCount": 3
+    }
   },
   {
     "id": "pf-16102278",
@@ -2309,7 +2333,9 @@
       "Bayut": "https://www.bayut.com/property/details-16102278.html"
     },
     "buildingTxnPsf": 3533,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 3462,
+    "buildingTxnHigh": 3888
   },
   {
     "id": "pf-16139080",
@@ -2581,7 +2607,9 @@
       "Bayut": "https://www.bayut.com/property/details-16142136.html"
     },
     "buildingTxnPsf": 2694,
-    "buildingTxnCount": 6
+    "buildingTxnCount": 6,
+    "buildingTxnLow": 2349,
+    "buildingTxnHigh": 3006
   },
   {
     "id": "pf-15812781",
@@ -2647,9 +2675,7 @@
     "sourceUrl": "https://www.bayut.com/property/details-15812781.html",
     "sourceUrls": {
       "Bayut": "https://www.bayut.com/property/details-15812781.html"
-    },
-    "buildingTxnPsf": 7148,
-    "buildingTxnCount": 2
+    }
   },
   {
     "id": "pf-16323718",

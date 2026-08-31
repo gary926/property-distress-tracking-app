@@ -519,3 +519,119 @@ describe("a real scrape, with the headings the recipe strips", () => {
     expect(listings[0].buildingPsf).toBe(3105);
   });
 });
+
+describe("transactionPsf quality gates", () => {
+  // Bugatti Residences, read live on 2026-08-30: a correctly parsed table
+  // whose same-size sales ran 8,188–13,112 AED/sqft. The median of three of
+  // those against a 5,464 asking price reads as a 55% bargain that is really
+  // just a branded tower pricing penthouses differently from apartments.
+  const scattered = [
+    { price: 19_750_000, sqft: 2412 }, // 8,188
+    { price: 33_200_000, sqft: 2532 }, // 13,112
+    { price: 34_000_000, sqft: 2783 }, // 12,217
+  ];
+
+  it("publishes no figure when the median is wildly out of line with the area", () => {
+    // These three are only 1.6x apart, so the spread gate does not fire. What
+    // disqualifies them is 12,217 against a 2,684 Business Bay average.
+    const out = transactionPsf(scattered, 2672, 2684);
+    expect(out.buildingTxnPsf).toBeUndefined();
+    expect(out.buildingTxnOutOfLine).toBe(true);
+    expect(out.buildingTxnCount).toBe(3);
+  });
+
+  it("publishes no figure when the building's own sales disagree by more than 2x", () => {
+    const wild = [
+      { price: 1_000_000, sqft: 1000 }, // 1,000
+      { price: 2_000_000, sqft: 1000 }, // 2,000
+      { price: 3_000_000, sqft: 1000 }, // 3,000
+    ];
+    const out = transactionPsf(wild, 1000, 2000);
+    expect(out.buildingTxnPsf).toBeUndefined();
+    expect(out.buildingTxnSpread).toBe(true);
+  });
+
+  it("publishes no figure off fewer than three sales", () => {
+    const out = transactionPsf([{ price: 20_820_100, sqft: 4204 }, { price: 39_999_999, sqft: 4281 }], 6245);
+    expect(out.buildingTxnPsf).toBeUndefined();
+    expect(out.buildingTxnCount).toBe(2);
+  });
+
+  it("publishes a median, and its range, when the sales actually agree", () => {
+    const out = transactionPsf(
+      [
+        { price: 1_960_000, sqft: 1101 }, // 1,780
+        { price: 1_910_000, sqft: 1095 }, // 1,744
+        { price: 1_400_000, sqft: 1095 }, // 1,279
+      ],
+      1200,
+      1800,
+    );
+    expect(out.buildingTxnPsf).toBe(1744);
+    expect(out.buildingTxnLow).toBe(1279);
+    expect(out.buildingTxnHigh).toBe(1780);
+  });
+
+  it("counts a rejected building in the enrich summary rather than hiding it", () => {
+    const listing = {
+      id: "x", building: "Bugatti", community: "Business Bay", beds: 2,
+      askingPrice: 14_600_000, sqft: 2672, listingType: "sale",
+      benchmarkSource: "Listing averages", comps: [],
+    };
+    const md = [
+      "| Date | AED | Area (sqft) |",
+      "| --- | --- | --- |",
+      ...scattered.map((t, i) => `| ${i + 1} Jan 2026 | ${t.price.toLocaleString()} | ${t.sqft.toLocaleString()} |`),
+      "",
+      "Transactions for Similar Properties",
+      "",
+      "2 Beds Apartment in Bugatti",
+      "",
+      "Average Sale Price is 5,000,000 AED",
+      "",
+      "Average size is",
+      "1,863 sqft",
+      "",
+      "The data displayed is based on average prices and sizes of all listings that were live on Property Finder in Business Bay",
+    ].join("\n");
+    const { listings, stats } = enrich([listing], [{ id: "x", markdown: md }]);
+    expect(listings[0].buildingTxnPsf).toBeUndefined();
+    expect(stats.txnPsf).toBe(0);
+    expect(stats.txnRejected).toBe(1);
+  });
+});
+
+describe("re-enriching a listing that already carries a figure", () => {
+  it("clears a stale building figure the gates now reject", () => {
+    // The seed was written before the quality gates existed, so listings can
+    // arrive carrying a figure that would no longer be published. Not setting
+    // the new one is not enough — the old one has to go.
+    const listing = {
+      id: "x", building: "Bugatti", community: "Business Bay", beds: 2,
+      askingPrice: 14_600_000, sqft: 2672, listingType: "sale",
+      benchmarkSource: "Portal published", comps: [],
+      buildingTxnPsf: 12_217, buildingTxnCount: 3, // from the looser earlier run
+    };
+    const md = [
+      "| Date | AED | Area (sqft) |",
+      "| --- | --- | --- |",
+      "| 1 Jan 2026 | 19,750,000 | 2,412 |",
+      "| 2 Jan 2026 | 33,200,000 | 2,532 |",
+      "| 3 Jan 2026 | 34,000,000 | 2,783 |",
+      "",
+      "Transactions for Similar Properties",
+      "",
+      "2 Beds Apartment in Bugatti",
+      "",
+      "Average Sale Price is 5,000,000 AED",
+      "",
+      "Average size is",
+      "1,863 sqft",
+      "",
+      "The data displayed is based on average prices and sizes of all listings that were live on Property Finder in Business Bay",
+    ].join("\n");
+    const { listings } = enrich([listing], [{ id: "x", markdown: md }]);
+    expect(listings[0].buildingTxnPsf).toBeUndefined();
+    expect(listings[0].buildingTxnCount).toBeUndefined();
+  });
+});
