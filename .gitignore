@@ -7,8 +7,10 @@ node_modules/
 .wrangler/
 dist/
 
-# Daily sweep intermediates: regenerated end-to-end on every run from the
-# committed seed/detail-pages transcripts, so there is no history worth keeping.
+# Daily sweep scratch files. These three paths are overwritten by every run,
+# so tracking them would rewrite the same diff daily and keep no usable
+# history. The day's result is kept instead as seed/sweeps/<date>.json, which
+# accumulates; the benchmarks it was read from are in seed/detail-pages/.
 raw.json
 listings.json
 enriched.json
