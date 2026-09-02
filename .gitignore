@@ -6,3 +6,9 @@ node_modules/
 .dev.vars
 .wrangler/
 dist/
+
+# Daily sweep intermediates: regenerated end-to-end on every run from the
+# committed seed/detail-pages transcripts, so there is no history worth keeping.
+raw.json
+listings.json
+enriched.json
