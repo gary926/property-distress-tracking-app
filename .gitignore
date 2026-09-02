@@ -1,0 +1,16 @@
+node_modules/
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
+.dev.vars
+.wrangler/
+dist/
+
+# Daily sweep scratch files. These three paths are overwritten by every run,
+# so tracking them would rewrite the same diff daily and keep no usable
+# history. The day's result is kept instead as seed/sweeps/<date>.json, which
+# accumulates; the benchmarks it was read from are in seed/detail-pages/.
+raw.json
+listings.json
+enriched.json
