@@ -635,3 +635,36 @@ describe("re-enriching a listing that already carries a figure", () => {
     expect(listings[0].buildingTxnCount).toBeUndefined();
   });
 });
+
+describe("a chart whose own psf disagrees with ours by rounding", () => {
+  // Verbatim scrape of Bay Central West on 2026-09-09. The chart reads
+  // "2,5772,898": 2,577 is the Dubai Marina 1-bed average and 2,898 is what
+  // Bayut computes for this unit. Our own arithmetic gives 1,850,000 / 638 =
+  // 2,900, so stripping our psf off the end of the run cannot match, and the
+  // parser fell through to scanning the whole page — where it returned this
+  // building's 1,225,000 sale as the "area average".
+  const drift = readFileSync(
+    new URL("./fixtures/bayut-detail-rounding-drift.md", import.meta.url),
+    "utf8",
+  );
+  const bayCentral = {
+    id: "pf-15822929",
+    building: "Bay Central West",
+    community: "Dubai Marina",
+    beds: 1,
+    askingPrice: 1_850_000,
+    sqft: 638,
+    listingType: "sale",
+    benchmarkSource: "Listing averages",
+    comps: [],
+  };
+
+  it("reads the published average off the legend, not a sale price", () => {
+    expect(parseDetailPage(drift, bayCentral).areaPsf).toBe(2577);
+  });
+
+  it("never returns a figure orders of magnitude from the listing's own psf", () => {
+    const p = parseDetailPage(drift, bayCentral);
+    expect(p.areaPsf).toBeLessThan(bayCentral.askingPrice / bayCentral.sqft * 20);
+  });
+});

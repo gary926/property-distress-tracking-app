@@ -136,7 +136,24 @@ function parseAreaAverage(markdown, listingPsf) {
 
   // Fallback: comma grouping is the only other thing that makes the pair
   // splittable. A lone figure is the average unless it is plainly our own psf.
-  const numbers = (chart.match(GROUPED_NUMBER) ?? []).map(toNumber).filter(Boolean);
+  //
+  // Search the legend-adjacent run first, and only then the wider chart text.
+  // Without headings to narrow it, `chart` is everything before the legend —
+  // which on a real scrape is the transactions table and the per-location
+  // table, both full of comma-grouped numbers. Bay Central West published
+  // 2,577 next to its own 2,898 and our psf rounds to 2,900, so the suffix
+  // strip missed by one and the wide scan returned that page's own 1,225,000
+  // sale as an "area average". The run captured beside the legend holds the
+  // two bars and nothing else.
+  //
+  // Either way a benchmark orders of magnitude from the listing's own psf is a
+  // parse failure and not a market, so the same plausibility band the suffix
+  // strip uses gates the candidates here too.
+  const plausible = (n) => !listingPsf || (n > listingPsf / 20 && n < listingPsf * 20);
+  const grouped = (text) =>
+    (text.match(GROUPED_NUMBER) ?? []).map(toNumber).filter(Boolean).filter(plausible);
+  const pair = block.match(/([\d,]+)\s*Avg\. price\/sqft/)?.[1] ?? "";
+  const numbers = grouped(pair).length ? grouped(pair) : grouped(chart);
   if (numbers.length === 0) return { areaName };
   if (numbers.length === 1) {
     const only = numbers[0];
