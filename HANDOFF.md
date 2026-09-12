@@ -61,8 +61,19 @@ Two things it depends on that do not live in this repo:
   (`npm run cf:secrets`). Rotating it means changing it in both. It is
   deliberately not written down in this repo.
 
-The routine checks out `claude/uae-distress-deals-dashboard-j3184x`, because
-`main` is still the initial commit. Merge that branch and this step can go.
+The app now lives on `main` (merged 2026-09-12), so a session no longer has
+to check out a feature branch to find it. The routine's prompt still tells it
+to check out `claude/uae-distress-deals-dashboard-j3184x`; that branch is
+merged and kept in step with `main`, so the instruction still works, but it
+can be dropped from the prompt whenever the routine is next edited.
+
+**Where a scheduled sweep's commits land is not its own choice.** Each
+scheduled session is assigned a `claude/determined-ride-*` branch and told to
+develop on it, so sweep work — refreshed benchmark transcripts, and any fix
+the sweep makes — lands there rather than on the branch the next sweep checks
+out. Two sweeps' worth of work sat stranded that way before being merged on
+2026-09-12. If a sweep reports a fix, check whether it is actually on the
+branch the next run will read, and merge it across if not.
 
 The job it runs:
 
