@@ -137,6 +137,13 @@ The job it runs:
    path is untouched.
 
 4. **Ingest**: `APP_URL=… INGEST_TOKEN=… node scripts/ingest.mjs listings.json`
+   Then keep the day's enriched batch as `seed/sweeps/<YYYY-MM-DD>.json` and
+   commit it. `raw.json`, `listings.json` and `enriched.json` are gitignored
+   scratch — they are overwritten every run, so tracking them would rewrite
+   the same diff daily and keep nothing. The dated snapshot accumulates
+   instead, and is the same bare-array shape as `seed/first-sweep.json`, so
+   `npm run score -- --data seed/sweeps/<date>.json` rescores any past day
+   against today's weights.
 5. **Deliver**: `GET <APP_URL>/api/digest` — if `deals` is non-empty, email it
    to the configured recipient via Gmail and send a phone push with the count
    and top deal.

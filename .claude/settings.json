@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Firecrawl__firecrawl_scrape",
+      "mcp__Firecrawl__firecrawl_map",
+      "mcp__Firecrawl__firecrawl_search"
+    ]
+  }
+}
