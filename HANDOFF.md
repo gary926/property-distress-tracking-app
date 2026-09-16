@@ -192,6 +192,92 @@ been observed dropping.
   2026-08-29; the scrape → transform → ingest → score chain was run end to end
   on 16 real Dubai Marina listings against local D1.
 
+## Bayut is blocking the scraper (2026-09-16)
+
+Every Bayut URL now returns an interstitial titled **"Security check | Bayut"**
+with HTTP **503** — "Please confirm you're a human visitor to continue". Tried
+on 2026-09-16 against both documented search shapes
+(`/for-sale/property/dubai/dubai-marina/` and
+`/for-sale/apartments/dubai/dubai-marina/`) and under all three Firecrawl proxy
+modes (`basic`, `stealth`, `auto`). Same 503 every time, so this is a site-side
+block, not a transient failure or a bad recipe.
+
+Unlike the silent failures elsewhere in this file, this one is **loud**: the
+scrape returns a 503 and a page whose body is the challenge text, so a
+`json` extraction yields `{"listings": []}` rather than wrong data. Check
+`metadata.statusCode` before trusting an empty Bayut result.
+
+**The sweep runs Property Finder–only until this lifts**, which costs less than
+it sounds: HANDOFF already prefers PF wherever the two disagree ("Property
+Finder is the better benchmark"), and PF states its scope in prose rather than
+leaving it to be guessed. What is actually lost:
+
+- **Volume**, roughly halved (73 listings on 2026-09-16 vs 119 on 2026-09-02).
+- **`buildingPsf` entirely.** Bayut's per-location table was the only source of
+  a same-tower asking average; PF publishes a community-and-band figure only. So
+  every listing now scores on `areaPsf` alone, which `scoreListing` caps at 70%
+  confidence — below-market maxes out at 21 of 30 points.
+
+  Combined with price-drop (35) and staleness (15) being unavailable on a
+  listing's first sighting, **the ceiling for a brand-new PF-only listing is 41
+  points — below the 45 needed for "warm".** A PF-only sweep therefore reports
+  zero deals on day one *by construction*, and only starts producing them once
+  listings have been observed long enough to drop. This is not a threshold worth
+  "fixing"; it is the price-drop signal doing its job.
+
+If Bayut stays blocked, the real fix is a second source of tower-level asking
+averages, not a looser threshold.
+
+## Property Finder area slugs (2026-09-16)
+
+The `?c=1&l=<id>` search form needs numeric location ids nobody has written
+down. The SEO landing pages take plain slugs and return the same listings:
+
+    https://www.propertyfinder.ae/en/buy/<emirate>/properties-for-sale-<slug>.html?ob=nd
+
+Verified slugs for the tracked areas — two are not what you would guess:
+
+| Area | Emirate segment | Slug |
+| --- | --- | --- |
+| Dubai Marina | dubai | `dubai-marina` |
+| Business Bay | dubai | `business-bay` |
+| JVC | dubai | `jumeirah-village-circle` (**not** `…-jvc`, which 404s) |
+| Al Reem Island | abu-dhabi | `al-reem-island` |
+| Tilal City | sharjah | `tilal-city` |
+| Al Rahmaniya | sharjah | `al-rahmaniya` |
+| Al Khan | sharjah | `al-khan` |
+| Al Tai | sharjah | `al-tai` |
+| Sharjah Garden City | sharjah | `sharjah-garden-city` |
+| Al Menhaz | sharjah | `al-rowdat-suburb` (**PF files Al Menhaz under this**) |
+
+PF returns sub-communities in the `community` field (Maryam Island for Al Khan,
+Shams Abu Dhabi for Al Reem, Masaar for Tilal City). Normalise to the tracked
+area name or the batch stops grouping by area.
+
+## Never trust the search page for price, size or beds (2026-09-16)
+
+The `formats: ["json"]` extraction over a PF *search results* page misaligns
+card fields: on the 2026-09-16 sweep it returned prices and sizes belonging to
+the adjacent card, and in Al Khan the whole block was **offset by one listing**
+— a 900,000 / 2-bed / 1,109 sqft card was really 650,000 / 1-bed / 715 sqft.
+Eywa came back as 49,000,000 / 5,693 sqft against a real 8,900,000 / 2,164 sqft.
+It also drops urgency wording: the "6BR Distress Deal" title in Tilal City was
+returned with an empty `urgencyPhrases`.
+
+Nothing about this is visible in the output — every row looks plausible.
+
+**The search page is now used only to enumerate listing URLs.** Title, price,
+beds, baths, size, building and property type are all re-read from the
+listing's own detail page, which states them as labelled fields (`Area`,
+`Price per area`, `Bedrooms`, and the headline price immediately before
+`Own from`). Cross-check every row with `price / sqft ≈ the stated
+"Price per area"`; the 2026-09-16 batch agreed on all 73 after the rebuild.
+
+A side benefit: the detail page is also where a dead listing shows up. Four of
+the 77 planned pages 404'd — they had gone in the hours between the search
+scrape and the detail scrape — and were dropped rather than ingested with
+whatever the search card claimed.
+
 ## Benchmark scoping — two traps the first live run walked into
 
 Both were found on 2026-08-30 by running the pipeline against live pages, and
