@@ -278,6 +278,44 @@ the 77 planned pages 404'd — they had gone in the hours between the search
 scrape and the detail scrape — and were dropped rather than ingested with
 whatever the search card claimed.
 
+## An unbanded fallback benchmark is worse than none (2026-09-23)
+
+`transform-listings.mjs` computed `buildingPsf` bed-banded, and then, when a
+band had fewer than 3 comparables, **fell back to an unbanded median over the
+whole building** — and `areaPsf` did the same over the whole community. That
+fallback contradicted the comment three lines above it, which already says an
+unbanded average "flags every large unit" because psf falls with size.
+
+Al Tai on 2026-09-23 is the worked example. Nasma Residence had two 2-beds and
+three 3-beds, so the 2-bed band was one short. The fallback pooled all five to a
+single median of 850, and the 2,365 sqft 2-bed asking 528/sqft was published as
+**38% below "its building's average"** — it is only cheaper per foot because it
+is half as dense again as the 1,469 sqft unit it was being compared with. It
+led that run's digest, above the one listing with a real seller keyword.
+
+Both fallbacks are gone. A band that cannot field 3 comparables now simply gets
+no figure, which is the honest answer; `areaPsf` is usually portal-published
+anyway, so the practical loss is small (this sweep: `buildingPsf` fell from 12
+listings to 3, `areaPsf` unaffected at 46/46). A test pins the Al Tai shape.
+
+## A retraction has to travel as an explicit `null` (2026-09-23)
+
+Worth knowing before trusting any "cleared" benchmark. `/api/ingest` merges
+`{...existing, ...incoming}`, and `JSON.stringify` **drops `undefined` keys** —
+so a field the pipeline deliberately stops setting never reaches the worker, and
+D1 keeps the old value forever. `parse-detail-page.mjs` does `delete
+next.buildingTxnPsf` for a figure that failed its gates (see "Per-listing
+enrichment"), believing that clears it. It does not, on a listing already in D1.
+
+The 2026-09-23 sweep worked around this by rewriting the retractable fields
+(`buildingPsf`, `buildingPsfLabel`, `buildingTxnPsf`, `buildingTxnCount`,
+`buildingTxnLow`, `buildingTxnHigh`) to explicit `null` before ingesting, which
+did correct the live rows. **That was a one-off in the sweep session, not a code
+change** — the pipeline still emits omissions, so the next sweep will hit this
+again. The real fix is one of: emit `null` instead of `delete`/`undefined`, or
+have the worker treat a known-retractable field absent from `incoming` as a
+clear. Not done; it needs a decision about which fields are retractable.
+
 ## Benchmark scoping — two traps the first live run walked into
 
 Both were found on 2026-08-30 by running the pipeline against live pages, and
