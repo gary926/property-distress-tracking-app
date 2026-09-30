@@ -132,7 +132,11 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
     .map((raw) => {
       const title = String(pick(raw, "title", "name") ?? "").trim();
       const price = num(pick(raw, "priceAED", "price"));
-      const sqft = num(pick(raw, "sizeSqft", "size", "area", "builtUpArea"));
+      // "sqft" is listed explicitly: it is the most natural name for an
+      // extraction to emit, and none of the others match it even fuzzily
+      // ("size" is not a substring of "sqft"), so omitting it made every row
+      // fail the price/size guard below and the whole batch transform to zero.
+      const sqft = num(pick(raw, "sizeSqft", "sqft", "size", "area", "builtUpArea"));
       if (!price || !sqft) return null;
       const urlEarly = pick(raw, "listingURL", "url", "link");
       if (isRental(raw, title, urlEarly)) return null;
@@ -235,9 +239,7 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
     return map;
   };
   const byBuildingBand = groupPsf((l) => `${l.community}|${l.building}|${band(l.beds)}`);
-  const byBuilding = groupPsf((l) => `${l.community}|${l.building}`);
   const byAreaBand = groupPsf((l) => `${l.community}|${band(l.beds)}`);
-  const byArea = groupPsf((l) => l.community);
   // Median resists a single mispriced outlier better than the mean.
   const median = (a) => {
     const s = [...a].sort((x, y) => x - y);
@@ -254,14 +256,22 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
 
   let anyPublished = false;
   for (const l of interim) {
+    // Both benchmarks are bed-banded, with NO unbanded fallback. Falling back
+    // to a whole-building or whole-community median mixes bedroom counts, and a
+    // psf comparison across them is not a comparison at all: big units carry
+    // structurally lower psf, so the largest unit in any group reads "below
+    // market" for being large. That is the exact failure bed banding exists to
+    // prevent, and it fired on 2026-09-30 — a 10,550 sqft 5-bed in Nasma
+    // Residence came out "30% below its building" against an unbanded median of
+    // 837 drawn from that development's 2- to 5-beds, while its own published
+    // 5-bed area average of 544 put it 8% ABOVE market. It was the only deal in
+    // that day's digest. Better to publish no building figure than a false one:
+    // the detail screen already says "Not available" rather than substituting.
     l.buildingPsf =
       l.publishedBuildingPsf ??
-      fromGroup(byBuildingBand, `${l.community}|${l.building}|${band(l.beds)}`) ??
-      fromGroup(byBuilding, `${l.community}|${l.building}`);
+      fromGroup(byBuildingBand, `${l.community}|${l.building}|${band(l.beds)}`);
     l.areaPsf =
-      l.publishedAreaPsf ??
-      fromGroup(byAreaBand, `${l.community}|${band(l.beds)}`) ??
-      fromGroup(byArea, l.community);
+      l.publishedAreaPsf ?? fromGroup(byAreaBand, `${l.community}|${band(l.beds)}`);
     if (l.publishedBuildingPsf || l.publishedAreaPsf) anyPublished = true;
     l.benchmarkSource =
       l.publishedBuildingPsf || l.publishedAreaPsf ? "Portal published" : "Listing averages";

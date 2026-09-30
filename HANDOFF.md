@@ -116,8 +116,12 @@ The job it runs:
    - `includeTags` cuts the page to ~1 KB, and markdown costs **1 credit**
      where a `json`/`query` extraction of the same page costs 5.
 
-   Save each page as `seed/detail-pages/<listing id>.md`, then
-   `node scripts/parse-detail-page.mjs seed/detail-pages listings.json`.
+   Save each page as `seed/detail-pages/<listing id>.md`, then reconcile the
+   batch against those pages (see "The search-page extraction mis-pairs fields")
+   and only then parse:
+
+       node scripts/reconcile-detail.mjs seed/detail-pages listings.json > fixed.json
+       node scripts/parse-detail-page.mjs seed/detail-pages fixed.json > enriched.json
 
    **Two plans, and the choice is a budget decision.**
    `--plan` gives one page per (community, bedroom band) — 23 pages for the
@@ -191,6 +195,112 @@ been observed dropping.
 - **Firecrawl verified working** against Bayut and Property Finder on
   2026-08-29; the scrape → transform → ingest → score chain was run end to end
   on 16 real Dubai Marina listings against local D1.
+
+## Bayut is blocked; the sweep is Property Finder only (2026-09-30)
+
+Every Bayut URL now returns **HTTP 503 with a "Security check" interstitial**
+("Please confirm you're a human visitor"), on area pages and detail pages alike.
+`proxy: "stealth"` does not get past it. Bayut supplied 94 of the 119 listings on
+the 2026-09-02 sweep, so this is the single biggest change to how the job runs.
+
+**Do not spend credits retrying Bayut with a `formats: ["json"]` extraction.**
+The block page is empty of listings, and the extraction model *invented* a
+plausible batch from it — five listings with fabricated `example.com` and
+`bayut.com/property/123456` URLs, in communities the page never mentioned
+(Downtown Dubai, Emirates Hills, JBR) on a Dubai Marina request. Nothing in the
+response says it failed except `statusCode: 503`. Always read the status code and
+the page title before trusting an extraction. One cheap markdown scrape (1 credit)
+tells you whether the portal is serving content at all.
+
+Property Finder is unaffected and is the better benchmark anyway (see below), so
+the sweep still runs — it is just single-portal until Bayut lets us back in.
+Worth a periodic 1-credit markdown probe of a Bayut area page to notice recovery.
+
+**Property Finder search URLs, since the `l=<locId>` ids were never written down.**
+The slug form resolves without an id and is what this sweep used:
+
+    https://www.propertyfinder.ae/en/buy/dubai/apartments-for-sale-<area>.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/abu-dhabi/apartments-for-sale-al-reem-island.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-<area>.html?ob=nd
+
+`?ob=nd` (newest first) works on the slug form. Use `properties-for-sale-` for the
+Sharjah communities: they are villa/townhouse areas and `apartments-for-sale-`
+returns almost nothing. Verified slugs: `dubai-marina` (also `l=50`),
+`business-bay`, `jumeirah-village-circle`, `al-reem-island`, `tilal-city`,
+`al-khan`, `al-rahmaniya`, `al-tai`, `sharjah-garden-city`.
+**Al Menhaz has no location node on PF** — its inventory (Masaar 3) is filed under
+`al-rowdat-suburb`, so scrape that and label the listings Al Menhaz.
+
+## The search-page extraction mis-pairs fields; reconcile before ingesting (2026-09-30)
+
+`formats: ["json"]` over a search results page is an LLM extraction over a long,
+noisy document, and it **pairs fields across adjacent cards**. This is not rare:
+on 2026-09-30, 14 of 69 rows carried a wrong price and/or size, and the whole
+Sharjah Garden City page came back **shifted by one card**, so most of its rows
+had a neighbour's price, size and bedroom count. Ubora Tower 1 was extracted as
+590 sqft / AED 1,150,000 against a real 1,586 sqft / AED 2,700,000.
+
+`askingPrice` and `sqft` *are* the below-market signal, so a mis-paired row
+manufactures a bargain that does not exist and puts it at the top of the digest.
+
+`scripts/reconcile-detail.mjs` fixes it, and costs nothing because the
+per-listing plan already fetches every listing's own page, which states price,
+size, beds, baths and type unambiguously:
+
+    node scripts/reconcile-detail.mjs seed/detail-pages listings.json > fixed.json
+
+It prints every row it changed, cross-checks `askingPrice / sqft` against the
+portal's own stated "Price per area" (a mismatch over 2% is reported, and there
+were none once corrected), and **drops a listing whose page 404s** — that listing
+was delisted between the search scrape and the enrichment, and publishing it
+would show a deal that can no longer be bought.
+
+Run it *before* `parse-detail-page.mjs`, so the benchmarks are matched against
+corrected bedroom counts. The day's order is therefore:
+
+    transform → reconcile-detail → parse-detail-page → ingest
+
+**This is also the strongest argument for `--per-listing`.** A band plan fetches
+~1 page per band and so cannot check the other rows at all; the shifted Sharjah
+Garden City page would have gone straight into the digest.
+
+## Three benchmark bugs found by running the 2026-09-30 sweep
+
+All three manufactured a "below market" flag rather than failing loudly, which is
+the one thing a benchmark must never do. Each now has a regression test.
+
+- **`transform` fell back to an *unbanded* median.** `buildingPsf` and `areaPsf`
+  fell back to a whole-building / whole-community median when the bed band had
+  fewer than 3 comparables. Mixing bedroom counts in a psf comparison is not a
+  comparison: big units carry structurally lower psf, so the largest unit in any
+  group reads "below market" for being large. A 10,550 sqft 5-bed in Nasma
+  Residence came out **"30% below its building"** against an unbanded median of
+  837 drawn from that development's 2- to 5-beds — while its own published 5-bed
+  area average of 544 put it **8% ABOVE** market. It was the only deal in the
+  digest. The fallbacks are gone; both benchmarks are bed-banded or absent.
+- **Our bed bands are coarser than the portal's.** `4plus` merges 4, 5 and 6
+  beds, which PF prices separately (Sharjah Garden City: 848 for 4-beds, 686 for
+  5-beds). The band median of 848 made a 660 psf 5-bed read "22% below market"
+  when against its own published 5-bed average it was 4% below. `enrich` now
+  prefers the **listing's own page** reading, which is bedroom-exact, over the
+  band median. Two guards keep that safe: the own reading must be
+  community-scoped, and it must come from the portal the band vote actually
+  polled — otherwise this would silently undo "Property Finder wins where the
+  portals disagree" for a Bayut listing in a mixed band. The band vote remains
+  the fallback and is still what catches a sub-development-scoped figure.
+- **`/api/ingest` read an absent benchmark as "unchanged".** The update path
+  merged the incoming row over the stored one with a spread, so a field the sweep
+  *omitted* kept yesterday's value. A withdrawn `buildingPsf` therefore stayed
+  live and held that Nasma listing in the digest at "30% below its building"
+  after the pipeline had stopped publishing the figure. Every derived benchmark
+  is now cleared before the merge, and `scripts/ingest.mjs` additionally sends an
+  explicit `null` for any it has no figure for, so a batch is self-describing
+  even against a worker that has not been redeployed. Accrued history
+  (`firstSeen`, `priceHistory`, `relistCount`) is deliberately **not** in that
+  list — it belongs to the row and must survive.
+
+  Note the worker change needs a deploy to take effect; the explicit nulls are
+  what made the live data correct on the day.
 
 ## Benchmark scoping — two traps the first live run walked into
 

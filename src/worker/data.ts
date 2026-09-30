@@ -58,6 +58,21 @@ export async function handleListings(env: Env): Promise<Response> {
 
 /** Upsert scraped listings; price changes append to price_points, which is how
  *  drop/relist detection accrues over daily ingest runs. */
+
+/** Fields the sweep recomputes from scratch every run. On an update the
+ *  incoming row is the whole truth about these, including by saying nothing. */
+const DERIVED_BENCHMARK_FIELDS = [
+  "buildingPsf",
+  "buildingPsfLabel",
+  "areaPsf",
+  "benchmarkSource",
+  "buildingTxnPsf",
+  "buildingTxnCount",
+  "buildingTxnLow",
+  "buildingTxnHigh",
+  "comps",
+] as const;
+
 export async function handleIngest(request: Request, env: Env): Promise<Response> {
   const body = await readJson<{ listings?: (Partial<Listing> & { id: string; askingPrice: number })[] }>(request);
   if (!body?.listings?.length) {
@@ -101,7 +116,20 @@ export async function handleIngest(request: Request, env: Env): Promise<Response
       continue;
     }
 
-    const merged = { ...(JSON.parse(existing.data) as Listing), ...incoming };
+    // Every benchmark is derived fresh from the day's scrape, so an absent one
+    // means "no figure today" — never "keep yesterday's". A plain spread merge
+    // reads absence as "unchanged", which quietly republishes a number the
+    // pipeline has just decided not to trust: on 2026-09-30 a listing kept a
+    // buildingPsf from a looser earlier run of the same sweep and stayed in the
+    // digest at "30% below its building" after that figure had been withdrawn.
+    // Clearing them first makes the incoming row authoritative for all of them.
+    // Accrued history (firstSeen, priceHistory, relistCount) is NOT in this
+    // list: that genuinely belongs to the row and must survive.
+    const stored = JSON.parse(existing.data) as Listing;
+    for (const field of DERIVED_BENCHMARK_FIELDS) {
+      delete (stored as unknown as Record<string, unknown>)[field];
+    }
+    const merged = { ...stored, ...incoming };
     const statements = [
       env.DB.prepare(
         "UPDATE listings SET data = ?, last_seen = ?, asking_price = ? WHERE id = ?",

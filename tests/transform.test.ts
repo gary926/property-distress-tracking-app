@@ -99,6 +99,27 @@ describe("benchmarks", () => {
     expect(out[0].buildingPsf).toBeUndefined();
     expect(out[0].areaPsf).toBeUndefined();
   });
+
+  it("never falls back to an unbanded median, which flags big units as cheap", () => {
+    // One tower, five bedroom counts, psf falling with size exactly as it does
+    // in reality. An unbanded per-building median would be drawn from all of
+    // them and mark the largest unit far "below its building" purely for being
+    // large. Each band here has fewer than 3 members, so the honest answer is
+    // no figure at all.
+    const tower = [
+      saleRow({ bedrooms: 2, sizeSqft: 1_350, priceAED: 1_100_000, listingURL: "https://www.bayut.com/property/details-900001.html" }),
+      saleRow({ bedrooms: 3, sizeSqft: 2_400, priceAED: 2_100_000, listingURL: "https://www.bayut.com/property/details-900002.html" }),
+      saleRow({ bedrooms: 3, sizeSqft: 1_450, priceAED: 1_550_000, listingURL: "https://www.bayut.com/property/details-900003.html" }),
+      saleRow({ bedrooms: 4, sizeSqft: 2_998, priceAED: 2_510_000, listingURL: "https://www.bayut.com/property/details-900004.html" }),
+      saleRow({ bedrooms: 5, sizeSqft: 10_550, priceAED: 6_200_000, listingURL: "https://www.bayut.com/property/details-900005.html" }),
+    ];
+    const out = transform({ listings: tower });
+    const biggest = out.find((l: { beds: number }) => l.beds === 5)!;
+    expect(biggest.buildingPsf).toBeUndefined();
+    expect(biggest.areaPsf).toBeUndefined();
+    // And nothing else in the tower picked up a cross-band figure either.
+    for (const l of out) expect(l.buildingPsf).toBeUndefined();
+  });
 });
 
 describe("source links", () => {

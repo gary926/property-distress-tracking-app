@@ -478,6 +478,9 @@ export function enrich(listings, pages) {
     pages: pages.length,
     building: 0,
     area: 0,
+    /** Of `area`, how many came from the listing's own page (bedroom-exact)
+     *  rather than from the band median. Only non-zero under --per-listing. */
+    areaOwnPage: 0,
     comps: 0,
     rentals: 0,
     bands: 0,
@@ -544,7 +547,39 @@ export function enrich(listings, pages) {
     }
     const next = { ...listing };
     const published = resolved.get(`${listing.community}|${band(listing.beds)}`);
-    if (published?.areaPsf) {
+    // A listing's own page states the average for its own bedroom count, so
+    // when we have that page it beats the band median — our bands are coarser
+    // than the portal's. `4plus` merges 4, 5 and 6 beds, which the portal
+    // prices separately: in Sharjah Garden City on 2026-09-30 it published
+    // 848 for 4-beds and 686 for 5-beds, and the merged median of 848 made a
+    // 660 psf 5-bed read "22% below market" when against its own published
+    // 5-bed average it was 4% below. That is a manufactured signal, which is
+    // the one thing the benchmark must never do.
+    //
+    // The band vote still matters and is still the fallback: it exists to catch
+    // a figure scoped to a sub-development (Bayut states no scope, so it has to
+    // be inferred), and it is all there is for listings whose own page was not
+    // fetched under the band plan.
+    //
+    // Two conditions, and both are load-bearing. The own reading must be
+    // community-scoped, and it must come from the portal the vote actually
+    // polled — otherwise this would quietly undo "Property Finder wins where
+    // the portals disagree", handing a Bayut listing in a mixed band its own
+    // Bayut figure when a corroborated PF one exists for the same band. That
+    // preference cost the project a worse benchmark for a day; being more
+    // precise about the bedroom count is not a reason to spend it again.
+    const ownArea =
+      own?.areaPsf &&
+      own.areaPsfScope === "community" &&
+      (!published?.areaPsfPortal || published.areaPsfPortal === own.portal)
+        ? own.areaPsf
+        : undefined;
+    if (ownArea) {
+      next.areaPsf = ownArea;
+      next.benchmarkSource = "Portal published";
+      stats.area++;
+      stats.areaOwnPage++;
+    } else if (published?.areaPsf) {
       next.areaPsf = published.areaPsf;
       next.benchmarkSource = "Portal published";
       stats.area++;
@@ -704,7 +739,8 @@ if (process.argv[1] && process.argv[1].endsWith("parse-detail-page.mjs")) {
   process.stdout.write(JSON.stringify(enriched, null, 2));
   console.error(
     `Enriched from ${stats.pages} pages covering ${stats.bands} bands: ` +
-      `${stats.building} building averages, ${stats.area} area averages, ` +
+      `${stats.building} building averages, ${stats.area} area averages ` +
+      `(${stats.areaOwnPage} read from the listing's own page, the rest from the band median), ` +
       `${stats.txnPsf} building sale figures (${stats.txnRejected} rejected as too few or too scattered), ` +
       `${stats.comps} comp sets, ` +
       `${stats.rentals} rentals dropped.`,

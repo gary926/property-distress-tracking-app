@@ -336,6 +336,30 @@ describe("Property Finder pages", () => {
     // the assertion above is a preference and not a coincidence.
     expect(parseDetailPage(page, bayutOwner).areaPsf).toBe(2176);
   });
+
+  it("reads a listing's area average off its own page, since our bands are coarser", () => {
+    // `4plus` merges 4, 5 and 6 beds; the portal prices them separately. Taking
+    // the band median across them made a cheap-per-sqft 5-bed read far below
+    // market against the 4-bed average — a manufactured signal. Each listing's
+    // own page states the average for its own bedroom count, so that wins.
+    const fourBed = { ...pfUnit, id: "pf-4b", beds: 4, askingPrice: 4_250_000, sqft: 5038, comps: [] };
+    const fiveBed = { ...pfUnit, id: "pf-5b", beds: 5, askingPrice: 4_800_000, sqft: 7270, comps: [] };
+    const pageFor = (avg: number, size: number) =>
+      pfPage.replace("2,996,887", avg.toLocaleString("en-US")).replace("1,407 sqft", `${size.toLocaleString("en-US")} sqft`);
+
+    const { listings } = enrich(
+      [fourBed, fiveBed],
+      [
+        { id: "pf-4b", markdown: pageFor(4_148_262, 4892) },
+        { id: "pf-5b", markdown: pageFor(4_944_565, 7205) },
+      ],
+    );
+    // 4,148,262/4,892 = 848 and 4,944,565/7,205 = 686: each listing keeps its
+    // own, rather than both collapsing to one median of the merged band.
+    expect(listings[0].areaPsf).toBe(848);
+    expect(listings[1].areaPsf).toBe(686);
+  });
+
 });
 
 describe("pagesToScrape portal preference", () => {
