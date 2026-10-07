@@ -356,6 +356,160 @@ no headings, so this cannot regress.
 The lesson generalises: **fixtures must be what the scraper actually returns.**
 A hand-tidied transcript tests the parser against a page that never exists.
 
+## Bayut is blocked; the sweep ran Property Finder only (2026-10-07)
+
+Found on the 2026-10-07 sweep. **Every Bayut request returns HTTP 503 with the
+page title "Security check | Bayut"** and a body asking the visitor to confirm
+they are human. Verified three ways before concluding it: the Dubai Marina
+search page with `proxy: "basic"`, the same page with `proxy: "stealth"`, and a
+known-good *detail* page (`details-16277587.html`) with stealth. All three came
+back 503. It is a bot block on Bayut's side, not a Firecrawl fault and not a
+layout change.
+
+This matters more than losing one portal: **94 of the 119 rows on the
+2026-09-02 sweep came from Bayut**, and Bayut was the *only* source for Al
+Menhaz. Until it lifts, the sweep is Property Finder only. That is survivable —
+PF is already the preferred benchmark (see "Property Finder is the better
+benchmark") — but it halves the candidate pool and removes the cross-portal
+disagreement check that caught the Dubai Marina 1-bed scoping bug.
+
+**The dangerous part was the failure mode, not the block.** The documented
+recipe for the search pages is `formats: ["json"]` with an extraction prompt. On
+the blocked page that extraction returned **two confidently fabricated
+listings** — "Marina Residences, Palm Jumeirah, 4,000,000, motivated seller" and
+a studio in Al Furjan — with invented URLs of the form
+`bayut.com/property/12345678`. Neither the community nor the URLs were real, and
+nothing in the response said so except `statusCode: 503` in the metadata. An LLM
+extraction of an error page will invent plausible rows rather than return none.
+**Always assert `metadata.statusCode === 200` before using an extraction**, and
+spot-check that returned `listingUrl`s match the portal's real URL shape and
+that `community` matches the page you asked for.
+
+PF search URLs that work (SEO form; `?ob=nd` = newest first):
+
+    https://www.propertyfinder.ae/en/buy/dubai/apartments-for-sale-dubai-marina.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/dubai/apartments-for-sale-business-bay.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/dubai/properties-for-sale-jumeirah-village-circle.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/abu-dhabi/apartments-for-sale-al-reem-island.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-tilal-city.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-al-rahmaniya.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-al-khan.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-al-tai.html?ob=nd
+    https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-sharjah-garden-city.html?ob=nd
+
+The `l=` location ids the old `/en/search?c=1&l=<locId>` form needs are
+discoverable from any SEO page's "Map" link (Dubai Marina is `l=50`), but the
+SEO URLs are easier and need no lookup.
+
+**Al Menhaz does not exist as a Property Finder area.** PF files that
+neighbourhood under **Al Ruwaidat Suburb** (canonical spelling; the slug
+`properties-for-sale-al-rowdat-suburb.html` redirects to it, and
+`...-al-menhaz.html` is a 404). The listings there are Masaar 3 / Sedra /
+Khalid Bin Sultan City, and their own descriptions say "Located in Al Menhaz,
+Sharjah". The 2026-10-07 sweep therefore swept Al Ruwaidat Suburb and **labelled
+it as PF labels it**, rather than relabelling it "Al Menhaz" — because the
+published `areaPsf` on those pages is scoped to "Al Ruwaidat Suburb" by PF's own
+disclaimer, and asserting a scope the portal does not state is the exact trap
+the benchmark-scoping section exists to prevent. Consequence: the app now has an
+`Al Ruwaidat Suburb` community and no `Al Menhaz` rows. **Decide which name the
+tracker should use** before the next sweep; renaming the community is a
+one-field change in the raw prep, but the two names must not both accumulate.
+
+## The search-card extraction scrambles fields between adjacent listings (2026-10-07)
+
+This is the most important finding of the 2026-10-07 run, because it does not
+fail loudly and it **selectively manufactures deals**.
+
+The `formats: ["json"]` extraction over a *search results* page sometimes pairs
+one card's price, bedroom count or size with another card's URL and title. It is
+not random noise: on the Al Tai page three URLs each came back twice with
+different prices attached, and on the Dubai Marina page one listing's size was
+taken from its neighbour.
+
+Audited by comparing all 28 listings that also had a detail-page fixture against
+the authoritative "Price per area" / "Area" / "Bedrooms" fields on their own
+detail page: **26 of 28 matched** within tolerance. So the extraction is roughly
+93% accurate in aggregate — which sounds fine, and is exactly why this is
+dangerous.
+
+**Both of that day's two digest deals were extraction errors**, and that is not
+coincidence. The score's below-market signal fires when asking psf sits under
+the band average, so *any* error that understates psf — an overstated sqft, an
+understated price — becomes a deal, while errors in the other direction stay
+invisible. A 7% error rate in the batch concentrates into a ~100% error rate at
+the top of the digest. The two:
+
+- **Marina Shores `pf-155089531`** ingested as a 2-bed of 1,373 sqft → 1,420
+  psf, scored "33% below the Dubai Marina 2-bed average". Its detail page says
+  **1 bed, 767 sqft → 2,542 psf**: 16% *above* the 1-bed average of 2,194, and
+  level with its own tower's settled median of 2,542 over five sales. The size
+  and bedroom count had come from an adjacent card.
+- **Nasma Residence `pf-154603850`** ingested at AED 1,150,000 → 537 psf, scored
+  "33% below". That URL is actually **AED 1,800,000 at 2,140 sqft → 841 psf**,
+  about 6% below the Al Tai 3-bed average of 895. The 1,150,000 belonged to a
+  different Al Tai card ("Urban Elite"), whose real URL is unrecoverable from
+  the scrape.
+
+Both were corrected from their detail pages and re-ingested, after which the
+digest went from 2 deals to **0** and no email was sent.
+
+**So: never send a digest deal on search-card figures alone.** Before a listing
+goes in the email, re-scrape its own detail page and take price, size and
+bedrooms from `Price per area` / `Area` / `Bedrooms` there. That is 1 credit per
+deal and there are only ever a handful. The durable fix is to make the per-deal
+detail scrape a step in the pipeline rather than a manual check, and ideally to
+have `ingest` reject a listing whose psf disagrees with its detail page by more
+than a few percent.
+
+One honest caveat on the audit: PF itself quotes `Price per area` against **plot
+size** for some villas (Marwa Homes 3 `pf-155106755`: 4,000,000 / 2,161 sqft plot
+= 1,850, where built-up is 3,162 → 1,265). That is a PF inconsistency, not a
+scrape error, and the built-up figure is the right one for a psf benchmark.
+
+## Two band-plan limitations worth knowing (2026-10-07)
+
+The 2026-10-07 sweep ran the **28-page band plan**, not the 119-page
+`--per-listing` plan. All 119 listings still got a PF-published, band-scoped
+`areaPsf`, which is what the score actually uses, so scoring was unaffected. Two
+things were lost:
+
+- **No vote on the band average.** With one page per band there is nothing to
+  compare, so `enrich` printed no disputed-band warnings — that silence means
+  "could not check", not "agreed". Two gradients look odd on a single reading
+  and would be worth a second page: Business Bay reads 2,112 / 2,264 / 2,735 psf
+  for 1 / 2 / 3 beds (psf normally *falls* as units get bigger), and Al Tai
+  reads 716 / 895 / 533 for 2 / 3 / 4-plus.
+- **Almost no `buildingTxnPsf`.** 6 of 119 rows carry their building's settled
+  sales, all from the pages that happened to be fetched.
+
+Where it did land, it was the most useful number on the page. Three of the
+largest below-area signals are towers that are simply cheaper than their
+neighbourhood, not motivated sellers, and only the settled comps say so:
+Manchester Tower asks 1,500 against a 2,194 area average but its own 1-beds
+settle at ~1,462; Executive Tower G asks 1,833 against 2,735 but settles at
+~1,575. A "below even the settled comps" signal would separate these from real
+deals — still unbuilt, still a scoring change.
+
+## `ob=nd` means the sweep rarely re-observes a listing (2026-10-07)
+
+The 2026-10-07 ingest reported `created: 119, updated: 0`: not one of the 119
+rows matched anything already in D1. The same was true of the 2026-09-02 batch.
+The cause is the sort order — `?ob=nd` asks each portal for its *newest*
+listings, so every run sees a fresh set of ids and `price_points` never gets a
+second observation of the same listing.
+
+That matters because the price-drop signal is 35 of the 100 available points and
+**can only fire on a listing observed twice**. As configured, the radar will keep
+scoring everything in the 25–35 band more or less forever, and "Hot" deals will
+essentially never appear. This is not the documented "expect low scores on day
+one" effect wearing off; it is structural.
+
+Options, none taken yet because it is a design decision for Garvit: sweep a
+stable ordering as well (default relevance, or page 2+) so the same listings
+recur; or re-check the previous sweep's ids directly each day (they are all in
+`seed/sweeps/<date>.json`) rather than relying on them reappearing in a
+newest-first page.
+
 ## Gotchas already hit
 
 - **The app's own domain needs an egress allowlist entry.** *(Resolved
