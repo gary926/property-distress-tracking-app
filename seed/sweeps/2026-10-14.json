@@ -1,0 +1,4520 @@
+[
+  {
+    "id": "pf-155507503",
+    "title": "Middle Townhouse | Great Price | Investment Deal",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1500,
+    "askingPrice": 1300000,
+    "listingType": "sale",
+    "buildingPsf": 704,
+    "areaPsf": 716,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Middle Townhouse | Great Price | Investment Deal",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 1050000,
+        "sqft": 1469,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-155507503.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-155507503.html"
+    }
+  },
+  {
+    "id": "pf-155528313",
+    "title": "4BHK Corner Townhouse | 2 Master Bedrooms | Rented",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3315,
+    "askingPrice": 2500000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "4BHK Corner Townhouse | 2 Master Bedrooms | Rented",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2350000,
+        "sqft": 4033,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2300000,
+        "sqft": 4000,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2700000,
+        "sqft": 3500,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-155528313.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-155528313.html"
+    }
+  },
+  {
+    "id": "pf-155528547",
+    "title": "Elegant Home| Prime Family Community | Nasma",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 4033,
+    "askingPrice": 2350000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Elegant Home| Prime Family Community | Nasma",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2500000,
+        "sqft": 3315,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2300000,
+        "sqft": 4000,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2700000,
+        "sqft": 3500,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-155528547.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-155528547.html"
+    }
+  },
+  {
+    "id": "pf-157350413",
+    "title": "Standalone Villa | Best Price | No Service Charges",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 4000,
+    "askingPrice": 2300000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Standalone Villa | Best Price | No Service Charges",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2500000,
+        "sqft": 3315,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2350000,
+        "sqft": 4033,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2700000,
+        "sqft": 3500,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-157350413.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-157350413.html"
+    }
+  },
+  {
+    "id": "pf-157789595",
+    "title": "Corner 03BHK | Bigger Layout | Nasma Community",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2890,
+    "askingPrice": 1950000,
+    "listingType": "sale",
+    "buildingPsf": 704,
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Corner 03BHK | Bigger Layout | Nasma Community",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 3BR",
+        "date": "2026-10-14",
+        "price": 1600000,
+        "sqft": 2000,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-157789595.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-157789595.html"
+    }
+  },
+  {
+    "id": "pf-158231594",
+    "title": "| 4-Bedroom Villa with Majlis for Sale in Nasma |",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 3500,
+    "askingPrice": 2700000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "| 4-Bedroom Villa with Majlis for Sale in Nasma |",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2500000,
+        "sqft": 3315,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2350000,
+        "sqft": 4033,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2300000,
+        "sqft": 4000,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158231594.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158231594.html"
+    }
+  },
+  {
+    "id": "pf-158246379",
+    "title": "Spacious 4BR Villa | zero service fee",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 4033,
+    "askingPrice": 2500000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious 4BR Villa | zero service fee",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2500000,
+        "sqft": 3315,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2350000,
+        "sqft": 4033,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2300000,
+        "sqft": 4000,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158246379.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158246379.html"
+    }
+  },
+  {
+    "id": "pf-158262983",
+    "title": "4BR Villa with Majlis|Garden|Nasma Residences",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 3897,
+    "askingPrice": 2700000,
+    "listingType": "sale",
+    "buildingPsf": 656,
+    "areaPsf": 533,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "4BR Villa with Majlis|Garden|Nasma Residences",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2500000,
+        "sqft": 3315,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2350000,
+        "sqft": 4033,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 4BR",
+        "date": "2026-10-14",
+        "price": 2300000,
+        "sqft": 4000,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158262983.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-tai-nasma-residence-158262983.html"
+    }
+  },
+  {
+    "id": "pf-158265236",
+    "title": "2BR HOUSE WITH BIG LAYOUT FOR SALE-BEST VALUE",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 2,
+    "baths": 4,
+    "sqft": 1469,
+    "askingPrice": 1050000,
+    "listingType": "sale",
+    "buildingPsf": 704,
+    "areaPsf": 716,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "2BR HOUSE WITH BIG LAYOUT FOR SALE-BEST VALUE",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 1300000,
+        "sqft": 1500,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-158265236.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-158265236.html"
+    }
+  },
+  {
+    "id": "pf-158703812",
+    "title": "Closed kitchen layout | stunning 2BR Ready",
+    "building": "Azure Beach Residence",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1100,
+    "askingPrice": 1100000,
+    "listingType": "sale",
+    "areaPsf": 851,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Closed kitchen layout | stunning 2BR Ready",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 164,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1170000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1150000,
+        "sqft": 1016,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Aysha Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 2065888,
+        "sqft": 2141,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-azure-beach-residence-158703812.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-azure-beach-residence-158703812.html"
+    }
+  },
+  {
+    "id": "pf-158704475",
+    "title": "Most Premium Crystal Building| Marina Ocean View",
+    "building": "Crystal Residences Tower A",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 1800,
+    "askingPrice": 1680000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Most Premium Crystal Building| Marina Ocean View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 297,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-crystal-residences-crystal-residences-tower-a-158704475.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-crystal-residences-crystal-residences-tower-a-158704475.html"
+    }
+  },
+  {
+    "id": "pf-158705284",
+    "title": "Brand New 3BR Fully Paid Jawaher 1 Maryam Island",
+    "building": "Jawaher Residences 1",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 1687,
+    "askingPrice": 1800000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Brand New 3BR Fully Paid Jawaher 1 Maryam Island",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 48,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-jawaher-residences-jawaher-residences-1-158705284.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-jawaher-residences-jawaher-residences-1-158705284.html"
+    }
+  },
+  {
+    "id": "pf-158706149",
+    "title": "Modern 2BR | Mesk | Waterfront Lifestyle *FreeHold",
+    "building": "Mesk Residences",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1100,
+    "askingPrice": 1170000,
+    "listingType": "sale",
+    "buildingPsf": 1132,
+    "areaPsf": 851,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Modern 2BR | Mesk | Waterfront Lifestyle *FreeHold",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 21,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Azure Beach Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 1100000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1150000,
+        "sqft": 1016,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Aysha Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 2065888,
+        "sqft": 2141,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158706149.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158706149.html"
+    }
+  },
+  {
+    "id": "pf-158706408",
+    "title": "Original price | distress deal in Mesk residences",
+    "building": "Mesk Residences",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1016,
+    "askingPrice": 1150000,
+    "listingType": "sale",
+    "buildingPsf": 1132,
+    "areaPsf": 851,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [
+      "distress"
+    ],
+    "description": "Original price | distress deal in Mesk residences",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 21,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Azure Beach Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 1100000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1170000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Aysha Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 2065888,
+        "sqft": 2141,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158706408.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158706408.html"
+    }
+  },
+  {
+    "id": "pf-158707114",
+    "title": "3-Bedroom Apartment for Sale in Al Alia Tower",
+    "building": "Al Alia Tower",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 3345,
+    "askingPrice": 2050000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "3-Bedroom Apartment for Sale in Al Alia Tower",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 61,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158707114.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158707114.html"
+    }
+  },
+  {
+    "id": "pf-158707553",
+    "title": "LUXURY/WIDE/7Y PAYMENT PLAN /EASY PAY/NEAR DUBAI",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 5038,
+    "askingPrice": 4250000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "LUXURY/WIDE/7Y PAYMENT PLAN /EASY PAY/NEAR DUBAI",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 6100000,
+        "sqft": 7311,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158707553.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158707553.html"
+    }
+  },
+  {
+    "id": "pf-158710403",
+    "title": "3BR+MAID | Corner Unit | Sea View | Book Now",
+    "building": "Reem Hills",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 2171,
+    "askingPrice": 3600000,
+    "listingType": "sale",
+    "areaPsf": 1598,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "3BR+MAID | Corner Unit | Sea View | Book Now",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 213,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Rivage by Deeyar · 3BR",
+        "date": "2026-10-14",
+        "price": 3599998,
+        "sqft": 2275,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Meera 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 2590000,
+        "sqft": 1602,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-najmat-abu-dhabi-reem-hills-158710403.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-najmat-abu-dhabi-reem-hills-158710403.html"
+    }
+  },
+  {
+    "id": "pf-158710556",
+    "title": "STANDALONE/CORNER/READY/HIGH PRIVACY/LAST UNIT/LUX",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 5038,
+    "askingPrice": 3950000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "STANDALONE/CORNER/READY/HIGH PRIVACY/LAST UNIT/LUX",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 6100000,
+        "sqft": 7311,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158710556.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158710556.html"
+    }
+  },
+  {
+    "id": "pf-158711474",
+    "title": "SPACIOUS/PHASE 1/PRIVET COMMUNITY/FAMILY LIVING/FH",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 7,
+    "sqft": 9921,
+    "askingPrice": 4100000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "SPACIOUS/PHASE 1/PRIVET COMMUNITY/FAMILY LIVING/FH",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 6100000,
+        "sqft": 7311,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158711474.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158711474.html"
+    }
+  },
+  {
+    "id": "pf-158711762",
+    "title": "Sea View | High ROI | Prime Location",
+    "building": "Al Ghaf Tower",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 772,
+    "askingPrice": 610000,
+    "listingType": "sale",
+    "areaPsf": 985,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Sea View | High ROI | Prime Location",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 60,
+    "comps": [],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-al-ghaf-tower-158711762.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-al-ghaf-tower-158711762.html"
+    }
+  },
+  {
+    "id": "pf-158712350",
+    "title": "Apartment for sale in Al-Olaya Tower, Al Khan:",
+    "building": "Al Alia Tower",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 3345,
+    "askingPrice": 2100000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Apartment for sale in Al-Olaya Tower, Al Khan:",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 61,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-al-alia-tower-158712350.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-al-alia-tower-158712350.html"
+    }
+  },
+  {
+    "id": "pf-158713015",
+    "title": "Below Original Price | Full-Unit Investment",
+    "building": "Ciel Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 344,
+    "askingPrice": 2100000,
+    "listingType": "sale",
+    "areaPsf": 2552,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [
+      "below original price"
+    ],
+    "description": "Below Original Price | Full-Unit Investment",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 222,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Ciel Tower · Studio",
+        "date": "2025-08-26",
+        "price": 2739750,
+        "sqft": 352,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Ciel Tower · Studio",
+        "date": "2025-02-17",
+        "price": 2200000,
+        "sqft": 343,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Ciel Tower · Studio",
+        "date": "2024-07-23",
+        "price": 2572091,
+        "sqft": 336,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Ciel Tower · Studio",
+        "date": "2024-02-01",
+        "price": 2172300,
+        "sqft": 338,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-ciel-tower-158713015.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-ciel-tower-158713015.html"
+    }
+  },
+  {
+    "id": "pf-158713203",
+    "title": "High Floor 2BR | Sea View | Al Maryah & Saadiyat V",
+    "building": "Leaf Tower",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 962,
+    "askingPrice": 2278000,
+    "listingType": "sale",
+    "areaPsf": 1644,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High Floor 2BR | Sea View | Al Maryah & Saadiyat V",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 217,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Julphar Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 2199999,
+        "sqft": 1442,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-tamouh-leaf-tower-158713203.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-tamouh-leaf-tower-158713203.html"
+    }
+  },
+  {
+    "id": "pf-158713221",
+    "title": "Hot Deal | Generous Space | Marina View",
+    "building": "KG Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1677,
+    "askingPrice": 2099999,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Hot Deal | Generous Space | Marina View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 347,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "KG Tower · 2BR",
+        "date": "2025-04-21",
+        "price": 1700000,
+        "sqft": 1707,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "KG Tower · 2BR",
+        "date": "2025-01-22",
+        "price": 1660000,
+        "sqft": 1770,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "KG Tower · 2BR",
+        "date": "2025-01-15",
+        "price": 1700000,
+        "sqft": 1770,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "KG Tower · 2BR",
+        "date": "2024-09-02",
+        "price": 1530000,
+        "sqft": 1770,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-kg-tower-158713221.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-kg-tower-158713221.html"
+    },
+    "buildingTxnPsf": 960,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 864,
+    "buildingTxnHigh": 996
+  },
+  {
+    "id": "pf-158713650",
+    "title": "MARINA VIEW | FURNISHED| HIGH FLOOR | VOT",
+    "building": "Marina Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1854,
+    "askingPrice": 4500000,
+    "listingType": "sale",
+    "areaPsf": 2241,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "MARINA VIEW | FURNISHED| HIGH FLOOR | VOT",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 81,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Marina Tower · 3BR",
+        "date": "2026-10-08",
+        "price": 3615000,
+        "sqft": 1854,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Tower · 3BR",
+        "date": "2026-01-14",
+        "price": 3500000,
+        "sqft": 1854,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Tower · 3BR",
+        "date": "2025-11-04",
+        "price": 3375000,
+        "sqft": 1854,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Tower · 3BR",
+        "date": "2025-03-05",
+        "price": 3350000,
+        "sqft": 1854,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-tower-158713650.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-tower-158713650.html"
+    },
+    "buildingTxnPsf": 1820,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1707,
+    "buildingTxnHigh": 1950
+  },
+  {
+    "id": "pf-158713870",
+    "title": "Motivated Seller| Marina View| Rented",
+    "building": "Iris Blue",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1371,
+    "askingPrice": 2690000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [
+      "motivated seller"
+    ],
+    "description": "Motivated Seller| Marina View| Rented",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 111,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Iris Blue · 2BR",
+        "date": "2026-09-27",
+        "price": 2900000,
+        "sqft": 1371,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Iris Blue · 2BR",
+        "date": "2026-06-28",
+        "price": 2550000,
+        "sqft": 1371,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Iris Blue · 2BR",
+        "date": "2026-06-25",
+        "price": 2375000,
+        "sqft": 1371,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Iris Blue · 2BR",
+        "date": "2025-12-16",
+        "price": 2500000,
+        "sqft": 1371,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-iris-blue-158713870.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-iris-blue-158713870.html"
+    },
+    "buildingTxnPsf": 1860,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1732,
+    "buildingTxnHigh": 2115
+  },
+  {
+    "id": "pf-158714303",
+    "title": "Nature Meets Luxury Living| A Legacy of Elegant",
+    "building": "Laura",
+    "community": "Al Ruwaidat Suburb",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 3244,
+    "askingPrice": 4705000,
+    "listingType": "sale",
+    "areaPsf": 1115,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Nature Meets Luxury Living| A Legacy of Elegant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 141,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Phase 4 · 4BR",
+        "date": "2026-10-14",
+        "price": 3510000,
+        "sqft": 2652,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar 3 · 5BR",
+        "date": "2026-10-14",
+        "price": 15000000,
+        "sqft": 6000,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-laura-158714303.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-laura-158714303.html"
+    }
+  },
+  {
+    "id": "pf-158714380",
+    "title": "Spacious 1BR | Prime Location | Elite Residence",
+    "building": "Elite Residence",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 737,
+    "askingPrice": 1250000,
+    "listingType": "sale",
+    "areaPsf": 2194,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious 1BR | Prime Location | Elite Residence",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 5,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Elite Residence · 1BR",
+        "date": "2026-09-02",
+        "price": 1065000,
+        "sqft": 737,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Elite Residence · 1BR",
+        "date": "2026-07-01",
+        "price": 1275000,
+        "sqft": 737,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Elite Residence · 1BR",
+        "date": "2026-06-30",
+        "price": 1325000,
+        "sqft": 737,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Elite Residence · 1BR",
+        "date": "2026-06-23",
+        "price": 1120000,
+        "sqft": 737,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-elite-residence-158714380.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-elite-residence-158714380.html"
+    },
+    "buildingTxnPsf": 1730,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1445,
+    "buildingTxnHigh": 1798
+  },
+  {
+    "id": "pf-158714434",
+    "title": "Furnished | Upgraded 2 Beds | Prime Location",
+    "building": "DEC Tower 2",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1490,
+    "askingPrice": 2200000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Furnished | Upgraded 2 Beds | Prime Location",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 127,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "DEC Tower 2 · 2BR",
+        "date": "2026-09-21",
+        "price": 2000001,
+        "sqft": 1491,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DEC Tower 2 · 2BR",
+        "date": "2026-05-19",
+        "price": 1400000,
+        "sqft": 1491,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DEC Tower 2 · 2BR",
+        "date": "2025-12-29",
+        "price": 1660000,
+        "sqft": 1491,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "DEC Tower 2 · 2BR",
+        "date": "2025-12-22",
+        "price": 1570000,
+        "sqft": 1491,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-dec-towers-dec-tower-2-158714434.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-dec-towers-dec-tower-2-158714434.html"
+    },
+    "buildingTxnPsf": 1113,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 939,
+    "buildingTxnHigh": 1341
+  },
+  {
+    "id": "pf-158714616",
+    "title": "Luxury Villa with Majlis, Maid & Driver Rooms",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 7,
+    "sqft": 7311,
+    "askingPrice": 6100000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Luxury Villa with Majlis, Maid & Driver Rooms",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714616.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714616.html"
+    }
+  },
+  {
+    "id": "pf-158714629",
+    "title": "Park-Facing Standalone Villa| Luxury Family Villa",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 7,
+    "sqft": 7311,
+    "askingPrice": 6100000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Park-Facing Standalone Villa| Luxury Family Villa",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714629.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714629.html"
+    }
+  },
+  {
+    "id": "pf-158714674",
+    "title": "5BR Standalone Villa with Park View |Spacious Now",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 7,
+    "sqft": 7311,
+    "askingPrice": 6100000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "5BR Standalone Villa with Park View |Spacious Now",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714674.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714674.html"
+    }
+  },
+  {
+    "id": "pf-158714695",
+    "title": "Luxury Standalone Villa in Garden City|Family Live",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 7,
+    "sqft": 7311,
+    "askingPrice": 6100000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 703,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Luxury Standalone Villa in Garden City|Family Live",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 4250000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 4BR",
+        "date": "2026-10-14",
+        "price": 3950000,
+        "sqft": 5038,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Shomous Residential Complex · 5BR",
+        "date": "2026-10-14",
+        "price": 4100000,
+        "sqft": 9921,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714695.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158714695.html"
+    }
+  },
+  {
+    "id": "pf-158714878",
+    "title": "High Floor | Full Marina View | Discounted",
+    "building": "Marina Gate 2",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 1633,
+    "askingPrice": 5400000,
+    "listingType": "sale",
+    "areaPsf": 2241,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High Floor | Full Marina View | Discounted",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 19,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 3BR",
+        "date": "2026-02-24",
+        "price": 5650000,
+        "sqft": 1636,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 3BR",
+        "date": "2025-12-14",
+        "price": 5700000,
+        "sqft": 1634,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 3BR",
+        "date": "2025-06-01",
+        "price": 5500000,
+        "sqft": 1634,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Marina Gate 2 · 3BR",
+        "date": "2024-12-04",
+        "price": 5800000,
+        "sqft": 1634,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-marina-gate-2-158714878.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-marina-gate-marina-gate-2-158714878.html"
+    },
+    "buildingTxnPsf": 3488,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 3366,
+    "buildingTxnHigh": 3550
+  },
+  {
+    "id": "pf-158717314",
+    "title": "Fully Paid | 1BR Apartment | Vista 3 | High Floor",
+    "building": "Vista 3",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 1,
+    "sqft": 506,
+    "askingPrice": 1000000,
+    "listingType": "sale",
+    "areaPsf": 1724,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Fully Paid | 1BR Apartment | Vista 3 | High Floor",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 242,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Parkside Residence · 1BR",
+        "date": "2026-10-14",
+        "price": 1394999,
+        "sqft": 764,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-vista-3-158717314.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-vista-3-158717314.html"
+    }
+  },
+  {
+    "id": "pf-158717337",
+    "title": "Canal View | Spacious Balcony | Prime Community !",
+    "building": "Julphar Residence",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1442,
+    "askingPrice": 2199999,
+    "listingType": "sale",
+    "areaPsf": 1644,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Canal View | Spacious Balcony | Prime Community !",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 232,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Leaf Tower · 2BR",
+        "date": "2026-10-14",
+        "price": 2278000,
+        "sqft": 962,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-julphar-residence-158717337.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-julphar-residence-158717337.html"
+    }
+  },
+  {
+    "id": "pf-158718132",
+    "title": "2 BEDROOM FURNISHED | LARGEST LAYOUT | CANAL VIEW",
+    "building": "Damac Maison Prive A",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1342,
+    "askingPrice": 2450000,
+    "listingType": "sale",
+    "areaPsf": 2264,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "2 BEDROOM FURNISHED | LARGEST LAYOUT | CANAL VIEW",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 324,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Damac Maison Prive A · 2BR",
+        "date": "2026-10-04",
+        "price": 2100000,
+        "sqft": 1381,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Damac Maison Prive A · 2BR",
+        "date": "2026-09-10",
+        "price": 2450000,
+        "sqft": 1398,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Damac Maison Prive A · 2BR",
+        "date": "2025-07-07",
+        "price": 2580000,
+        "sqft": 1342,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Damac Maison Prive A · 2BR",
+        "date": "2025-05-28",
+        "price": 2600000,
+        "sqft": 1342,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-damac-maison-prive-damac-maison-prive-a-158718132.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-damac-maison-prive-damac-maison-prive-a-158718132.html"
+    },
+    "buildingTxnPsf": 1774,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1521,
+    "buildingTxnHigh": 1937
+  },
+  {
+    "id": "pf-158719389",
+    "title": "Fully Furnished | Partial Mangrove View",
+    "building": "Parkside Residence",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 764,
+    "askingPrice": 1394999,
+    "listingType": "sale",
+    "areaPsf": 1724,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Fully Furnished | Partial Mangrove View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 325,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Vista 3 · 1BR",
+        "date": "2026-10-14",
+        "price": 1000000,
+        "sqft": 506,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-parkside-residence-158719389.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-parkside-residence-158719389.html"
+    }
+  },
+  {
+    "id": "pf-158719812",
+    "title": "Spacious | Rented | Sheikh Zayed Road View | 2BR",
+    "building": "Trident Waterfront",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1709,
+    "askingPrice": 1895000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Spacious | Rented | Sheikh Zayed Road View | 2BR",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 30,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2025-05-25",
+        "price": 2000000,
+        "sqft": 1709,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2025-03-25",
+        "price": 1900000,
+        "sqft": 1709,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2025-01-30",
+        "price": 2025000,
+        "sqft": 1709,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2024-07-03",
+        "price": 1800000,
+        "sqft": 1709,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-trident-waterfront-158719812.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-trident-waterfront-158719812.html"
+    },
+    "buildingTxnPsf": 1123,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1053,
+    "buildingTxnHigh": 1185
+  },
+  {
+    "id": "pf-158720057",
+    "title": "3 BR Upgraded Apartment with Private Pool",
+    "building": "Azure Beach Residence",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1645,
+    "askingPrice": 2700000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "3 BR Upgraded Apartment with Private Pool",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 164,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-azure-beach-residence-158720057.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-azure-beach-residence-158720057.html"
+    }
+  },
+  {
+    "id": "pf-158720101",
+    "title": "Fully Furnished Marina and Sea View Spacious Unit",
+    "building": "Skyview Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 894,
+    "askingPrice": 1425000,
+    "listingType": "sale",
+    "areaPsf": 2194,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Fully Furnished Marina and Sea View Spacious Unit",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 235,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Skyview Tower · 1BR",
+        "date": "2026-03-10",
+        "price": 1500000,
+        "sqft": 896,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Skyview Tower · 1BR",
+        "date": "2025-09-03",
+        "price": 1550000,
+        "sqft": 897,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Skyview Tower · 1BR",
+        "date": "2024-11-07",
+        "price": 1230000,
+        "sqft": 897,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Skyview Tower · 1BR",
+        "date": "2024-06-09",
+        "price": 1375000,
+        "sqft": 894,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-skyview-tower-158720101.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-skyview-tower-158720101.html"
+    },
+    "buildingTxnPsf": 1538,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1371,
+    "buildingTxnHigh": 1728
+  },
+  {
+    "id": "pf-158720166",
+    "title": "Waterfront Apartment | 2BR | Furnished | For Sale",
+    "building": "Trident Waterfront",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1703,
+    "askingPrice": 2400000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Waterfront Apartment | 2BR | Furnished | For Sale",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 30,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2026-01-08",
+        "price": 1900000,
+        "sqft": 1703,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2025-10-22",
+        "price": 1825000,
+        "sqft": 1703,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2025-07-24",
+        "price": 1990000,
+        "sqft": 1703,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Trident Waterfront · 2BR",
+        "date": "2024-06-19",
+        "price": 1800000,
+        "sqft": 1703,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-trident-waterfront-158720166.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-trident-waterfront-158720166.html"
+    },
+    "buildingTxnPsf": 1072,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1015,
+    "buildingTxnHigh": 1169
+  },
+  {
+    "id": "pf-158720250",
+    "title": "Pay Later: 5 Years After Handover | Offer Open Now",
+    "building": "Shomous Residential Complex",
+    "community": "Sharjah Garden City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 4004,
+    "askingPrice": 3350000,
+    "listingType": "sale",
+    "buildingPsf": 834,
+    "areaPsf": 751,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Pay Later: 5 Years After Handover | Offer Open Now",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 162,
+    "comps": [],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158720250.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-sharjah-garden-city-shomous-residential-complex-158720250.html"
+    }
+  },
+  {
+    "id": "pf-158720434",
+    "title": "Hot Deal | Corner High Floor | Water View 3BR+Maid",
+    "building": "Rivage by Deeyar",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 2275,
+    "askingPrice": 3599998,
+    "listingType": "sale",
+    "areaPsf": 1598,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Hot Deal | Corner High Floor | Water View 3BR+Maid",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 51,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Reem Hills · 3BR",
+        "date": "2026-10-14",
+        "price": 3600000,
+        "sqft": 2171,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Meera 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 2590000,
+        "sqft": 1602,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-rivage-by-deeyar-158720434.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-rivage-by-deeyar-158720434.html"
+    }
+  },
+  {
+    "id": "pf-158720694",
+    "title": "Priced to Impress |4BR Townhouse| Gated | High ROI",
+    "building": "Phase 4",
+    "community": "Al Ruwaidat Suburb",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 2652,
+    "askingPrice": 3510000,
+    "listingType": "sale",
+    "areaPsf": 1115,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Priced to Impress |4BR Townhouse| Gated | High ROI",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 221,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Laura · 4BR",
+        "date": "2026-10-14",
+        "price": 4705000,
+        "sqft": 3244,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar 3 · 5BR",
+        "date": "2026-10-14",
+        "price": 15000000,
+        "sqft": 6000,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-phase-4-158720694.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-phase-4-158720694.html"
+    }
+  },
+  {
+    "id": "pf-158721091",
+    "title": "3BHK-BIGGER LAYOUT-FREEHOLD FOR ARABS-BEST OFFER",
+    "building": "Nasma Residence",
+    "community": "Al Tai",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2000,
+    "askingPrice": 1600000,
+    "listingType": "sale",
+    "buildingPsf": 704,
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "3BHK-BIGGER LAYOUT-FREEHOLD FOR ARABS-BEST OFFER",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Nasma Residence · 3BR",
+        "date": "2026-10-14",
+        "price": 1950000,
+        "sqft": 2890,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-158721091.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-158721091.html"
+    }
+  },
+  {
+    "id": "pf-158721133",
+    "title": "Freehold, Luxury 3BHK in front of Marina and Beach",
+    "building": "Crystal Residences",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 1689,
+    "askingPrice": 2370888,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Freehold, Luxury 3BHK in front of Marina and Beach",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 359,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-crystal-residences-158721133.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-crystal-residences-158721133.html"
+    }
+  },
+  {
+    "id": "pf-158721245",
+    "title": "Own Corner Garden Apartment in Front of Pool",
+    "building": "Aysha Residence",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 2141,
+    "askingPrice": 2065888,
+    "listingType": "sale",
+    "areaPsf": 851,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Own Corner Garden Apartment in Front of Pool",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 8,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Azure Beach Residence · 2BR",
+        "date": "2026-10-14",
+        "price": 1100000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1170000,
+        "sqft": 1100,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Mesk Residences · 2BR",
+        "date": "2026-10-14",
+        "price": 1150000,
+        "sqft": 1016,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-aysha-residence-158721245.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-aysha-residence-158721245.html"
+    }
+  },
+  {
+    "id": "pf-158721348",
+    "title": "Best Investment Deal/Lowest Price Highest Standard",
+    "building": "Mesk Residences",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 337,
+    "askingPrice": 399999,
+    "listingType": "sale",
+    "buildingPsf": 1132,
+    "areaPsf": 1338,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Best Investment Deal/Lowest Price Highest Standard",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 21,
+    "comps": [],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158721348.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-mesk-residences-158721348.html"
+    }
+  },
+  {
+    "id": "pf-158721394",
+    "title": "4-Bedroom Townhouse for Sale in Azizi Florence, Sh",
+    "building": "Al Rahmaniya 1",
+    "community": "Al Rahmaniya",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 2084,
+    "askingPrice": 3554000,
+    "listingType": "sale",
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "4-Bedroom Townhouse for Sale in Azizi Florence, Sh",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 128,
+    "comps": [],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-rahmaniya-al-rahmaniya-1-158721394.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-rahmaniya-al-rahmaniya-1-158721394.html"
+    },
+    "areaPsf": 674
+  },
+  {
+    "id": "pf-158722084",
+    "title": "Upgraded + Laundry | Mangrove View",
+    "building": "Meera 1",
+    "community": "Al Reem Island",
+    "emirate": "Abu Dhabi",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 1602,
+    "askingPrice": 2590000,
+    "listingType": "sale",
+    "areaPsf": 1598,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Upgraded + Laundry | Mangrove View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 211,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Reem Hills · 3BR",
+        "date": "2026-10-14",
+        "price": 3600000,
+        "sqft": 2171,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Rivage by Deeyar · 3BR",
+        "date": "2026-10-14",
+        "price": 3599998,
+        "sqft": 2275,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-meera-1-158722084.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-abu-dhabi-al-reem-island-shams-abu-dhabi-meera-1-158722084.html"
+    }
+  },
+  {
+    "id": "pf-158726346",
+    "title": "Brand New | Above Floor | Canal Views",
+    "building": "Mama Shelter Residences",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 802,
+    "askingPrice": 2000000,
+    "listingType": "sale",
+    "areaPsf": 2264,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Brand New | Above Floor | Canal Views",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 40,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · 2BR",
+        "date": "2025-11-03",
+        "price": 2000000,
+        "sqft": 862,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · 2BR",
+        "date": "2025-10-28",
+        "price": 2000000,
+        "sqft": 802,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · 2BR",
+        "date": "2024-05-20",
+        "price": 2600000,
+        "sqft": 802,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · 2BR",
+        "date": "2024-04-22",
+        "price": 2593469,
+        "sqft": 802,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-mama-shelter-residences-158726346.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-mama-shelter-residences-158726346.html"
+    },
+    "buildingTxnPsf": 3234,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 2320,
+    "buildingTxnHigh": 3265
+  },
+  {
+    "id": "pf-158726502",
+    "title": "5 BR Townhouse with Private Gym in Northern Emirates",
+    "building": "Masaar 3",
+    "community": "Al Ruwaidat Suburb",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 5,
+    "baths": 5,
+    "sqft": 6000,
+    "askingPrice": 15000000,
+    "listingType": "sale",
+    "areaPsf": 1115,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "5 BR Townhouse with Private Gym in Northern Emirates",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 320,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Laura · 4BR",
+        "date": "2026-10-14",
+        "price": 4705000,
+        "sqft": 3244,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Phase 4 · 4BR",
+        "date": "2026-10-14",
+        "price": 3510000,
+        "sqft": 2652,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-158726502.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-ruwaidat-suburb-masaar-3-158726502.html"
+    }
+  },
+  {
+    "id": "pf-158726528",
+    "title": "2 Bedroom | JLT/SZR View",
+    "building": "Vida Residences Dubai Marina",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1591,
+    "askingPrice": 3500000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "2 Bedroom | JLT/SZR View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 78,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Vida Residences Dubai Marina · 2BR",
+        "date": "2025-10-06",
+        "price": 5180000,
+        "sqft": 1403,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Vida Residences Dubai Marina · 2BR",
+        "date": "2025-09-02",
+        "price": 2519930,
+        "sqft": 1314,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Vida Residences Dubai Marina · 2BR",
+        "date": "2025-04-09",
+        "price": 6650000,
+        "sqft": 1870,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Vida Residences Dubai Marina · 2BR",
+        "date": "2024-08-07",
+        "price": 4900000,
+        "sqft": 1403,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-vida-residences-dubai-marina-158726528.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-vida-residences-dubai-marina-158726528.html"
+    }
+  },
+  {
+    "id": "pf-158726865",
+    "title": "Below Original Price | Burj View | Private Pool",
+    "building": "Bayz 102 by Danube",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1209,
+    "askingPrice": 3250000,
+    "listingType": "sale",
+    "areaPsf": 2264,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [
+      "below original price"
+    ],
+    "description": "Below Original Price | Burj View | Private Pool",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 19,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Bayz 102 by Danube · 2BR",
+        "date": "2025-10-16",
+        "price": 3505000,
+        "sqft": 1209,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bayz 102 by Danube · 2BR",
+        "date": "2025-10-16",
+        "price": 3438820,
+        "sqft": 1209,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bayz 102 by Danube · 2BR",
+        "date": "2025-10-15",
+        "price": 3259410,
+        "sqft": 1209,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Bayz 102 by Danube · 2BR",
+        "date": "2025-10-14",
+        "price": 3410520,
+        "sqft": 1209,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-bayz-102-by-danube-158726865.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-bayz-102-by-danube-158726865.html"
+    },
+    "buildingTxnPsf": 2844,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 2696,
+    "buildingTxnHigh": 2899
+  },
+  {
+    "id": "pf-158727294",
+    "title": "Quality Fully Upgraded | High Floor | Open View",
+    "building": "Executive Tower J",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 2205,
+    "askingPrice": 4200000,
+    "listingType": "sale",
+    "areaPsf": 2735,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Quality Fully Upgraded | High Floor | Open View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 173,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Executive Tower J · 3BR",
+        "date": "2026-09-06",
+        "price": 4000000,
+        "sqft": 2205,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower J · 3BR",
+        "date": "2026-07-14",
+        "price": 3600000,
+        "sqft": 2205,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower J · 3BR",
+        "date": "2026-07-08",
+        "price": 3325000,
+        "sqft": 2205,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower J · 3BR",
+        "date": "2026-03-31",
+        "price": 4000000,
+        "sqft": 2205,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-executive-towers-executive-tower-j-158727294.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-executive-towers-executive-tower-j-158727294.html"
+    },
+    "buildingTxnPsf": 1633,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1508,
+    "buildingTxnHigh": 1814
+  },
+  {
+    "id": "pf-158727374",
+    "title": "3BR Sea View Dubai Marina | High Floor | Rented",
+    "building": "Ocean Heights",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 1547,
+    "askingPrice": 2800000,
+    "listingType": "sale",
+    "areaPsf": 2241,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "3BR Sea View Dubai Marina | High Floor | Rented",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 154,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Ocean Heights · 3BR",
+        "date": "2025-07-31",
+        "price": 2650000,
+        "sqft": 1622,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Ocean Heights · 3BR",
+        "date": "2025-04-22",
+        "price": 2750000,
+        "sqft": 1644,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Ocean Heights · 3BR",
+        "date": "2024-09-22",
+        "price": 2300000,
+        "sqft": 1581,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "Ocean Heights · 3BR",
+        "date": "2024-07-24",
+        "price": 2250000,
+        "sqft": 1613,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-ocean-heights-158727374.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-ocean-heights-158727374.html"
+    },
+    "buildingTxnPsf": 1455,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1296,
+    "buildingTxnHigh": 1673
+  },
+  {
+    "id": "pf-158727417",
+    "title": "Quality Fully Upgraded | High Floor | Open View",
+    "building": "Executive Tower H",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2866,
+    "askingPrice": 6000000,
+    "listingType": "sale",
+    "areaPsf": 3532,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Quality Fully Upgraded | High Floor | Open View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 171,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Executive Tower H · 4BR",
+        "date": "2025-03-26",
+        "price": 5500000,
+        "sqft": 2866,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower H · 4BR",
+        "date": "2025-03-12",
+        "price": 4990000,
+        "sqft": 2866,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower H · 4BR",
+        "date": "2024-08-25",
+        "price": 4350000,
+        "sqft": 2866,
+        "beds": 4
+      },
+      {
+        "source": "DLD",
+        "label": "Executive Tower H · 4BR",
+        "date": "2024-07-08",
+        "price": 4600000,
+        "sqft": 2866,
+        "beds": 4
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-executive-towers-executive-tower-h-158727417.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-executive-towers-executive-tower-h-158727417.html"
+    },
+    "buildingTxnPsf": 1605,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 1375,
+    "buildingTxnHigh": 1919
+  },
+  {
+    "id": "pf-158727501",
+    "title": "Furnished Studio Business Bay| High Floor | Vacant",
+    "building": "Mama Shelter Residences",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 407,
+    "askingPrice": 930000,
+    "listingType": "sale",
+    "areaPsf": 2310,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Furnished Studio Business Bay| High Floor | Vacant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 40,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · Studio",
+        "date": "2025-07-20",
+        "price": 1282500,
+        "sqft": 402,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · Studio",
+        "date": "2024-03-14",
+        "price": 1248066,
+        "sqft": 405,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · Studio",
+        "date": "2023-12-06",
+        "price": 1094042,
+        "sqft": 402,
+        "beds": 0
+      },
+      {
+        "source": "DLD",
+        "label": "Mama Shelter Residences · Studio",
+        "date": "2023-11-29",
+        "price": 1149989,
+        "sqft": 405,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-mama-shelter-residences-158727501.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-mama-shelter-residences-158727501.html"
+    },
+    "buildingTxnPsf": 3039,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 2721,
+    "buildingTxnHigh": 3190
+  },
+  {
+    "id": "pf-158727608",
+    "title": "Sea view | Furnished | Vacant",
+    "building": "Princess Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1301,
+    "askingPrice": 2000000,
+    "listingType": "sale",
+    "areaPsf": 2119,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Sea view | Furnished | Vacant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 320,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Princess Tower · 2BR",
+        "date": "2026-01-13",
+        "price": 1250000,
+        "sqft": 1300,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Princess Tower · 2BR",
+        "date": "2025-09-09",
+        "price": 2100000,
+        "sqft": 1300,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Princess Tower · 2BR",
+        "date": "2025-05-01",
+        "price": 2200000,
+        "sqft": 1300,
+        "beds": 2
+      },
+      {
+        "source": "DLD",
+        "label": "Princess Tower · 2BR",
+        "date": "2025-04-17",
+        "price": 2000000,
+        "sqft": 1300,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-princess-tower-158727608.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-princess-tower-158727608.html"
+    },
+    "buildingTxnPsf": 1577,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 962,
+    "buildingTxnHigh": 1692
+  },
+  {
+    "id": "pf-158728287",
+    "title": "Stunning Sea View |Branded Residence |High Floor",
+    "building": "Six Senses Residences",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 4,
+    "baths": 6,
+    "sqft": 10064,
+    "askingPrice": 72840000,
+    "listingType": "sale",
+    "areaPsf": 2444,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Stunning Sea View |Branded Residence |High Floor",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 226,
+    "comps": [],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-six-senses-residences-158728287.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-six-senses-residences-158728287.html"
+    }
+  },
+  {
+    "id": "pf-158728333",
+    "title": "Waterfront | Elegance | Panoramic",
+    "building": "DG1",
+    "community": "Business Bay",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 1762,
+    "askingPrice": 4267621,
+    "listingType": "sale",
+    "areaPsf": 2735,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Waterfront | Elegance | Panoramic",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 188,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "DG1 · 3BR",
+        "date": "2025-11-04",
+        "price": 5400000,
+        "sqft": 1762,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "DG1 · 3BR",
+        "date": "2025-09-01",
+        "price": 5618957,
+        "sqft": 1762,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "DG1 · 3BR",
+        "date": "2025-03-23",
+        "price": 5439450,
+        "sqft": 1762,
+        "beds": 3
+      },
+      {
+        "source": "DLD",
+        "label": "DG1 · 3BR",
+        "date": "2025-03-02",
+        "price": 5611556,
+        "sqft": 1762,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-dg1-158728333.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-business-bay-dg1-158728333.html"
+    },
+    "buildingTxnPsf": 3185,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 3065,
+    "buildingTxnHigh": 3345
+  },
+  {
+    "id": "pf-158728515",
+    "title": "Beachfront + Maid | Premium Community | Freehold",
+    "building": "Aysha Residence",
+    "community": "Al Khan",
+    "emirate": "Sharjah",
+    "type": "Apartment",
+    "beds": 3,
+    "baths": 5,
+    "sqft": 1700,
+    "askingPrice": 1690000,
+    "listingType": "sale",
+    "areaPsf": 895,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Beachfront + Maid | Premium Community | Freehold",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 8,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Crystal Residences Tower A · 3BR",
+        "date": "2026-10-14",
+        "price": 1680000,
+        "sqft": 1800,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Jawaher Residences 1 · 3BR",
+        "date": "2026-10-14",
+        "price": 1800000,
+        "sqft": 1687,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Al Alia Tower · 3BR",
+        "date": "2026-10-14",
+        "price": 2050000,
+        "sqft": 3345,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-aysha-residence-158728515.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-sharjah-al-khan-aysha-residence-158728515.html"
+    }
+  },
+  {
+    "id": "pf-158728685",
+    "title": "1 Bedroom | Low floor | Vacant",
+    "building": "Sulafa Tower",
+    "community": "Dubai Marina",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 967,
+    "askingPrice": 1220000,
+    "listingType": "sale",
+    "areaPsf": 2194,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "1 Bedroom | Low floor | Vacant",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 85,
+    "comps": [
+      {
+        "source": "DLD",
+        "label": "Sulafa Tower · 1BR",
+        "date": "2026-05-12",
+        "price": 1290000,
+        "sqft": 967,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Sulafa Tower · 1BR",
+        "date": "2025-07-28",
+        "price": 1235000,
+        "sqft": 967,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Sulafa Tower · 1BR",
+        "date": "2025-04-27",
+        "price": 1255000,
+        "sqft": 967,
+        "beds": 1
+      },
+      {
+        "source": "DLD",
+        "label": "Sulafa Tower · 1BR",
+        "date": "2024-12-10",
+        "price": 885000,
+        "sqft": 967,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-sulafa-tower-158728685.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-marina-sulafa-tower-158728685.html"
+    },
+    "buildingTxnPsf": 1277,
+    "buildingTxnCount": 5,
+    "buildingTxnLow": 915,
+    "buildingTxnHigh": 1334
+  },
+  {
+    "id": "pf-159139151",
+    "title": "Vacant | Branded Ellington | Spacious",
+    "building": "Belgravia 3B",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1468,
+    "askingPrice": 1900000,
+    "listingType": "sale",
+    "areaPsf": 1309,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant | Branded Ellington | Spacious",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 338,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Azure · 2BR",
+        "date": "2026-10-14",
+        "price": 1650000,
+        "sqft": 1111,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Hyati Avenue · 2BR",
+        "date": "2026-10-14",
+        "price": 1850000,
+        "sqft": 1222,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-15-belgravia-3-belgravia-3b-159139151.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-15-belgravia-3-belgravia-3b-159139151.html"
+    }
+  },
+  {
+    "id": "pf-159139363",
+    "title": "Vacant | Furnished | Pool View",
+    "building": "Binghatti Corner",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 742,
+    "askingPrice": 975000,
+    "listingType": "sale",
+    "areaPsf": 1348,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant | Furnished | Pool View",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 131,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Royale · 1BR",
+        "date": "2026-10-14",
+        "price": 1425000,
+        "sqft": 923,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Gateway · 1BR",
+        "date": "2026-10-14",
+        "price": 950000,
+        "sqft": 771,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-10-binghatti-corner-159139363.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-10-binghatti-corner-159139363.html"
+    }
+  },
+  {
+    "id": "pf-159139374",
+    "title": "Villa View | Notice Served | High Floor",
+    "building": "Binghatti Azure",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Villa",
+    "beds": 2,
+    "baths": 3,
+    "sqft": 1111,
+    "askingPrice": 1650000,
+    "listingType": "sale",
+    "areaPsf": 1309,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Villa View | Notice Served | High Floor",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 33,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Belgravia 3B · 2BR",
+        "date": "2026-10-14",
+        "price": 1900000,
+        "sqft": 1468,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Hyati Avenue · 2BR",
+        "date": "2026-10-14",
+        "price": 1850000,
+        "sqft": 1222,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-16-binghatti-azure-159139374.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-16-binghatti-azure-159139374.html"
+    }
+  },
+  {
+    "id": "pf-159139425",
+    "title": "\\+ Study | Big Layout | Near Exit",
+    "building": "Binghatti Royale",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 923,
+    "askingPrice": 1425000,
+    "listingType": "sale",
+    "areaPsf": 1348,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "\\+ Study | Big Layout | Near Exit",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 134,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Corner · 1BR",
+        "date": "2026-10-14",
+        "price": 975000,
+        "sqft": 742,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Gateway · 1BR",
+        "date": "2026-10-14",
+        "price": 950000,
+        "sqft": 771,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-18-binghatti-royale-159139425.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-18-binghatti-royale-159139425.html"
+    }
+  },
+  {
+    "id": "pf-159139439",
+    "title": "Furnished | Vacant | Modern Unit",
+    "building": "Hyati Avenue",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1222,
+    "askingPrice": 1850000,
+    "listingType": "sale",
+    "areaPsf": 1309,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Furnished | Vacant | Modern Unit",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 75,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Belgravia 3B · 2BR",
+        "date": "2026-10-14",
+        "price": 1900000,
+        "sqft": 1468,
+        "beds": 2
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Azure · 2BR",
+        "date": "2026-10-14",
+        "price": 1650000,
+        "sqft": 1111,
+        "beds": 2
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-14-hyati-avenue-159139439.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-14-hyati-avenue-159139439.html"
+    }
+  },
+  {
+    "id": "pf-159139447",
+    "title": "Motivated Seller | Brand New | Bigger Layout",
+    "building": "The Orchard Place Tower A",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 529,
+    "askingPrice": 680000,
+    "listingType": "sale",
+    "areaPsf": 1571,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [
+      "motivated seller"
+    ],
+    "description": "Motivated Seller | Brand New | Bigger Layout",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 43,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Xanadu Residence 2 · Studio",
+        "date": "2026-10-14",
+        "price": 550000,
+        "sqft": 422,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-district-12-the-orchard-place-jumeirah-village-circle-the-orchard-place-tower-a-159139447.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-district-12-the-orchard-place-jumeirah-village-circle-the-orchard-place-tower-a-159139447.html"
+    }
+  },
+  {
+    "id": "pf-159139454",
+    "title": "High-End Villa | Stylish Design & Luxury",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2520,
+    "askingPrice": 1700000,
+    "listingType": "sale",
+    "buildingPsf": 675,
+    "areaPsf": 915,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High-End Villa | Stylish Design & Luxury",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1600000,
+        "sqft": 2516,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1700000,
+        "sqft": 2520,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139454.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139454.html"
+    }
+  },
+  {
+    "id": "pf-159139455",
+    "title": "Pool Villa | Serene Community",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3715,
+    "askingPrice": 2100000,
+    "listingType": "sale",
+    "buildingPsf": 596,
+    "areaPsf": 955,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Pool Villa | Serene Community",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2220000,
+        "sqft": 3722,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 2920000,
+        "sqft": 4513,
+        "beds": 5
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 3010000,
+        "sqft": 4519,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139455.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139455.html"
+    }
+  },
+  {
+    "id": "pf-159139456",
+    "title": "Exclusive Villa | Forest View Homes",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3722,
+    "askingPrice": 2220000,
+    "listingType": "sale",
+    "buildingPsf": 596,
+    "areaPsf": 955,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Exclusive Villa | Forest View Homes",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3715,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 2920000,
+        "sqft": 4513,
+        "beds": 5
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 3010000,
+        "sqft": 4519,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139456.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139456.html"
+    }
+  },
+  {
+    "id": "pf-159139457",
+    "title": "Contemporary Villa | Smart Tech",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 6,
+    "sqft": 4513,
+    "askingPrice": 2920000,
+    "listingType": "sale",
+    "buildingPsf": 596,
+    "areaPsf": 955,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Contemporary Villa | Smart Tech",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3715,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2220000,
+        "sqft": 3722,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 3010000,
+        "sqft": 4519,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139457.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139457.html"
+    }
+  },
+  {
+    "id": "pf-159139458",
+    "title": "Premium Smart Villa | Cycling & Wellness Lifestyle",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Villa",
+    "beds": 5,
+    "baths": 6,
+    "sqft": 4519,
+    "askingPrice": 3010000,
+    "listingType": "sale",
+    "buildingPsf": 596,
+    "areaPsf": 955,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Premium Smart Villa | Cycling & Wellness Lifestyle",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3715,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2220000,
+        "sqft": 3722,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 2920000,
+        "sqft": 4513,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139458.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/villa-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139458.html"
+    }
+  },
+  {
+    "id": "pf-159139459",
+    "title": "Sustainable Smart Villa | Eco-Luxury Living",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2516,
+    "askingPrice": 1600000,
+    "listingType": "sale",
+    "buildingPsf": 675,
+    "areaPsf": 915,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Sustainable Smart Villa | Eco-Luxury Living",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1700000,
+        "sqft": 2520,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1700000,
+        "sqft": 2520,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139459.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139459.html"
+    }
+  },
+  {
+    "id": "pf-159139460",
+    "title": "High ROI Deal | Luxury Living | Prime Area",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 4,
+    "sqft": 2520,
+    "askingPrice": 1700000,
+    "listingType": "sale",
+    "buildingPsf": 675,
+    "areaPsf": 915,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "High ROI Deal | Luxury Living | Prime Area",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1700000,
+        "sqft": 2520,
+        "beds": 3
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 3BR",
+        "date": "2026-10-14",
+        "price": 1600000,
+        "sqft": 2516,
+        "beds": 3
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139460.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139460.html"
+    }
+  },
+  {
+    "id": "pf-159139464",
+    "title": "Premium Smart Villa | Cycling & Wellness Lifestyle",
+    "building": "Masaar Azalea",
+    "community": "Tilal City",
+    "emirate": "Sharjah",
+    "type": "Townhouse",
+    "beds": 4,
+    "baths": 5,
+    "sqft": 3725,
+    "askingPrice": 2200000,
+    "listingType": "sale",
+    "buildingPsf": 596,
+    "areaPsf": 955,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Premium Smart Villa | Cycling & Wellness Lifestyle",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 139,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2100000,
+        "sqft": 3715,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 4BR",
+        "date": "2026-10-14",
+        "price": 2220000,
+        "sqft": 3722,
+        "beds": 4
+      },
+      {
+        "source": "Listing avg",
+        "label": "Masaar Azalea · 5BR",
+        "date": "2026-10-14",
+        "price": 2920000,
+        "sqft": 4513,
+        "beds": 5
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139464.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-tilal-city-masaar-masaar-azalea-159139464.html"
+    }
+  },
+  {
+    "id": "pf-159139634",
+    "title": "Vacant | Lowrise Building | Lower Service Charges",
+    "building": "Xanadu Residence 2",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 0,
+    "baths": 1,
+    "sqft": 422,
+    "askingPrice": 550000,
+    "listingType": "sale",
+    "areaPsf": 1571,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Vacant | Lowrise Building | Lower Service Charges",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 197,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "The Orchard Place Tower A · Studio",
+        "date": "2026-10-14",
+        "price": 680000,
+        "sqft": 529,
+        "beds": 0
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-13-xanadu-residence-2-159139634.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-13-xanadu-residence-2-159139634.html"
+    }
+  },
+  {
+    "id": "pf-159139648",
+    "title": "Brand New | Modern Design | Exclusive",
+    "building": "Gateway",
+    "community": "Jumeirah Village Circle",
+    "emirate": "Dubai",
+    "type": "Apartment",
+    "beds": 1,
+    "baths": 2,
+    "sqft": 771,
+    "askingPrice": 950000,
+    "listingType": "sale",
+    "areaPsf": 1348,
+    "benchmarkSource": "Portal published",
+    "listedDate": "2026-10-14",
+    "relistCount": 0,
+    "keywords": [],
+    "description": "Brand New | Modern Design | Exclusive",
+    "portals": [
+      "Property Finder"
+    ],
+    "agent": {
+      "name": "Listing agent",
+      "phone": ""
+    },
+    "imageHue": 2,
+    "comps": [
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Corner · 1BR",
+        "date": "2026-10-14",
+        "price": 975000,
+        "sqft": 742,
+        "beds": 1
+      },
+      {
+        "source": "Listing avg",
+        "label": "Binghatti Royale · 1BR",
+        "date": "2026-10-14",
+        "price": 1425000,
+        "sqft": 923,
+        "beds": 1
+      }
+    ],
+    "firstSeen": "2026-10-14",
+    "sourceUrl": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-10-gateway-159139648.html",
+    "sourceUrls": {
+      "Property Finder": "https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-jumeirah-village-circle-district-10-gateway-159139648.html"
+    }
+  }
+]

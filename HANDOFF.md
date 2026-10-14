@@ -356,6 +356,82 @@ no headings, so this cannot regress.
 The lesson generalises: **fixtures must be what the scraper actually returns.**
 A hand-tidied transcript tests the parser against a page that never exists.
 
+## Bayut is blocked, and the search cards cannot be scored from (2026-10-14)
+
+Two findings from the first Property-Finder-only sweep. Both are silent, and
+the second one had been feeding wrong numbers into the scorer.
+
+**Bayut now serves a bot wall.** Every Bayut URL returned HTTP 503 with
+`title: "Security check | Bayut"` and a "Verify you are human" body, on
+`proxy: basic`, `stealth` and `enhanced` alike. Bayut supplied 94 of the 119
+listings on the 2026-09-02 sweep, so this is most of the old intake. Property
+Finder is unaffected and is already the preferred benchmark, so the sweep runs
+PF-only; all ten tracked areas are still reachable. Worth re-testing Bayut
+occasionally rather than assuming it is gone for good.
+
+**The bot wall makes the JSON extractor hallucinate.** Scraping the blocked
+Bayut page with `formats: ["json"]` did not come back empty — it returned four
+well-formed listings that do not exist, with invented buildings, prices and
+`/property/details/123456`-style URLs, in communities the page never mentioned
+(Jumeirah, Downtown, Masdar City on a Dubai Marina search). A schema'd
+extraction of an error page returns confident fiction, not an error. Always
+check `metadata.statusCode` and `metadata.title` before believing a batch, and
+tell the extraction prompt to return an empty array for a captcha or 404 — with
+that instruction PF's real 404s did come back empty.
+
+**Search-page extraction is not accurate enough to score from — use the detail
+pages.** Checked row by row against the detail pages, 11 of 82 search-card rows
+disagreed. Not noise: a wrong price (AED 499,999 for a plot asking 799,999), a
+wrong size (814 sqft for a 962 sqft unit), a studio recorded as a 1-bed, an
+Al Khan 1-bed at 610,000/772 sqft recorded as a 3-bed at 920,000/1,700, and in
+Tilal City the entire page shifted by one so every card carried its neighbour's
+figures. One Dubai Marina row carried a different listing's title, price and
+size outright ("Vacant | Palm & Sea View" at 2,200,000/1,512 where the page is
+"Spacious | Rented | SZR View" at 1,895,000/1,709). Titles are wrong too, so
+the keyword signal inherits the same errors — a "distress deal" phrase landed
+on a listing whose real title does not contain it.
+
+These land straight in the AED/sqft the below-market signal divides by. The
+fix is `scripts/raw-from-detail-pages.mjs`: the search page's only job is now
+to supply candidate URLs, which it gets right because they are hrefs rather
+than inferred, and every scored field is read from the listing's own detail
+page, which states them unambiguously under "Property details". We already
+fetch one detail page per listing for the benchmarks, so this costs nothing
+extra under `--per-listing`. It also fixes community grouping as a side effect:
+the detail page's location path puts Executive Towers listings under Business
+Bay, where the published average is actually scoped, instead of a community
+literally named "Executive Towers".
+
+**Plots are excluded.** The Sharjah `properties-for-sale-<area>` pages return
+residential land next to houses. A plot asks AED 123–160/sqft where the
+built-home area average is AED 674/sqft, so a plot reads as ~80% below market
+on a comparison that is meaningless — land psf and built psf are different
+quantities. `raw-from-detail-pages.mjs` drops `Property Type: Land`.
+
+**Enrich from a dated directory.** `seed/detail-pages/<YYYY-MM-DD>/` holds the
+day's pages and is what `parse-detail-page.mjs` is pointed at, so a sweep's
+band vote is taken over that sweep's pages only. The 178 loose transcripts at
+the top of `seed/detail-pages/` are the Aug/Sep sweeps, kept for reproducibility.
+
+**Property Finder URL shapes that actually work** (the `?c=1&l=<locId>` search
+form in "The daily sweep" above still works, but these SEO paths need no
+location ids):
+
+- `https://www.propertyfinder.ae/en/buy/<emirate>/apartments-for-sale-<area>.html?ob=nd`
+- `https://www.propertyfinder.ae/en/buy/sharjah/properties-for-sale-<area>.html?ob=nd`
+  for the Sharjah communities, which are villa/townhouse/land rather than flats
+- JVC is `jumeirah-village-circle`, **not** `jumeirah-village-circle-jvc` (404)
+- **Al Menhaz has no PF search page.** Its developments (Masaar 3) are filed
+  under `al-rowdat-suburb`, which redirects to Al Ruwaidat Suburb. Those
+  listings are grouped under PF's own "Al Ruwaidat Suburb" label rather than
+  relabelled "Al Menhaz", so no benchmark is claimed for a scope PF did not state.
+
+**A band disagreement that is not a bug.** `Sharjah Garden City|4plus` warned
+that 7 pages disagree by 21%. That band pools 4-bed (AED 853/sqft) and 5-bed
+(AED 703/sqft) pages, which PF prices separately; the median took 703. It is
+the band scheme being coarser than the portal's, not a figure scoped to a
+sub-development. Checked on a page, as the warning asks.
+
 ## Gotchas already hit
 
 - **The app's own domain needs an egress allowlist entry.** *(Resolved
