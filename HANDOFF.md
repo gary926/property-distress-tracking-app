@@ -356,6 +356,93 @@ no headings, so this cannot regress.
 The lesson generalises: **fixtures must be what the scraper actually returns.**
 A hand-tidied transcript tests the parser against a page that never exists.
 
+## Bayut is blocking automated access (2026-10-21)
+
+Every Bayut URL — area search pages and `/property/details-*.html` alike —
+returns HTTP 503 with a "Security check | Bayut" interstitial ("Please confirm
+you're a human visitor"). Tried on Firecrawl's `basic`, `stealth` and
+`enhanced` proxies; all three get the same page, so this is not a proxy
+problem to tune around. Bayut supplied 94 of the 119 listings on the 2026-09-02
+sweep, so the sweep is Property Finder only until this changes.
+
+What that costs and does not cost:
+
+- **Benchmarks are fine.** Property Finder is already the preferred source
+  (see "Property Finder is the better benchmark"): it states the scope of its
+  averages in prose instead of leaving it to be inferred. The 2026-10-21 sweep
+  got a published area average on 104 of 104 listings.
+- **Coverage is thinner**, and one tracked area is gone: PF has no location
+  called **Al Menhaz**. It files those listings under "Al Rowdat Suburb" /
+  "Al Ruwaidat Suburb" (Masaar 3), naming Al Menhaz only in prose. Scraping
+  that slug instead would silently rename the tracked area and mix a different
+  catchment into its benchmarks, so Al Menhaz is simply uncovered. Decide
+  whether to retrack it under the Suburb name before adding it back.
+- Bayut's parse path in `parse-detail-page.mjs` is untouched and still tested
+  against `tests/fixtures/bayut-detail-raw.md`, ready for when Bayut reopens.
+
+**Property Finder search URLs that work** (no location id needed; append
+`?ob=nd` for newest-first):
+
+    /en/buy/dubai/apartments-for-sale-dubai-marina.html
+    /en/buy/dubai/apartments-for-sale-business-bay.html
+    /en/buy/dubai/properties-for-sale-jumeirah-village-circle.html   (not "-jvc")
+    /en/buy/abu-dhabi/apartments-for-sale-al-reem-island.html
+    /en/buy/sharjah/properties-for-sale-tilal-city.html
+    /en/buy/sharjah/properties-for-sale-al-rahmaniya.html
+    /en/buy/sharjah/apartments-for-sale-al-khan.html
+    /en/buy/sharjah/properties-for-sale-al-tai.html
+    /en/buy/sharjah/properties-for-sale-sharjah-garden-city.html
+
+## The search page cannot be trusted for price, size, beds or title (2026-10-21)
+
+The biggest finding of this sweep, and it was silent. The search-page
+`formats: ["json"]` extraction attaches a result card's fields to the **wrong
+listing URL**. Checked row by row against each listing's own detail page, on
+104 listings it got **39 prices, 30 sizes, 25 bed counts and 50 titles wrong**.
+
+The worst single case: a row that read as a 1-bed, 845 sqft, AED 2,200,000 in
+Liv Lux is really a 4-bed duplex penthouse, 9,125 sqft, AED 46,999,548 in LIV
+Marina. The failure clusters where several cards share a building slug — four
+`...-liv-lux-<id>.html` URLs on one Dubai Marina page shuffled their prices
+among themselves — and one JVC page was shifted by a whole position, every
+card's data landing on its neighbour's URL.
+
+Why this matters more than it looks: a wrong sqft or a wrong price is a wrong
+AED/sqft, which is precisely the false "below market" flag that the whole
+benchmark-scoping effort exists to prevent. It would have ingested quietly.
+
+**The fix, and the rule it establishes: the search page is only for discovering
+URLs. Every scored number comes off the listing's own page.**
+`scripts/verify-from-detail.mjs` runs between scrape and transform:
+
+    node scripts/verify-from-detail.mjs raw.json seed/detail-pages > raw.verified.json
+    node scripts/transform-listings.mjs raw.verified.json > listings.json
+
+It overwrites title, price, size, beds, baths, type and the location path from
+the detail page, and reports how many of each it corrected — watch that count,
+it is a live check on the extraction. Because it needs every listing's page, it
+pairs with `--plan --per-listing`; under the cheaper band plan most rows would
+have no page to check against.
+
+One subtlety it handles: **size is taken as price ÷ PF's own "Price per area",
+not from the Area field.** On a villa PF prints both a plot size and a built-up
+area and computes its own psf — and the band average it publishes — on the
+plot. Dividing keeps every listing on whatever basis PF used, so a villa is
+never compared against its band on a different footing. (Sol Terra Casa: 1,601
+plot vs 3,224 built-up, and PF's 3,116/sqft confirms the plot.)
+
+## Our bed bands are coarser than Property Finder's (2026-10-21)
+
+`band()` buckets everything with 4+ bedrooms into `4plus`, but PF publishes a
+separate average per bedroom count. On the 2026-10-21 sweep that tripped the
+disputed-band warning for Sharjah Garden City `4plus`: 8 pages, 21% spread,
+because the 4-beds carry a published average of AED 853/sqft and the 5-beds
+AED 703/sqft. The median the parser took, 778, is a blend of two correct
+figures rather than a scoping error — benign, but it skews both ways: a 4-bed
+is measured against a number that is too low (reads as less of a deal) and a
+5-bed against one too high (reads as more of one). Worth narrowing the bands
+before trusting a 4plus below-market figure to a few points.
+
 ## Gotchas already hit
 
 - **The app's own domain needs an egress allowlist entry.** *(Resolved
