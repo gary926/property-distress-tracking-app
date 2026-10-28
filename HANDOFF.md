@@ -356,6 +356,59 @@ no headings, so this cannot regress.
 The lesson generalises: **fixtures must be what the scraper actually returns.**
 A hand-tidied transcript tests the parser against a page that never exists.
 
+## Bayut is behind a bot wall, and the extractor lies about it (2026-10-28)
+
+Every Bayut area page returned **HTTP 503 `Security check | Bayut`** on the
+2026-10-28 sweep — `dubai-marina`, `business-bay`, `jumeirah-village-circle-jvc`
+and `abu-dhabi/al-reem-island` alike. The slugs are right; the site is refusing
+the scraper.
+
+**The dangerous part is what `formats: ["json"]` did with the block page.** It
+did not fail. For each of the four pages it returned five well-formed listings
+with plausible towers, prices, beds and urgency phrases — and `listingURL`s
+like `https://example.com/listing1`. A sweep that trusted them would have
+ingested invented inventory under real-looking scores. The 503 is only visible
+in `metadata.statusCode`; the extraction reads as a clean success.
+
+So, for any portal scrape with `formats: ["json"]`: **check
+`metadata.statusCode` is 200 before using `json`,** and treat an `example.com`
+or non-portal `listingURL` as proof the page was never read.
+
+Retrying Bayut through `proxy: "stealth"` is not an option a sweep may take:
+the session's permission classifier refuses it as bot-check circumvention, and
+rightly — it is deliberate anti-scraping that we do not get to route around.
+Do not try it, and do not report the sweep as healthy when Bayut is dropped.
+
+**What this costs.** Property Finder is unaffected and carries Dubai Marina,
+Business Bay, JVC and Al Reem Island, plus Tilal City (37 sale apartments) and
+Al Khan (1,908). It does **not** cover the rest of the Sharjah set: Al
+Rahmaniya, Al Tai, Al Menhaz and Sharjah Garden City are apartment-thin or
+absent on PF and were Bayut-sourced. Until Bayut is reachable again those four
+communities have no coverage, and a sweep should say so rather than quietly
+reporting six areas as if it were ten.
+
+## The search-page extractor mis-reads cards, and only the detail page catches it
+
+Also 2026-10-28. Three of 48 listings came off the PF search pages with wrong
+fields, and all three were caught by the per-listing enrichment:
+
+- **The Portman, JVC** — extracted as a 1-bed; the detail page says Studio. It
+  landed in the JVC 1-bed band, where its studio-scoped area average (1,571)
+  sat against four readings of 1,348 and tripped the **disputed-band warning at
+  17%**. That warning is worth taking literally: it was a data bug, not a
+  scoping disagreement.
+- **Rehan Residences, Al Khan** — extracted with a *neighbouring card's* title,
+  price and size (1-bed / 1,100 sqft / AED 1,350,000). It is a 400 sqft studio
+  at AED 450,000, i.e. a 1,125 psf unit read as 1,227 psf on 2.4x the price.
+- **Kaya, Masaar** — `"Apartment - 2 - 4"` (2 beds, 4 baths) read as 4 beds,
+  which would have benchmarked it against the 4plus band.
+
+The pattern: where a PF card's title carries no bed count, the extractor
+guesses, and it can pair a title with the wrong card's numbers. **The detail
+page is authoritative** — when it disagrees with the search card on beds, size
+or price, correct the batch before enriching, then re-run the transform so the
+bed banding is rebuilt.
+
 ## Gotchas already hit
 
 - **The app's own domain needs an egress allowlist entry.** *(Resolved
