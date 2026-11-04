@@ -192,6 +192,156 @@ been observed dropping.
   2026-08-29; the scrape → transform → ingest → score chain was run end to end
   on 16 real Dubai Marina listings against local D1.
 
+## The sweep cannot currently produce a deal (found 2026-11-04)
+
+This is the most important thing in this file. Read it before refreshing
+benchmarks again, because no amount of benchmark work fixes it.
+
+Measured against live D1 on 2026-11-04: **962 listings, 966 price points.**
+958 of the 962 have exactly *one* price point; only 4 have ever had a second.
+
+The cause is the scrape target. Every sweep fetches each area's search page
+with `ob=nd` — newest first — and takes the ~10 cards on page one. A week
+later, page one is ten *different* brand-new listings. So the sweep has never
+re-observed a listing it had seen before, which means:
+
+- **price-drop (35 points) can never fire** — it needs the same listing
+  observed at two prices;
+- **staleness/relist (15 points) can never fire** — it needs days-on-market.
+
+That caps every listing at belowMarket (30) + keyword (20) = **50**, and
+`buildDigest` filters on `score >= minScore` with `minScore` defaulting to
+**50**. A listing would have to max *both* surviving components simultaneously
+to tie the threshold. Today's batch of 87 topped out at **28**.
+
+So `/api/digest` has almost certainly returned zero deals on every run since
+launch, and will keep doing so. This is NOT the documented "expect low scores
+on day one" effect — that one resolves itself as history accrues. This one
+never resolves, because history never accrues.
+
+**The missing half of the pipeline is re-pricing what is already tracked.**
+The listing URLs are already in D1. A fix means fetching the current price of
+listings already stored (so `price_points` gains a second row and a drop can be
+seen) rather than only discovering new ones. That is a design decision with a
+credit cost — roughly one scrape per tracked listing per run on top of
+discovery — and a sweep should not make it unilaterally, so it is left to
+Garvit. Lowering `minScore` would only paper over it: with no price history the
+scores are measuring half the signal set.
+
+Also worth checking: ingests land **weekly**, not daily. `first_seen` values are
+2026-08-29/30/31 then every seventh day — 09-02, 09-09, 09-16, 09-23, 09-30,
+10-07, 10-14, 10-21, 10-28, 11-04 — i.e. 13 ingests in 67 days. The routine's
+cron is recorded above as `0 4 * * *` (daily), so either the schedule is not
+what this file says or six of every seven runs are not reaching `/api/ingest`.
+
+## Never trust the search-card extraction for a listing's own numbers (2026-11-04)
+
+The search-results scrape is an LLM `formats: ["json"]` extraction over a grid
+of cards, and it **misaligns a card's attributes with that card's URL**. Found
+live on 2026-11-04:
+
+- Al Reem Island: the Mayar and Radiant Marina Towers cards had each other's
+  price and size (3,235,020 / 2,205 sqft against the wrong URL of the two).
+- Tilal City: the *whole page* was shifted by one row — card N's price, size
+  and title belonged to the listing before it. Four of ten checked were wrong.
+- Scattered single-field errors elsewhere: Marina Heights read as a 2-bed when
+  its page says 1 Bed, Radiant Garden Towers as a 2-bed when it is a 1-bed.
+
+A one-row shift is the worst failure this project has: it pairs one unit's
+price with another unit's size, which fabricates a psf and therefore a fake
+"below market" flag — the exact class of error the benchmark-scoping work
+exists to prevent. It is also completely silent.
+
+**The URL is the only self-identifying field on a card** (it carries the listing
+id). So the search page is now used *only* to enumerate which listings exist,
+and every value that feeds a psf — title, price, beds, baths, sqft, type,
+building — is read from that listing's own detail page, where it sits under a
+label. `scripts/raw-from-detail-pages.mjs` does this:
+
+    node scripts/parse-detail-page.mjs --plan --per-listing listings.json > plan.json
+    # scrape each plan url into seed/detail-pages/<id>.md, then:
+    node scripts/raw-from-detail-pages.mjs plan.json seed/detail-pages > raw.json
+    node scripts/transform-listings.mjs raw.json > listings.json
+
+That makes the first transform pass a bootstrap whose only real output is the
+plan's id+url+community list. It is slightly circular but cheap, and it means
+the per-listing scrape we were already paying for now also *validates* the
+cheap extraction instead of trusting it.
+
+A detail page that 404s (withdrawn between the two scrapes) drops the listing;
+2 of 89 did on 2026-11-04.
+
+## A third benchmark-scoping trap: property type (2026-11-04)
+
+Property Finder's published average is scoped by **property type** as well as
+community and bedroom count, and like the sub-development trap it never says so.
+
+Jumeirah Village Circle 2-beds had two pages that disagreed by 26%, and neither
+was a parse error — an apartment page reporting 1,734,766 / 1,325 sqft
+(1,309/sqft) and a villa page reporting 4,105,683 / 3,949 sqft (1,039/sqft).
+`enrich` keyed the vote on `community|band` only, so it pooled them and put a
+median that was half apartment under Block F, a 6,781 sqft 2-bed villa asking
+634/sqft — reading it as **46% below market**. Against the villa figure it is
+39%, and the band vote now keys on `community|band|family` (`family()` puts
+villa/townhouse/compound in "house" and everything else in "flat", because what
+moves a psf is stacked-vs-ground and PF files duplexes with apartments).
+
+**Block F is still not a deal, and the band cannot make it one.** PF's own page
+says it costs 5% *more* than the average while being 72% *bigger*; per sqft that
+is 39% below. "2-bed villa in JVC" spans a 3,949 sqft average and a 6,781 sqft
+listing, so the bed band is not controlling for size at all here — the very
+effect bed banding exists to neutralise. Treat a large outlier inside a
+house band as a size artifact until its own development has 3+ comparables.
+
+Still open, and deliberately not changed: **Sharjah Garden City 4plus warns at
+17%** because `band()` lumps 4-bed (4,206,121 / 4,969 = 846) with 5-bed
+(5,169,069 / 7,171 = 721). Both are villas and both figures parse correctly, so
+the median (721) just benchmarks the 4-beds low, which is the conservative
+direction. Splitting "4plus" into 4 and 5 would fix it and would change scores.
+
+## Bayut is behind a bot check; the sweep is Property Finder only (2026-11-04)
+
+`https://www.bayut.com/for-sale/...` returned **HTTP 503 "Security check"** on a
+plain Firecrawl scrape. Two things follow.
+
+- **A `formats: ["json"]` extraction of a block page invents listings.** The 503
+  interstitial produced two confident, well-formed, entirely fictional rows —
+  "Sky Gardens" in a community called "Damas", `example.com` listing URLs. The
+  only tell was `metadata.statusCode`. **Check `statusCode === 200` and that
+  each `listingURL` is on the portal's own host before using an extraction.**
+- Retrying Bayut through `proxy: "stealth"` was refused by the session's
+  permission layer as bot-check circumvention, so it was not attempted again.
+  Nothing was routed around.
+
+Property Finder covered all ten tracked areas on its own, so this cost coverage
+breadth rather than the sweep. PF is the preferred benchmark anyway (see above),
+so the loss is the Bayut cross-check that catches a PF scoping oddity, not the
+benchmark itself. If Bayut is wanted back, it needs a decision from Garvit about
+how (an allowed proxy mode, or a different source) — it is not a code fix.
+
+## Property Finder URL shapes the sweep needs (2026-11-04)
+
+Area pages are SEO slugs, not the `?l=<locId>` ids recorded earlier:
+`https://www.propertyfinder.ae/en/buy/<emirate>/properties-for-sale-<area>.html?ob=nd`.
+`properties-for-sale-` (not `apartments-for-sale-`) is deliberate: Tilal City,
+Al Rahmaniya, Al Tai, Sharjah Garden City and Al Menhaz are villa/townhouse
+stock and an apartments-only page returns almost nothing there.
+
+Two slugs are not guessable from the area name:
+
+- **JVC** is `properties-for-sale-jumeirah-village-circle` — *not*
+  `...-jumeirah-village-circle-jvc`, which 404s.
+- **Al Menhaz has no Property Finder landing page.** PF files the Masaar 3 /
+  Al Sehma stock that the listings themselves place "in Al Menhaz, Sharjah"
+  under **Al Ruwaidat Suburb** (`properties-for-sale-al-rowdat-suburb`, which
+  redirects to `al-ruwaidat-suburb`). The sweep scrapes that page and files the
+  results under the tracked name "Al Menhaz", which is why the tracked community
+  cannot be read off the page and has to come from the plan.
+
+**Land plots are excluded.** `properties-for-sale-` returns them in Al Rahmaniya
+and Al Ruwaidat Suburb; they carry no beds and no built-up area, so their psf is
+not comparable with built stock and they would pollute a band.
+
 ## Benchmark scoping — two traps the first live run walked into
 
 Both were found on 2026-08-30 by running the pipeline against live pages, and

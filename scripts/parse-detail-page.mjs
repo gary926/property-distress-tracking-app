@@ -461,6 +461,24 @@ export function band(beds) {
 }
 
 /**
+ * Property Finder's published average is scoped by property TYPE as well as by
+ * community and bedroom count, and it never says so.
+ *
+ * Found 2026-11-04: Jumeirah Village Circle 2-beds had two pages, an apartment
+ * reporting 1,734,766 / 1,325 sqft (1,309/sqft) and a villa reporting
+ * 4,105,683 / 3,949 sqft (1,039/sqft) — a 26% disagreement that is not a parse
+ * error on either side, just two different products. Pooling them put a
+ * half-apartment median under a 6,781 sqft villa and read it as 46% below
+ * market. Houses and flats therefore vote in separate bands.
+ *
+ * Grouped rather than per-type because the distinction that matters to a psf is
+ * stacked-vs-ground, and PF files duplexes and penthouses with apartments.
+ */
+export function family(type) {
+  return /villa|townhouse|compound/i.test(type ?? "") ? "house" : "flat";
+}
+
+/**
  * Merge scraped detail pages into transformed listings.
  *
  * The published figures are per *area and bedroom band*, not per listing, so a
@@ -497,7 +515,7 @@ export function enrich(listings, pages) {
     if (!owner) continue;
     const parsed = parseDetailPage(page.markdown, owner);
     perListing.set(page.id, parsed);
-    const key = `${owner.community}|${band(owner.beds)}`;
+    const key = `${owner.community}|${band(owner.beds)}|${family(owner.type)}`;
     const existing = benchmarks.get(key) ?? { candidates: [], buildingAverages: [] };
     benchmarks.set(key, {
       // Every page's reading is a vote, resolved once all pages are in. A
@@ -543,7 +561,7 @@ export function enrich(listings, pages) {
       continue;
     }
     const next = { ...listing };
-    const published = resolved.get(`${listing.community}|${band(listing.beds)}`);
+    const published = resolved.get(`${listing.community}|${band(listing.beds)}|${family(listing.type)}`);
     if (published?.areaPsf) {
       next.areaPsf = published.areaPsf;
       next.benchmarkSource = "Portal published";
@@ -630,7 +648,7 @@ export function pagesToScrape(listings, { perListing = false } = {}) {
   }
   const seen = new Map();
   for (const l of listings) {
-    const key = `${l.community}|${band(l.beds)}`;
+    const key = `${l.community}|${band(l.beds)}|${family(l.type)}`;
     // One page per band, but not just any page: a Property Finder listing
     // states the scope of its average in words, where Bayut's has to be
     // inferred and is sometimes a sub-development's. Same cost, better figure.
@@ -642,7 +660,7 @@ export function pagesToScrape(listings, { perListing = false } = {}) {
       isPf: Boolean(pfUrl(l)),
       community: l.community,
       band: band(l.beds),
-      covers: listings.filter((o) => `${o.community}|${band(o.beds)}` === key).length,
+      covers: listings.filter((o) => `${o.community}|${band(o.beds)}|${family(o.type)}` === key).length,
     });
   }
   return [...seen.values()].sort((a, b) => b.covers - a.covers);
