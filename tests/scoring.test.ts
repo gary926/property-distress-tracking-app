@@ -19,7 +19,9 @@ const base: Listing = {
   buildingPsf: 1000,
   areaPsf: 1000,
   benchmarkSource: "DLD transactions",
-  listedDate: "2026-08-01",
+  // Relative to today: a fixed date silently crosses the 90-day staleness
+  // cutoff as the calendar moves (these tests went red on 2026-10-30).
+  listedDate: new Date().toISOString().slice(0, 10),
   relistCount: 0,
   keywords: [],
   description: "",
