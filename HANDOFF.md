@@ -543,3 +543,40 @@ A hand-tidied transcript tests the parser against a page that never exists.
 - Playwright + Chromium are preinstalled in Claude remote sessions
   (`NODE_PATH=/opt/node22/lib/node_modules`); PNG icons were rendered from
   `public/icons/icon.svg` that way.
+
+## Sweep 2026-11-11: seven sweeps of fixes are stranded off main
+
+When this sweep started, **eight `claude/determined-ride-*` branches carried
+work that had never reached `main`**: the 09-16, 09-23, 09-30, 10-07, 10-14,
+10-21, 10-28 and 11-04 sweeps. Each sweep started from `main`, so it never saw
+the previous one's fixes and kept rediscovering the same problems: Bayut
+blocked, search-card misalignment, read fields from the detail page. There are
+now two competing scripts for that last fix, `verify-from-detail.mjs` (10-21)
+and `raw-from-detail-pages.mjs` (10-14/11-04). This branch is built on the
+11-04 branch (`determined-ride-djex4x`) alone. The others still need a human to
+pick through them, especially `5szwrt` (09-30), which changes
+`parse-detail-page.mjs`, `ingest.mjs`, `transform-listings.mjs` and
+`src/worker/data.ts`.
+
+Other findings from this run:
+
+- **Search pages via `formats: ["links"]`.** Enumerating listing URLs needs no
+  LLM extraction at all. `/en/plp/buy/...-<id>.html` links carry the id, so this
+  costs 1 credit per area instead of 5, and the misalignment problem cannot
+  happen.
+- **PF detail pages no longer return a transactions table** under the
+  `["table","p"]` recipe: 0 of 110 pages today, against 15 of 87 on 11-04
+  (re-checked with a fresh scrape of Marina 101). So `buildingTxnPsf` is now
+  never set. It is display-only, so scores are unaffected. The area average
+  (prose) is intact, 110 of 110. If settled prices are wanted back, the
+  `/en/transactions/buy/<emirate>/<community>-<building>` pages linked from the
+  search page are the likely source.
+- **Al Rahmaniya 4plus warns at 35%**, the same lumping as Sharjah Garden City.
+  PF publishes 4-bed 661, 5-bed 727 and 6-bed 890 AED/sqft. The 727 median
+  overstates 4-bed discounts by about 6 points, which is the *non*-conservative
+  direction there.
+- `tests/scoring.test.ts` had gone red on `main` on 2026-10-30 because its
+  fixture's `listedDate` was fixed and crossed the 90-day staleness cutoff. It
+  is now relative to today.
+- The digest's `minScore` is evidently set to 30 or lower in Settings: a
+  30-point "watch" listing came through.
