@@ -234,10 +234,14 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
     }
     return map;
   };
+  // Banded only. There is deliberately no unbanded fallback: pooling bands to
+  // rescue a thin group is worse than having no figure, because psf falls with
+  // size, so every large unit in the group reads "below market" for being
+  // large. Al Tai on 2026-09-23 is the worked example — two 2-beds and three
+  // 3-beds in Nasma Residence pooled to a single 850 median, and a 2,365 sqft
+  // 2-bed at 528 was reported as 38% below its building and led the digest.
   const byBuildingBand = groupPsf((l) => `${l.community}|${l.building}|${band(l.beds)}`);
-  const byBuilding = groupPsf((l) => `${l.community}|${l.building}`);
   const byAreaBand = groupPsf((l) => `${l.community}|${band(l.beds)}`);
-  const byArea = groupPsf((l) => l.community);
   // Median resists a single mispriced outlier better than the mean.
   const median = (a) => {
     const s = [...a].sort((x, y) => x - y);
@@ -256,12 +260,9 @@ export function transform(rawInput, { source = "firecrawl" } = {}) {
   for (const l of interim) {
     l.buildingPsf =
       l.publishedBuildingPsf ??
-      fromGroup(byBuildingBand, `${l.community}|${l.building}|${band(l.beds)}`) ??
-      fromGroup(byBuilding, `${l.community}|${l.building}`);
+      fromGroup(byBuildingBand, `${l.community}|${l.building}|${band(l.beds)}`);
     l.areaPsf =
-      l.publishedAreaPsf ??
-      fromGroup(byAreaBand, `${l.community}|${band(l.beds)}`) ??
-      fromGroup(byArea, l.community);
+      l.publishedAreaPsf ?? fromGroup(byAreaBand, `${l.community}|${band(l.beds)}`);
     if (l.publishedBuildingPsf || l.publishedAreaPsf) anyPublished = true;
     l.benchmarkSource =
       l.publishedBuildingPsf || l.publishedAreaPsf ? "Portal published" : "Listing averages";

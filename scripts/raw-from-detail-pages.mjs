@@ -48,7 +48,10 @@ export function parseRow(md, { id, url, community }) {
   const price = num(blocks[blocks.indexOf(titleRaw) + 1]);
   // Firecrawl escapes the pipes agents use as separators; the app shows the title.
   const title = String(titleRaw ?? "").replace(/\\([|_*])/g, "$1");
-  const sizeSqft = num(after(blocks, "Area"));
+  // Villa/townhouse pages relabelled this field "Plot size" by 2026-11-18 (it was
+  // "Area" on 11-11). Same field: the header repeats the same figure and PF's
+  // own "Average size is" for the band is unchanged, so it stays comparable.
+  const sizeSqft = num(after(blocks, "Area") ?? after(blocks, "Plot size"));
   const propertyType = after(blocks, "Property Type");
   const bedrooms = beds(after(blocks, "Bedrooms"));
   const bathrooms = num(after(blocks, "Bathrooms")) ?? 1;

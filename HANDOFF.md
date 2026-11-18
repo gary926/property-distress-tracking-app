@@ -580,3 +580,39 @@ Other findings from this run:
   is now relative to today.
 - The digest's `minScore` is evidently set to 30 or lower in Settings: a
   30-point "watch" listing came through.
+
+## Sweep 2026-11-18: two stranded fixes re-applied, PF relabelled villa size
+
+114 Property Finder sale listings across all ten areas; 114/114 carry a
+published PF area average; 21 building sale figures (PF detail pages show
+transaction tables again, unlike 11-11). Bayut still 503. Digest: 4 Watch deals
+(score 30), emailed. None of the 114 had been seen before (`ob=nd` page one
+again), so price-drop and staleness still cannot fire. See "The sweep cannot
+currently produce a deal" above; that is still the main blocker.
+
+This branch is built on the 11-11 branch (`busy-ramanujan-wan0pp`), which was
+never merged either. It re-applies two fixes that earlier sweeps made and left
+stranded, because today's run walked into both again:
+
+- **No unbanded building fallback** (from 09-23, `determined-ride-c9fzkc`,
+  with its test). The top digest deal was a Saro 5-bed villa at "20% below its
+  building", but the building figure was pooled from two 2-bed townhouses.
+  Against its own band it is 3% *above* the Tilal City average. It was dropped.
+- **ingest.mjs sends withdrawn benchmarks as null** (from 09-30,
+  `determined-ride-5szwrt`, client half only). `/api/ingest` merges an update
+  over the stored row, so re-ingesting without a buildingPsf left the old
+  one in place and Saro stayed in the digest. The worker half of that fix
+  (`src/worker/data.ts`) is still only on 5szwrt and needs a redeploy.
+
+**PF relabelled the size field on villa/townhouse pages** from "Area" to
+"Plot size". `raw-from-detail-pages.mjs` read only "Area", so all 57 house
+listings were silently dropped as "no price or size" until it was taught both
+labels. It looks like the same field: the header repeats the same figure, and
+PF's band "Average size" (e.g. Sharjah Garden City 5-bed 7,171 sqft) matches the
+11-11 value. But the label is a warning that for some agents this is a
+plot, not built-up area. Three of today's four deals are Shomous 5-bed villas
+at 9,221–12,784 sqft against a 7,274 sqft norm: the size-artifact pattern from
+the 11-04 note. Treat large house-band outliers with suspicion.
+
+Also noticed, not changed: the area-average vote uses every page in
+`seed/detail-pages/` (481 today, going back to August), not only today's.

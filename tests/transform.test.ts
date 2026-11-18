@@ -99,6 +99,42 @@ describe("benchmarks", () => {
     expect(out[0].buildingPsf).toBeUndefined();
     expect(out[0].areaPsf).toBeUndefined();
   });
+
+  it("never pools bedroom bands to rescue a thin group", () => {
+    // Al Tai, 2026-09-23. Nasma Residence had two 2-beds and three 3-beds, so
+    // the 2-bed band was one short of a benchmark. An unbanded fallback pooled
+    // all five to a median of 850 and reported the 2,365 sqft 2-bed (528/sqft)
+    // as 38% below "its building's average" — it is only cheaper per foot
+    // because it is bigger. That listing led the digest.
+    const nasma = (beds: number, sqft: number, price: number, id: string) =>
+      saleRow({
+        buildingOrTowerName: "Nasma Residence",
+        communityArea: "Al Tai, Sharjah",
+        bedrooms: beds,
+        sizeSqft: sqft,
+        priceAED: price,
+        listingURL: `https://www.propertyfinder.ae/en/plp/buy/townhouse-for-sale-sharjah-al-tai-nasma-residence-${id}.html`,
+      });
+    const out = transform({
+      listings: [
+        nasma(2, 1469, 1_250_000, "148621985"),
+        nasma(2, 2365, 1_250_000, "147817625"),
+        nasma(3, 1800, 1_530_000, "148205008"),
+        nasma(3, 1800, 1_530_000, "148204991"),
+        nasma(3, 2995, 2_025_000, "147800815"),
+      ],
+    });
+    const big2Bed = out.find((l: { id: string }) => l.id === "pf-147817625")!;
+    // Two in the band is one short, so there is simply no building figure.
+    expect(big2Bed.buildingPsf).toBeUndefined();
+    // The 3-bed band has three members and does get one — from its own band.
+    const threeBed = out.find((l: { id: string }) => l.id === "pf-147800815")!;
+    expect(threeBed.buildingPsf).toBe(850);
+    // Whatever is published, no band ever inherits another band's median.
+    for (const l of out as { beds: number; buildingPsf?: number }[]) {
+      if (l.beds === 2) expect(l.buildingPsf).toBeUndefined();
+    }
+  });
 });
 
 describe("source links", () => {
