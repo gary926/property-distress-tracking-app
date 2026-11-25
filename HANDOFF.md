@@ -616,3 +616,28 @@ the 11-04 note. Treat large house-band outliers with suspicion.
 
 Also noticed, not changed: the area-average vote uses every page in
 `seed/detail-pages/` (481 today, going back to August), not only today's.
+
+## Sweep 2026-11-25
+
+110 Property Finder sale listings across all ten areas (12 per area; Al
+Rahmaniya only 4, its page-one is mostly land plots). All 110 detail pages
+returned 200; 110/110 carry a PF area average; 22 building sale figures (1
+rejected). Every page's price ÷ size was checked against the AED/ft² it states:
+0 mismatches. Bayut not attempted (503 bot check since 11-04). None of the 110
+had been swept before, so price-drop and staleness still cannot fire.
+
+Digest: 2 Watch deals (score 30), both Shomous 5-bed villas in Sharjah Garden
+City at 9,688 and 12,784 sqft, against a 7,171 sqft band norm, and labelled
+"Plot size" on PF. This is the size-artifact pattern from 11-18, and the email
+said so.
+
+Band disputes, both the known "4plus" lumping: Sharjah Garden City (17%;
+4-beds benchmarked at the 5-bed 721 rather than 846, which is conservative) and
+Al Rahmaniya (22%; a 5-bed benchmarked at the 6-bed 890 rather than 727, which is
+*not* conservative). Al Rahmaniya villas list 15,000–18,600 sqft "Plot size" at
+250–290 AED/ft²: almost certainly plots, not built-up area.
+
+The detail pages were scraped by subagents writing the markdown out with the
+Write tool. One of them reports retyping its 28 pages from the tool output rather
+than writing them byte-for-byte, so small transcription differences are possible
+(the price/size self-check above passed on all of them).
